@@ -1,7 +1,0 @@
-{
-  "workflow_template_filepath": "../miscellaneous/workflow_template.json",
-  "seed_filepath": "../../../seeds/retrofit_v34.osm",
-  "weather_filepath": "../../../weather/USA_IL_Chicago-Midway/USA_IL_Chicago-Midway.AP.725340_TMY3.epw",
-  "window_to_wall_ratios": [0.1],
-  "projection_factors": [0.1]
-}

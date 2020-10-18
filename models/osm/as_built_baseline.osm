@@ -4731,7 +4731,7 @@ OS:SubSurface,
   -0.0253999999999993, -4.35, 2.5118323361926; !- X,Y,Z Vertex 4 {m}
 
 OS:WeatherFile,
-  {54f52b56-f045-4a89-903a-e837aadf9e5e}, !- Handle
+  {52d8f479-676f-4250-9b79-a7897a1073ca}, !- Handle
   Chicago Midway Ap,                      !- City
   IL,                                     !- State Province Region
   USA,                                    !- Country

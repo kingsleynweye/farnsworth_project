@@ -1,0 +1,1364 @@
+{
+  "analysis": {
+    "display_name": "retrofit_baseline_parametric_analysis",
+    "name": "retrofit_baseline_parametric_analysis",
+    "output_variables": [],
+    "problem": {
+      "workflow": [
+        {
+          "name": "replace_surface_construction",
+          "display_name": "Replace Surface Construction",
+          "measure_type": "RubyMeasure",
+          "measure_definition_class_name": "ReplaceSurfaceConstruction",
+          "measure_definition_directory": "./measures/replace_surface_construction",
+          "measure_definition_directory_local": "/Users/kingsleyenweye/Desktop/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/measures/replace_surface_construction",
+          "measure_definition_display_name": "Replace Surface Construction",
+          "measure_definition_name": "replace_surface_construction",
+          "measure_definition_name_xml": null,
+          "measure_definition_uuid": "991b211e-507d-4432-a6e1-b72e4ee322fd",
+          "measure_definition_version_uuid": "1ceabec2-de04-437d-b1a9-8c795dd80f0d",
+          "uuid": "991b211e-507d-4432-a6e1-b72e4ee322fd",
+          "version_uuid": "1ceabec2-de04-437d-b1a9-8c795dd80f0d",
+          "description": "Replaces the construction of all surface & sub surface objects matching a specified construction with new construction. The construction to replace with must already exist in the model.",
+          "taxonomy": "Envelope.Opaque",
+          "arguments": [
+            {
+              "display_name": "Replace surface construction?",
+              "display_name_short": "replace_surface_construction",
+              "name": "replace_surface_construction",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Replace sub surface construction?",
+              "display_name_short": "replace_sub_surface_construction",
+              "name": "replace_sub_surface_construction",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            }
+          ],
+          "variables": [
+            {
+              "argument": {
+                "display_name": "Skip Replace Surface Construction",
+                "display_name_short": "Skip entire measure",
+                "name": "__SKIP__",
+                "value_type": "boolean",
+                "default_value": false,
+                "value": false
+              },
+              "display_name": "Skip Replace Surface Construction",
+              "display_name_short": "Skip entire measure",
+              "variable_type": "variable",
+              "units": null,
+              "minimum": false,
+              "maximum": true,
+              "relation_to_output": null,
+              "static_value": false,
+              "variable": true,
+              "uncertainty_description": {
+                "attributes": [
+                  {
+                    "name": "discrete",
+                    "values_and_weights": []
+                  },
+                  {
+                    "name": "lower_bounds",
+                    "value": false
+                  },
+                  {
+                    "name": "upper_bounds",
+                    "value": false
+                  },
+                  {
+                    "name": "modes",
+                    "value": false
+                  },
+                  {
+                    "name": "delta_x",
+                    "value": null
+                  },
+                  {
+                    "name": "stddev",
+                    "value": null
+                  },
+                  {
+                    "name": "discrete",
+                    "values_and_weights": [
+                      {
+                        "value": true,
+                        "weight": 0.125
+                      },
+                      {
+                        "value": false,
+                        "weight": 0.125
+                      },
+                      {
+                        "value": false,
+                        "weight": 0.125
+                      },
+                      {
+                        "value": false,
+                        "weight": 0.125
+                      },
+                      {
+                        "value": false,
+                        "weight": 0.125
+                      },
+                      {
+                        "value": true,
+                        "weight": 0.125
+                      },
+                      {
+                        "value": true,
+                        "weight": 0.125
+                      },
+                      {
+                        "value": true,
+                        "weight": 0.125
+                      }
+                    ]
+                  }
+                ],
+                "type": "discrete"
+              },
+              "workflow_index": 0
+            },
+            {
+              "argument": {
+                "display_name": "Pick a construction from the model to be replaced in utilised surfaces and sub surfaces.",
+                "display_name_short": "old_construction",
+                "name": "old_construction",
+                "value_type": "string",
+                "default_value": "ASHRAE 189.1-2009 ExtWindow ClimateZone alt-res 4-5",
+                "value": "ASHRAE 189.1-2009 ExtWindow ClimateZone alt-res 4-5",
+                "choice_display_names": [
+                  "ASHRAE 189.1-2009 ExtWall SteelFrame ClimateZone 4-8",
+                  "Interior Wall",
+                  "Interior Ceiling",
+                  "ASHRAE 189.1-2009 ExtWindow ClimateZone alt-res 4-5",
+                  "ExtSlabCarpet 4in ClimateZone 1-8",
+                  "ASHRAE 189.1-2009 ExtRoof IEAD ClimateZone 2-5",
+                  "Interior Floor",
+                  "Interior Window",
+                  "Interior Door",
+                  "Air Wall",
+                  "R-99 Exterior Wall",
+                  "R-99 Window",
+                  "R-99 Floor",
+                  "Trp LoE (e2=e5=.1) Clr 3mm/13mm Arg - PHIUS2018 Climate Zone 5A",
+                  "R-99 Roof",
+                  "Exterior Wall - PHIUS2018 ClimateZone 5A",
+                  "Exterior Door",
+                  "Interior Partition",
+                  "Exterior Floor - PHIUS2018 Climate Zone 5A",
+                  "Exterior Roof - PHIUS2018 Climate Zone 5A"
+                ]
+              },
+              "display_name": "Pick a construction from the model to be replaced in utilised surfaces and sub surfaces.",
+              "display_name_short": "Pick a construction from the model to be replaced in utilised surfaces and sub surfaces.",
+              "variable_type": "variable",
+              "units": "",
+              "minimum": "ASHRAE 189.1-2009 ExtRoof IEAD ClimateZone 2-5",
+              "maximum": "ExtSlabCarpet 4in ClimateZone 1-8",
+              "relation_to_output": null,
+              "static_value": "ASHRAE 189.1-2009 ExtWindow ClimateZone alt-res 4-5",
+              "uuid": "",
+              "version_uuid": "",
+              "variable": true,
+              "uncertainty_description": {
+                "type": "discrete",
+                "attributes": [
+                  {
+                    "name": "discrete",
+                    "values_and_weights": [
+                      {
+                        "value": "ASHRAE 189.1-2009 ExtWindow ClimateZone alt-res 4-5",
+                        "weight": 0.125
+                      },
+                      {
+                        "value": "ASHRAE 189.1-2009 ExtWindow ClimateZone alt-res 4-5",
+                        "weight": 0.125
+                      },
+                      {
+                        "value": "ASHRAE 189.1-2009 ExtWall SteelFrame ClimateZone 4-8",
+                        "weight": 0.125
+                      },
+                      {
+                        "value": "ASHRAE 189.1-2009 ExtRoof IEAD ClimateZone 2-5",
+                        "weight": 0.125
+                      },
+                      {
+                        "value": "ExtSlabCarpet 4in ClimateZone 1-8",
+                        "weight": 0.125
+                      },
+                      {
+                        "value": "ASHRAE 189.1-2009 ExtWindow ClimateZone alt-res 4-5",
+                        "weight": 0.125
+                      },
+                      {
+                        "value": "ASHRAE 189.1-2009 ExtWindow ClimateZone alt-res 4-5",
+                        "weight": 0.125
+                      },
+                      {
+                        "value": "ASHRAE 189.1-2009 ExtWindow ClimateZone alt-res 4-5",
+                        "weight": 0.125
+                      }
+                    ]
+                  },
+                  {
+                    "name": "lower_bounds",
+                    "value": "ASHRAE 189.1-2009 ExtRoof IEAD ClimateZone 2-5"
+                  },
+                  {
+                    "name": "upper_bounds",
+                    "value": "ExtSlabCarpet 4in ClimateZone 1-8"
+                  },
+                  {
+                    "name": "modes",
+                    "value": null
+                  },
+                  {
+                    "name": "delta_x",
+                    "value": null
+                  },
+                  {
+                    "name": "stddev",
+                    "value": null
+                  }
+                ]
+              },
+              "workflow_index": 1
+            },
+            {
+              "argument": {
+                "display_name": "Pick construction from the model to be used for replacement.",
+                "display_name_short": "new_construction",
+                "name": "new_construction",
+                "value_type": "string",
+                "default_value": "R-99 Window",
+                "value": "R-99 Window",
+                "choice_display_names": [
+                  "ASHRAE 189.1-2009 ExtWall SteelFrame ClimateZone 4-8",
+                  "Interior Wall",
+                  "Interior Ceiling",
+                  "ASHRAE 189.1-2009 ExtWindow ClimateZone alt-res 4-5",
+                  "ExtSlabCarpet 4in ClimateZone 1-8",
+                  "ASHRAE 189.1-2009 ExtRoof IEAD ClimateZone 2-5",
+                  "Interior Floor",
+                  "Interior Window",
+                  "Interior Door",
+                  "Air Wall",
+                  "R-99 Exterior Wall",
+                  "R-99 Window",
+                  "R-99 Floor",
+                  "Trp LoE (e2=e5=.1) Clr 3mm/13mm Arg - PHIUS2018 Climate Zone 5A",
+                  "R-99 Roof",
+                  "Exterior Wall - PHIUS2018 ClimateZone 5A",
+                  "Exterior Door",
+                  "Interior Partition",
+                  "Exterior Floor - PHIUS2018 Climate Zone 5A",
+                  "Exterior Roof - PHIUS2018 Climate Zone 5A"
+                ]
+              },
+              "display_name": "Pick construction from the model to be used for replacement.",
+              "display_name_short": "Pick construction from the model to be used for replacement.",
+              "variable_type": "variable",
+              "units": "",
+              "minimum": "R-99 Exterior Wall",
+              "maximum": "R-99 Window",
+              "relation_to_output": null,
+              "static_value": "R-99 Window",
+              "uuid": "",
+              "version_uuid": "",
+              "variable": true,
+              "uncertainty_description": {
+                "type": "discrete",
+                "attributes": [
+                  {
+                    "name": "discrete",
+                    "values_and_weights": [
+                      {
+                        "value": "R-99 Window",
+                        "weight": 0.125
+                      },
+                      {
+                        "value": "R-99 Window",
+                        "weight": 0.125
+                      },
+                      {
+                        "value": "R-99 Exterior Wall",
+                        "weight": 0.125
+                      },
+                      {
+                        "value": "R-99 Roof",
+                        "weight": 0.125
+                      },
+                      {
+                        "value": "R-99 Floor",
+                        "weight": 0.125
+                      },
+                      {
+                        "value": "R-99 Window",
+                        "weight": 0.125
+                      },
+                      {
+                        "value": "R-99 Window",
+                        "weight": 0.125
+                      },
+                      {
+                        "value": "R-99 Window",
+                        "weight": 0.125
+                      }
+                    ]
+                  },
+                  {
+                    "name": "lower_bounds",
+                    "value": "R-99 Exterior Wall"
+                  },
+                  {
+                    "name": "upper_bounds",
+                    "value": "R-99 Window"
+                  },
+                  {
+                    "name": "modes",
+                    "value": null
+                  },
+                  {
+                    "name": "delta_x",
+                    "value": null
+                  },
+                  {
+                    "name": "stddev",
+                    "value": null
+                  }
+                ]
+              },
+              "workflow_index": 2
+            }
+          ],
+          "workflow_index": 0
+        },
+        {
+          "name": "resize_existing_windows_to_match_a_given_wwr",
+          "display_name": "Resize existing windows to match a given WWR",
+          "measure_type": "RubyMeasure",
+          "measure_definition_class_name": "ResizeExistingWindowsToMatchAGivenWWR",
+          "measure_definition_directory": "./measures/24f17993-91c8-439a-943b-332fab756e1c",
+          "measure_definition_directory_local": "/Users/kingsleyenweye/Desktop/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/measures/24f17993-91c8-439a-943b-332fab756e1c",
+          "measure_definition_display_name": "Resize existing windows to match a given WWR",
+          "measure_definition_name": "resize_existing_windows_to_match_a_given_wwr",
+          "measure_definition_name_xml": null,
+          "measure_definition_uuid": "b1c8aae7-db36-4461-88f8-d6ac57ec11d5",
+          "measure_definition_version_uuid": "d9ef6bb7-239a-4765-bb21-6cf7f42a3ddc",
+          "uuid": "b1c8aae7-db36-4461-88f8-d6ac57ec11d5",
+          "version_uuid": "d9ef6bb7-239a-4765-bb21-6cf7f42a3ddc",
+          "description": "This measure aims to resize all of the existing windows in order to produce a specified, user-input, window to wall ratio.\nThe windows will be resized around their centroid.\nIt should be noted that this measure should work in all cases when DOWNSIZING the windows (which is often the need given the 40% WWR imposed as baseline by ASHRAE Appendix G).\nIf you aim to increase the area, please note that this could result in subsurfaces being larger than their parent surface",
+          "taxonomy": "Envelope.Fenestration",
+          "arguments": [
+            {
+              "display_name": "Window to Wall Ratio (fraction).",
+              "display_name_short": "wwr",
+              "name": "wwr",
+              "value_type": "double",
+              "default_value": 0.4,
+              "value": 0.01
+            },
+            {
+              "display_name": "Only affect surfaces that are \"walls\"?",
+              "display_name_short": "check_wall",
+              "name": "check_wall",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Only affect surfaces that have boundary condition = \"Outdoor\"?",
+              "display_name_short": "check_outdoors",
+              "name": "check_outdoors",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Only affect surfaces that are \"SunExposed\"?",
+              "display_name_short": "check_sunexposed",
+              "name": "check_sunexposed",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            }
+          ],
+          "variables": [
+            {
+              "argument": {
+                "display_name": "Skip Resize existing windows to match a given WWR",
+                "display_name_short": "Skip entire measure",
+                "name": "__SKIP__",
+                "value_type": "boolean",
+                "default_value": false,
+                "value": false
+              },
+              "display_name": "Skip Resize existing windows to match a given WWR",
+              "display_name_short": "Skip entire measure",
+              "variable_type": "variable",
+              "units": null,
+              "minimum": false,
+              "maximum": true,
+              "relation_to_output": null,
+              "static_value": false,
+              "variable": true,
+              "uncertainty_description": {
+                "attributes": [
+                  {
+                    "name": "discrete",
+                    "values_and_weights": []
+                  },
+                  {
+                    "name": "lower_bounds",
+                    "value": false
+                  },
+                  {
+                    "name": "upper_bounds",
+                    "value": false
+                  },
+                  {
+                    "name": "modes",
+                    "value": false
+                  },
+                  {
+                    "name": "delta_x",
+                    "value": null
+                  },
+                  {
+                    "name": "stddev",
+                    "value": null
+                  },
+                  {
+                    "name": "discrete",
+                    "values_and_weights": [
+                      {
+                        "value": true,
+                        "weight": 0.125
+                      },
+                      {
+                        "value": true,
+                        "weight": 0.125
+                      },
+                      {
+                        "value": true,
+                        "weight": 0.125
+                      },
+                      {
+                        "value": true,
+                        "weight": 0.125
+                      },
+                      {
+                        "value": true,
+                        "weight": 0.125
+                      },
+                      {
+                        "value": false,
+                        "weight": 0.125
+                      },
+                      {
+                        "value": true,
+                        "weight": 0.125
+                      },
+                      {
+                        "value": true,
+                        "weight": 0.125
+                      }
+                    ]
+                  }
+                ],
+                "type": "discrete"
+              },
+              "workflow_index": 0
+            }
+          ],
+          "workflow_index": 1
+        },
+        {
+          "name": "reduce_lighting_loads_by_percentage",
+          "display_name": "Reduce Lighting Loads by Percentage",
+          "measure_type": "RubyMeasure",
+          "measure_definition_class_name": "ReduceLightingLoadsByPercentage",
+          "measure_definition_directory": "./measures/a8b83ef3-2795-4ba9-a779-1c4b023009b1",
+          "measure_definition_directory_local": "/Users/kingsleyenweye/Desktop/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/measures/a8b83ef3-2795-4ba9-a779-1c4b023009b1",
+          "measure_definition_display_name": "Reduce Lighting Loads by Percentage",
+          "measure_definition_name": "reduce_lighting_loads_by_percentage",
+          "measure_definition_name_xml": null,
+          "measure_definition_uuid": "791f3404-a28b-4a80-ba3f-e15b339e39ea",
+          "measure_definition_version_uuid": "a8b83ef3-2795-4ba9-a779-1c4b023009b1",
+          "uuid": "791f3404-a28b-4a80-ba3f-e15b339e39ea",
+          "version_uuid": "a8b83ef3-2795-4ba9-a779-1c4b023009b1",
+          "description": "The lighting system in this building uses more power per area than is required with the latest lighting technologies.  Replace the lighting system with a newer, more efficient lighting technology.  Newer technologies provide the same amount of light but use less energy in the process.",
+          "taxonomy": "Electric Lighting.Lighting Equipment",
+          "arguments": [
+            {
+              "display_name": "Apply the Measure to a Specific Space Type or to the Entire Model",
+              "display_name_short": "space_type",
+              "name": "space_type",
+              "value_type": "string",
+              "default_value": "*Entire Building*",
+              "value": "*Entire Building*"
+            },
+            {
+              "display_name": "Lighting Power Reduction",
+              "display_name_short": "lighting_power_reduction_percent",
+              "name": "lighting_power_reduction_percent",
+              "value_type": "double",
+              "default_value": 30,
+              "value": 100
+            },
+            {
+              "display_name": "Increase in Material and Installation Cost for Lighting per Floor Area",
+              "display_name_short": "material_and_installation_cost",
+              "name": "material_and_installation_cost",
+              "value_type": "double",
+              "default_value": 0,
+              "value": 0
+            },
+            {
+              "display_name": "Increase in Demolition Costs for Lighting per Floor Area",
+              "display_name_short": "demolition_cost",
+              "name": "demolition_cost",
+              "value_type": "double",
+              "default_value": 0,
+              "value": 0
+            },
+            {
+              "display_name": "Years Until Costs Start",
+              "display_name_short": "years_until_costs_start",
+              "name": "years_until_costs_start",
+              "value_type": "integer",
+              "default_value": 0,
+              "value": 0
+            },
+            {
+              "display_name": "Demolition Costs Occur During Initial Construction",
+              "display_name_short": "demo_cost_initial_const",
+              "name": "demo_cost_initial_const",
+              "value_type": "boolean",
+              "default_value": false,
+              "value": false
+            },
+            {
+              "display_name": "Expected Life",
+              "display_name_short": "expected_life",
+              "name": "expected_life",
+              "value_type": "integer",
+              "default_value": 15,
+              "value": 15
+            },
+            {
+              "display_name": "Increase O & M Costs for Lighting per Floor Area",
+              "display_name_short": "om_cost",
+              "name": "om_cost",
+              "value_type": "double",
+              "default_value": 0,
+              "value": 0
+            },
+            {
+              "display_name": "O & M Frequency",
+              "display_name_short": "om_frequency",
+              "name": "om_frequency",
+              "value_type": "integer",
+              "default_value": 1,
+              "value": 1
+            }
+          ],
+          "variables": [
+            {
+              "argument": {
+                "display_name": "Skip Reduce Lighting Loads by Percentage",
+                "display_name_short": "Skip entire measure",
+                "name": "__SKIP__",
+                "value_type": "boolean",
+                "default_value": false,
+                "value": false
+              },
+              "display_name": "Skip Reduce Lighting Loads by Percentage",
+              "display_name_short": "Skip entire measure",
+              "variable_type": "variable",
+              "units": null,
+              "minimum": false,
+              "maximum": true,
+              "relation_to_output": null,
+              "static_value": false,
+              "variable": true,
+              "uncertainty_description": {
+                "attributes": [
+                  {
+                    "name": "discrete",
+                    "values_and_weights": []
+                  },
+                  {
+                    "name": "lower_bounds",
+                    "value": false
+                  },
+                  {
+                    "name": "upper_bounds",
+                    "value": false
+                  },
+                  {
+                    "name": "modes",
+                    "value": false
+                  },
+                  {
+                    "name": "delta_x",
+                    "value": null
+                  },
+                  {
+                    "name": "stddev",
+                    "value": null
+                  },
+                  {
+                    "name": "discrete",
+                    "values_and_weights": [
+                      {
+                        "value": true,
+                        "weight": 0.125
+                      },
+                      {
+                        "value": true,
+                        "weight": 0.125
+                      },
+                      {
+                        "value": true,
+                        "weight": 0.125
+                      },
+                      {
+                        "value": true,
+                        "weight": 0.125
+                      },
+                      {
+                        "value": true,
+                        "weight": 0.125
+                      },
+                      {
+                        "value": true,
+                        "weight": 0.125
+                      },
+                      {
+                        "value": false,
+                        "weight": 0.125
+                      },
+                      {
+                        "value": true,
+                        "weight": 0.125
+                      }
+                    ]
+                  }
+                ],
+                "type": "discrete"
+              },
+              "workflow_index": 0
+            }
+          ],
+          "workflow_index": 2
+        },
+        {
+          "name": "reduce_space_infiltration_by_percentage",
+          "display_name": "ReduceSpaceInfiltrationByPercentage",
+          "measure_type": "RubyMeasure",
+          "measure_definition_class_name": "ReduceSpaceInfiltrationByPercentage",
+          "measure_definition_directory": "./measures/a80fe19c-7db4-47c4-ba4e-bb02f009fb3a",
+          "measure_definition_directory_local": "/Users/kingsleyenweye/Desktop/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/measures/a80fe19c-7db4-47c4-ba4e-bb02f009fb3a",
+          "measure_definition_display_name": "ReduceSpaceInfiltrationByPercentage",
+          "measure_definition_name": "reduce_space_infiltration_by_percentage",
+          "measure_definition_name_xml": null,
+          "measure_definition_uuid": "6e9de4b1-aa97-4010-80c8-529e53ffe943",
+          "measure_definition_version_uuid": "a80fe19c-7db4-47c4-ba4e-bb02f009fb3a",
+          "uuid": "6e9de4b1-aa97-4010-80c8-529e53ffe943",
+          "version_uuid": "a80fe19c-7db4-47c4-ba4e-bb02f009fb3a",
+          "description": "This measure will reduce space infiltration rates by the requested percentage. A cost per square foot of building area can be added to the model.",
+          "taxonomy": "Envelope.Infiltration",
+          "arguments": [
+            {
+              "display_name": "Apply the Measure to a Specific Space Type or to the Entire Model.",
+              "display_name_short": "space_type",
+              "name": "space_type",
+              "value_type": "string",
+              "default_value": "*Entire Building*",
+              "value": "*Entire Building*"
+            },
+            {
+              "display_name": "Space Infiltration Power Reduction",
+              "display_name_short": "space_infiltration_reduction_percent",
+              "name": "space_infiltration_reduction_percent",
+              "value_type": "double",
+              "default_value": 30,
+              "value": 100
+            },
+            {
+              "display_name": "Constant Coefficient",
+              "display_name_short": "constant_coefficient",
+              "name": "constant_coefficient",
+              "value_type": "double",
+              "default_value": 1,
+              "value": 1
+            },
+            {
+              "display_name": "Temperature Coefficient",
+              "display_name_short": "temperature_coefficient",
+              "name": "temperature_coefficient",
+              "value_type": "double",
+              "default_value": 0,
+              "value": 0
+            },
+            {
+              "display_name": "Wind Speed Coefficient",
+              "display_name_short": "wind_speed_coefficient",
+              "name": "wind_speed_coefficient",
+              "value_type": "double",
+              "default_value": 0,
+              "value": 0
+            },
+            {
+              "display_name": "Wind Speed Squared Coefficient",
+              "display_name_short": "wind_speed_squared_coefficient",
+              "name": "wind_speed_squared_coefficient",
+              "value_type": "double",
+              "default_value": 0,
+              "value": 0
+            },
+            {
+              "display_name": "Alter constant temperature and wind speed coefficients.",
+              "display_name_short": "alter_coef",
+              "name": "alter_coef",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Increase in Material and Installation Costs for Building per Affected Floor Area",
+              "display_name_short": "material_and_installation_cost",
+              "name": "material_and_installation_cost",
+              "value_type": "double",
+              "default_value": 0,
+              "value": 0
+            },
+            {
+              "display_name": "O & M Costs for Construction per Affected Floor Area",
+              "display_name_short": "om_cost",
+              "name": "om_cost",
+              "value_type": "double",
+              "default_value": 0,
+              "value": 0
+            },
+            {
+              "display_name": "O & M Frequency",
+              "display_name_short": "om_frequency",
+              "name": "om_frequency",
+              "value_type": "integer",
+              "default_value": 1,
+              "value": 1
+            }
+          ],
+          "variables": [
+            {
+              "argument": {
+                "display_name": "Skip ReduceSpaceInfiltrationByPercentage",
+                "display_name_short": "Skip entire measure",
+                "name": "__SKIP__",
+                "value_type": "boolean",
+                "default_value": false,
+                "value": false
+              },
+              "display_name": "Skip ReduceSpaceInfiltrationByPercentage",
+              "display_name_short": "Skip entire measure",
+              "variable_type": "variable",
+              "units": null,
+              "minimum": false,
+              "maximum": true,
+              "relation_to_output": null,
+              "static_value": false,
+              "variable": true,
+              "uncertainty_description": {
+                "attributes": [
+                  {
+                    "name": "discrete",
+                    "values_and_weights": []
+                  },
+                  {
+                    "name": "lower_bounds",
+                    "value": false
+                  },
+                  {
+                    "name": "upper_bounds",
+                    "value": false
+                  },
+                  {
+                    "name": "modes",
+                    "value": false
+                  },
+                  {
+                    "name": "delta_x",
+                    "value": null
+                  },
+                  {
+                    "name": "stddev",
+                    "value": null
+                  },
+                  {
+                    "name": "discrete",
+                    "values_and_weights": [
+                      {
+                        "value": true,
+                        "weight": 0.125
+                      },
+                      {
+                        "value": true,
+                        "weight": 0.125
+                      },
+                      {
+                        "value": true,
+                        "weight": 0.125
+                      },
+                      {
+                        "value": true,
+                        "weight": 0.125
+                      },
+                      {
+                        "value": true,
+                        "weight": 0.125
+                      },
+                      {
+                        "value": true,
+                        "weight": 0.125
+                      },
+                      {
+                        "value": true,
+                        "weight": 0.125
+                      },
+                      {
+                        "value": false,
+                        "weight": 0.125
+                      }
+                    ]
+                  }
+                ],
+                "type": "discrete"
+              },
+              "workflow_index": 0
+            }
+          ],
+          "workflow_index": 3
+        },
+        {
+          "name": "openstudio_results",
+          "display_name": "OpenStudio Results",
+          "measure_type": "ReportingMeasure",
+          "measure_definition_class_name": "OpenStudioResults",
+          "measure_definition_directory": "./measures/5d24f032-e2e4-407f-a20d-9f76e15d4ac1",
+          "measure_definition_directory_local": "/Users/kingsleyenweye/Desktop/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/measures/5d24f032-e2e4-407f-a20d-9f76e15d4ac1",
+          "measure_definition_display_name": "OpenStudio Results",
+          "measure_definition_name": "openstudio_results",
+          "measure_definition_name_xml": null,
+          "measure_definition_uuid": "a25386cd-60e4-46bc-8b11-c755f379d916",
+          "measure_definition_version_uuid": "5d24f032-e2e4-407f-a20d-9f76e15d4ac1",
+          "uuid": "a25386cd-60e4-46bc-8b11-c755f379d916",
+          "version_uuid": "5d24f032-e2e4-407f-a20d-9f76e15d4ac1",
+          "description": "This measure creates high level tables and charts pulling both from model inputs and EnergyPlus results. It has building level information as well as detail on space types, thermal zones, HVAC systems, envelope characteristics, and economics. Click the heading above a chart to view a table of the chart data.",
+          "taxonomy": "Reporting.QAQC",
+          "arguments": [
+            {
+              "display_name": "Which Unit System do you want to use?",
+              "display_name_short": "units",
+              "name": "units",
+              "value_type": "string",
+              "default_value": "IP",
+              "value": "SI"
+            },
+            {
+              "display_name": "Model Summary",
+              "display_name_short": "building_summary_section",
+              "name": "building_summary_section",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Annual Overview",
+              "display_name_short": "annual_overview_section",
+              "name": "annual_overview_section",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Monthly Overview",
+              "display_name_short": "monthly_overview_section",
+              "name": "monthly_overview_section",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Utility Bills/Rates",
+              "display_name_short": "utility_bills_rates_section",
+              "name": "utility_bills_rates_section",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Envelope Summary",
+              "display_name_short": "envelope_section_section",
+              "name": "envelope_section_section",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Space Type Breakdown",
+              "display_name_short": "space_type_breakdown_section",
+              "name": "space_type_breakdown_section",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Space Type Summary",
+              "display_name_short": "space_type_details_section",
+              "name": "space_type_details_section",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Interior Lighting Summary",
+              "display_name_short": "interior_lighting_section",
+              "name": "interior_lighting_section",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Plug Loads Summary",
+              "display_name_short": "plug_loads_section",
+              "name": "plug_loads_section",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Exterior Lighting",
+              "display_name_short": "exterior_light_section",
+              "name": "exterior_light_section",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Water Use Equipment",
+              "display_name_short": "water_use_section",
+              "name": "water_use_section",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "HVAC Load Profiles",
+              "display_name_short": "hvac_load_profile",
+              "name": "hvac_load_profile",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Zone Conditions",
+              "display_name_short": "zone_condition_section",
+              "name": "zone_condition_section",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Zone Overview",
+              "display_name_short": "zone_summary_section",
+              "name": "zone_summary_section",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Zone Equipment Detail",
+              "display_name_short": "zone_equipment_detail_section",
+              "name": "zone_equipment_detail_section",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Air Loops Detail",
+              "display_name_short": "air_loops_detail_section",
+              "name": "air_loops_detail_section",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Plant Loops Detail",
+              "display_name_short": "plant_loops_detail_section",
+              "name": "plant_loops_detail_section",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Outdoor Air",
+              "display_name_short": "outdoor_air_section",
+              "name": "outdoor_air_section",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Cash Flow",
+              "display_name_short": "cost_summary_section",
+              "name": "cost_summary_section",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Site and Source Summary",
+              "display_name_short": "source_energy_section",
+              "name": "source_energy_section",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Schedule Overview",
+              "display_name_short": "schedules_overview_section",
+              "name": "schedules_overview_section",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Measure Warnings",
+              "display_name_short": "measure_warning_section",
+              "name": "measure_warning_section",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Report monthly fuel and enduse breakdown to registerValue",
+              "display_name_short": "reg_monthly_details",
+              "name": "reg_monthly_details",
+              "value_type": "boolean",
+              "default_value": false,
+              "value": false
+            }
+          ],
+          "variables": [],
+          "workflow_index": 4
+        }
+      ],
+      "algorithm": {
+        "objective_functions": []
+      },
+      "analysis_type": null,
+      "design_alternatives": [
+        {
+          "name": "Baseline",
+          "options": [
+            {
+              "measure_name": "replace_surface_construction",
+              "workflow_index": 0,
+              "name": "replace_surface_construction",
+              "description": "Replaces the construction of all surface & sub surface objects matching a specified construction with new construction. The construction to replace with must already exist in the model."
+            },
+            {
+              "measure_name": "resize_existing_windows_to_match_a_given_wwr",
+              "workflow_index": 1,
+              "name": "resize_existing_windows_to_match_a_given_wwr",
+              "description": "This measure aims to resize all of the existing windows in order to produce a specified, user-input, window to wall ratio.\nThe windows will be resized around their centroid.\nIt should be noted that this measure should work in all cases when DOWNSIZING the windows (which is often the need given the 40% WWR imposed as baseline by ASHRAE Appendix G).\nIf you aim to increase the area, please note that this could result in subsurfaces being larger than their parent surface"
+            },
+            {
+              "measure_name": "reduce_lighting_loads_by_percentage",
+              "workflow_index": 2,
+              "name": "reduce_lighting_loads_by_percentage",
+              "description": "The lighting system in this building uses more power per area than is required with the latest lighting technologies.  Replace the lighting system with a newer, more efficient lighting technology.  Newer technologies provide the same amount of light but use less energy in the process."
+            },
+            {
+              "measure_name": "reduce_space_infiltration_by_percentage",
+              "workflow_index": 3,
+              "name": "reduce_space_infiltration_by_percentage",
+              "description": "This measure will reduce space infiltration rates by the requested percentage. A cost per square foot of building area can be added to the model."
+            },
+            {
+              "measure_name": "openstudio_results",
+              "workflow_index": 4,
+              "name": "SI Option",
+              "description": "Option 1 Description: This measure creates high level tables and charts pulling both from model inputs and EnergyPlus results. It has building level information as well as detail on space types, thermal zones, HVAC systems, envelope characteristics, and economics. Click the heading above a chart to view a table of the chart data."
+            }
+          ]
+        },
+        {
+          "name": "R-99 Window Alternative",
+          "options": [
+            {
+              "measure_name": "replace_surface_construction",
+              "workflow_index": 0,
+              "name": "R-99 Window Option",
+              "description": "Option 1 Description: Replaces the construction of all surface & sub surface objects matching a specified construction with new construction. The construction to replace with must already exist in the model."
+            },
+            {
+              "measure_name": "resize_existing_windows_to_match_a_given_wwr",
+              "workflow_index": 1,
+              "name": "resize_existing_windows_to_match_a_given_wwr",
+              "description": "This measure aims to resize all of the existing windows in order to produce a specified, user-input, window to wall ratio.\nThe windows will be resized around their centroid.\nIt should be noted that this measure should work in all cases when DOWNSIZING the windows (which is often the need given the 40% WWR imposed as baseline by ASHRAE Appendix G).\nIf you aim to increase the area, please note that this could result in subsurfaces being larger than their parent surface"
+            },
+            {
+              "measure_name": "reduce_lighting_loads_by_percentage",
+              "workflow_index": 2,
+              "name": "reduce_lighting_loads_by_percentage",
+              "description": "The lighting system in this building uses more power per area than is required with the latest lighting technologies.  Replace the lighting system with a newer, more efficient lighting technology.  Newer technologies provide the same amount of light but use less energy in the process."
+            },
+            {
+              "measure_name": "reduce_space_infiltration_by_percentage",
+              "workflow_index": 3,
+              "name": "reduce_space_infiltration_by_percentage",
+              "description": "This measure will reduce space infiltration rates by the requested percentage. A cost per square foot of building area can be added to the model."
+            },
+            {
+              "measure_name": "openstudio_results",
+              "workflow_index": 4,
+              "name": "SI Option",
+              "description": "Option 1 Description: This measure creates high level tables and charts pulling both from model inputs and EnergyPlus results. It has building level information as well as detail on space types, thermal zones, HVAC systems, envelope characteristics, and economics. Click the heading above a chart to view a table of the chart data."
+            }
+          ]
+        },
+        {
+          "name": "R-99 Exterior Wall Alternative",
+          "options": [
+            {
+              "measure_name": "replace_surface_construction",
+              "workflow_index": 0,
+              "name": "R-99 Wall Option",
+              "description": "Option 2 Description: Replaces the construction of all surface & sub surface objects matching a specified construction with new construction. The construction to replace with must already exist in the model."
+            },
+            {
+              "measure_name": "resize_existing_windows_to_match_a_given_wwr",
+              "workflow_index": 1,
+              "name": "resize_existing_windows_to_match_a_given_wwr",
+              "description": "This measure aims to resize all of the existing windows in order to produce a specified, user-input, window to wall ratio.\nThe windows will be resized around their centroid.\nIt should be noted that this measure should work in all cases when DOWNSIZING the windows (which is often the need given the 40% WWR imposed as baseline by ASHRAE Appendix G).\nIf you aim to increase the area, please note that this could result in subsurfaces being larger than their parent surface"
+            },
+            {
+              "measure_name": "reduce_lighting_loads_by_percentage",
+              "workflow_index": 2,
+              "name": "reduce_lighting_loads_by_percentage",
+              "description": "The lighting system in this building uses more power per area than is required with the latest lighting technologies.  Replace the lighting system with a newer, more efficient lighting technology.  Newer technologies provide the same amount of light but use less energy in the process."
+            },
+            {
+              "measure_name": "reduce_space_infiltration_by_percentage",
+              "workflow_index": 3,
+              "name": "reduce_space_infiltration_by_percentage",
+              "description": "This measure will reduce space infiltration rates by the requested percentage. A cost per square foot of building area can be added to the model."
+            },
+            {
+              "measure_name": "openstudio_results",
+              "workflow_index": 4,
+              "name": "SI Option",
+              "description": "Option 1 Description: This measure creates high level tables and charts pulling both from model inputs and EnergyPlus results. It has building level information as well as detail on space types, thermal zones, HVAC systems, envelope characteristics, and economics. Click the heading above a chart to view a table of the chart data."
+            }
+          ]
+        },
+        {
+          "name": "R-99 Roof Alternative",
+          "options": [
+            {
+              "measure_name": "replace_surface_construction",
+              "workflow_index": 0,
+              "name": "R-99 Roof Option",
+              "description": "Option 3 Description: Replaces the construction of all surface & sub surface objects matching a specified construction with new construction. The construction to replace with must already exist in the model."
+            },
+            {
+              "measure_name": "resize_existing_windows_to_match_a_given_wwr",
+              "workflow_index": 1,
+              "name": "resize_existing_windows_to_match_a_given_wwr",
+              "description": "This measure aims to resize all of the existing windows in order to produce a specified, user-input, window to wall ratio.\nThe windows will be resized around their centroid.\nIt should be noted that this measure should work in all cases when DOWNSIZING the windows (which is often the need given the 40% WWR imposed as baseline by ASHRAE Appendix G).\nIf you aim to increase the area, please note that this could result in subsurfaces being larger than their parent surface"
+            },
+            {
+              "measure_name": "reduce_lighting_loads_by_percentage",
+              "workflow_index": 2,
+              "name": "reduce_lighting_loads_by_percentage",
+              "description": "The lighting system in this building uses more power per area than is required with the latest lighting technologies.  Replace the lighting system with a newer, more efficient lighting technology.  Newer technologies provide the same amount of light but use less energy in the process."
+            },
+            {
+              "measure_name": "reduce_space_infiltration_by_percentage",
+              "workflow_index": 3,
+              "name": "reduce_space_infiltration_by_percentage",
+              "description": "This measure will reduce space infiltration rates by the requested percentage. A cost per square foot of building area can be added to the model."
+            },
+            {
+              "measure_name": "openstudio_results",
+              "workflow_index": 4,
+              "name": "SI Option",
+              "description": "Option 1 Description: This measure creates high level tables and charts pulling both from model inputs and EnergyPlus results. It has building level information as well as detail on space types, thermal zones, HVAC systems, envelope characteristics, and economics. Click the heading above a chart to view a table of the chart data."
+            }
+          ]
+        },
+        {
+          "name": "R-99 Floor Alternative",
+          "options": [
+            {
+              "measure_name": "replace_surface_construction",
+              "workflow_index": 0,
+              "name": "R-99 Floor Option",
+              "description": "Option 4 Description: Replaces the construction of all surface & sub surface objects matching a specified construction with new construction. The construction to replace with must already exist in the model."
+            },
+            {
+              "measure_name": "resize_existing_windows_to_match_a_given_wwr",
+              "workflow_index": 1,
+              "name": "resize_existing_windows_to_match_a_given_wwr",
+              "description": "This measure aims to resize all of the existing windows in order to produce a specified, user-input, window to wall ratio.\nThe windows will be resized around their centroid.\nIt should be noted that this measure should work in all cases when DOWNSIZING the windows (which is often the need given the 40% WWR imposed as baseline by ASHRAE Appendix G).\nIf you aim to increase the area, please note that this could result in subsurfaces being larger than their parent surface"
+            },
+            {
+              "measure_name": "reduce_lighting_loads_by_percentage",
+              "workflow_index": 2,
+              "name": "reduce_lighting_loads_by_percentage",
+              "description": "The lighting system in this building uses more power per area than is required with the latest lighting technologies.  Replace the lighting system with a newer, more efficient lighting technology.  Newer technologies provide the same amount of light but use less energy in the process."
+            },
+            {
+              "measure_name": "reduce_space_infiltration_by_percentage",
+              "workflow_index": 3,
+              "name": "reduce_space_infiltration_by_percentage",
+              "description": "This measure will reduce space infiltration rates by the requested percentage. A cost per square foot of building area can be added to the model."
+            },
+            {
+              "measure_name": "openstudio_results",
+              "workflow_index": 4,
+              "name": "SI Option",
+              "description": "Option 1 Description: This measure creates high level tables and charts pulling both from model inputs and EnergyPlus results. It has building level information as well as detail on space types, thermal zones, HVAC systems, envelope characteristics, and economics. Click the heading above a chart to view a table of the chart data."
+            }
+          ]
+        },
+        {
+          "name": "No Window Alternative",
+          "options": [
+            {
+              "measure_name": "replace_surface_construction",
+              "workflow_index": 0,
+              "name": "replace_surface_construction",
+              "description": "Replaces the construction of all surface & sub surface objects matching a specified construction with new construction. The construction to replace with must already exist in the model."
+            },
+            {
+              "measure_name": "resize_existing_windows_to_match_a_given_wwr",
+              "workflow_index": 1,
+              "name": "1% WWR Option",
+              "description": "Option 1 Description: This measure aims to resize all of the existing windows in order to produce a specified, user-input, window to wall ratio.\nThe windows will be resized around their centroid.\nIt should be noted that this measure should work in all cases when DOWNSIZING the windows (which is often the need given the 40% WWR imposed as baseline by ASHRAE Appendix G).\nIf you aim to increase the area, please note that this could result in subsurfaces being larger than their parent surface"
+            },
+            {
+              "measure_name": "reduce_lighting_loads_by_percentage",
+              "workflow_index": 2,
+              "name": "reduce_lighting_loads_by_percentage",
+              "description": "The lighting system in this building uses more power per area than is required with the latest lighting technologies.  Replace the lighting system with a newer, more efficient lighting technology.  Newer technologies provide the same amount of light but use less energy in the process."
+            },
+            {
+              "measure_name": "reduce_space_infiltration_by_percentage",
+              "workflow_index": 3,
+              "name": "reduce_space_infiltration_by_percentage",
+              "description": "This measure will reduce space infiltration rates by the requested percentage. A cost per square foot of building area can be added to the model."
+            },
+            {
+              "measure_name": "openstudio_results",
+              "workflow_index": 4,
+              "name": "SI Option",
+              "description": "Option 1 Description: This measure creates high level tables and charts pulling both from model inputs and EnergyPlus results. It has building level information as well as detail on space types, thermal zones, HVAC systems, envelope characteristics, and economics. Click the heading above a chart to view a table of the chart data."
+            }
+          ]
+        },
+        {
+          "name": "No Lighting Alternative",
+          "options": [
+            {
+              "measure_name": "replace_surface_construction",
+              "workflow_index": 0,
+              "name": "replace_surface_construction",
+              "description": "Replaces the construction of all surface & sub surface objects matching a specified construction with new construction. The construction to replace with must already exist in the model."
+            },
+            {
+              "measure_name": "resize_existing_windows_to_match_a_given_wwr",
+              "workflow_index": 1,
+              "name": "resize_existing_windows_to_match_a_given_wwr",
+              "description": "This measure aims to resize all of the existing windows in order to produce a specified, user-input, window to wall ratio.\nThe windows will be resized around their centroid.\nIt should be noted that this measure should work in all cases when DOWNSIZING the windows (which is often the need given the 40% WWR imposed as baseline by ASHRAE Appendix G).\nIf you aim to increase the area, please note that this could result in subsurfaces being larger than their parent surface"
+            },
+            {
+              "measure_name": "reduce_lighting_loads_by_percentage",
+              "workflow_index": 2,
+              "name": "No Lighting Option",
+              "description": "Option 1 Description: The lighting system in this building uses more power per area than is required with the latest lighting technologies.  Replace the lighting system with a newer, more efficient lighting technology.  Newer technologies provide the same amount of light but use less energy in the process."
+            },
+            {
+              "measure_name": "reduce_space_infiltration_by_percentage",
+              "workflow_index": 3,
+              "name": "reduce_space_infiltration_by_percentage",
+              "description": "This measure will reduce space infiltration rates by the requested percentage. A cost per square foot of building area can be added to the model."
+            },
+            {
+              "measure_name": "openstudio_results",
+              "workflow_index": 4,
+              "name": "SI Option",
+              "description": "Option 1 Description: This measure creates high level tables and charts pulling both from model inputs and EnergyPlus results. It has building level information as well as detail on space types, thermal zones, HVAC systems, envelope characteristics, and economics. Click the heading above a chart to view a table of the chart data."
+            }
+          ]
+        },
+        {
+          "name": "No Infiltration Alternative",
+          "options": [
+            {
+              "measure_name": "replace_surface_construction",
+              "workflow_index": 0,
+              "name": "replace_surface_construction",
+              "description": "Replaces the construction of all surface & sub surface objects matching a specified construction with new construction. The construction to replace with must already exist in the model."
+            },
+            {
+              "measure_name": "resize_existing_windows_to_match_a_given_wwr",
+              "workflow_index": 1,
+              "name": "resize_existing_windows_to_match_a_given_wwr",
+              "description": "This measure aims to resize all of the existing windows in order to produce a specified, user-input, window to wall ratio.\nThe windows will be resized around their centroid.\nIt should be noted that this measure should work in all cases when DOWNSIZING the windows (which is often the need given the 40% WWR imposed as baseline by ASHRAE Appendix G).\nIf you aim to increase the area, please note that this could result in subsurfaces being larger than their parent surface"
+            },
+            {
+              "measure_name": "reduce_lighting_loads_by_percentage",
+              "workflow_index": 2,
+              "name": "reduce_lighting_loads_by_percentage",
+              "description": "The lighting system in this building uses more power per area than is required with the latest lighting technologies.  Replace the lighting system with a newer, more efficient lighting technology.  Newer technologies provide the same amount of light but use less energy in the process."
+            },
+            {
+              "measure_name": "reduce_space_infiltration_by_percentage",
+              "workflow_index": 3,
+              "name": "No Infiltration Option",
+              "description": "Option 1 Description: This measure will reduce space infiltration rates by the requested percentage. A cost per square foot of building area can be added to the model."
+            },
+            {
+              "measure_name": "openstudio_results",
+              "workflow_index": 4,
+              "name": "SI Option",
+              "description": "Option 1 Description: This measure creates high level tables and charts pulling both from model inputs and EnergyPlus results. It has building level information as well as detail on space types, thermal zones, HVAC systems, envelope characteristics, and economics. Click the heading above a chart to view a table of the chart data."
+            }
+          ]
+        }
+      ]
+    },
+    "seed": {
+      "file_type": "OSM",
+      "path": "./seeds/retrofit_baseline.osm"
+    },
+    "weather_file": {
+      "file_type": "EPW",
+      "path": "./weather/USA_IL_Chicago-Midway.AP.725340_TMY3.epw"
+    },
+    "file_format_version": 1,
+    "server_scripts": {}
+  }
+}

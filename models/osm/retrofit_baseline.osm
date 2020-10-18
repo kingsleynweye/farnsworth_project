@@ -5341,20 +5341,6 @@ OS:StandardsInformation:Construction,
   {a6d9e79f-0426-4152-b1c5-d668e8edb5ff}, !- Handle
   {fc1681ef-7b97-4a9d-bec9-05ea684a4ba1}; !- Construction Name
 
-OS:WeatherFile,
-  {38872123-b6b8-4f39-9634-bf1d6a9b5b81}, !- Handle
-  Chicago Midway Ap,                      !- City
-  IL,                                     !- State Province Region
-  USA,                                    !- Country
-  TMY3,                                   !- Data Source
-  725340,                                 !- WMO Number
-  41.78,                                  !- Latitude {deg}
-  -87.75,                                 !- Longitude {deg}
-  -6,                                     !- Time Zone {hr}
-  186,                                    !- Elevation {m}
-  file:USA_IL_Chicago-Midway.AP.725340_TMY3.epw, !- Url
-  6A6726C5;                               !- Checksum
-
 OS:Rendering:Color,
   {b39517bf-f8d8-4496-aba8-53c89a2e5f6f}, !- Handle
   Rendering Color 28,                     !- Name
@@ -5640,7 +5626,7 @@ OS:StandardsInformation:Material,
 
 OS:Construction,
   {01d66e4f-7a71-4773-b9ae-83dfe62900a8}, !- Handle
-  R-36 Exterior Wall - PHIUS2018 ClimateZone 5A, !- Name
+  Exterior Wall - PHIUS2018 ClimateZone 5A, !- Name
   {0f765112-00a0-44ef-aa6c-982ab3adf5fa}, !- Surface Rendering Name
   {2c643b20-412a-4b52-897f-27e6bbd56232}, !- Layer 1
   {4e98f27c-ec12-48bb-a63b-e2ca7d82fd94}, !- Layer 2
@@ -5714,7 +5700,7 @@ OS:DefaultSubSurfaceConstructions,
 
 OS:Construction,
   {9604a407-40e3-4121-a8f4-abcc814cb8ea}, !- Handle
-  Exterior Floor - PHIUS Climate Zone 5A, !- Name
+  Exterior Floor - PHIUS2018 Climate Zone 5A, !- Name
   {b637ed62-2427-4709-9a66-a543e2fdbdc1}, !- Surface Rendering Name
   {8cd86a70-aaf4-4292-b0d5-11753ff02cf9}, !- Layer 1
   {fb62fd0c-0c7a-43eb-9f2c-a573f0a8dab1}, !- Layer 2
@@ -5928,4 +5914,18 @@ OS:StandardsInformation:Material,
 OS:StandardsInformation:Material,
   {0c498ed9-8492-4887-8781-594877a7700f}, !- Handle
   {abf3c47f-2ca8-45e4-93b8-8006218dc325}; !- Material Name
+
+OS:WeatherFile,
+  {9066411d-21aa-4897-b3a1-6a4fe499b464}, !- Handle
+  Chicago Midway Ap,                      !- City
+  IL,                                     !- State Province Region
+  USA,                                    !- Country
+  TMY3,                                   !- Data Source
+  725340,                                 !- WMO Number
+  41.78,                                  !- Latitude {deg}
+  -87.75,                                 !- Longitude {deg}
+  -6,                                     !- Time Zone {hr}
+  186,                                    !- Elevation {m}
+  file:USA_IL_Chicago-Midway.AP.725340_TMY3.epw, !- Url
+  6A6726C5;                               !- Checksum
 
