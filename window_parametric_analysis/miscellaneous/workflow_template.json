@@ -1,0 +1,25 @@
+{
+    "seed_file": "",
+    "weather_file": "",
+    "steps": [
+        {
+            "measure_dir_name": "../../../measures/24f17993-91c8-439a-943b-332fab756e1c",
+            "arguments": {
+                "wwr": 0.4
+            }
+        },
+        {
+            "measure_dir_name": "../../../measures/add_overhangs_by_projection_factor_custom",
+            "arguments": {
+                "projection_factor": 0.1,
+                "facade": "All"
+            }
+        },
+        {
+            "measure_dir_name": "../../../measures/5d24f032-e2e4-407f-a20d-9f76e15d4ac1",
+            "arguments": {
+                "units": "SI"
+            }
+        }
+    ]
+}
