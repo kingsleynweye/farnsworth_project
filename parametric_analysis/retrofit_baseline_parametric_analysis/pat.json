@@ -1,6 +1,6 @@
 {
   "projectName": "retrofit_baseline_parametric_analysis",
-  "projectDir": "/Users/kingsleyenweye/Desktop/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis",
+  "projectDir": "/Users/kingsleyenweye/Desktop/GRADUATE SCHOOL SEMESTERS/Fall 2020/ARC 327R - ENERGY MODELING & THE DESIGN PROCESS/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis",
   "analysisName": "retrofit_baseline_parametric_analysis",
   "seed": "retrofit_baseline.osm",
   "weatherFile": "USA_IL_Chicago-Midway.AP.725340_TMY3.epw",
@@ -63,9 +63,9 @@
   "openstudioMD5": "",
   "measures": [
     {
-      "measure_dir": "/Users/kingsleyenweye/Desktop/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/measures/replace_surface_construction",
+      "measure_dir": "/Users/kingsleyenweye/Desktop/GRADUATE SCHOOL SEMESTERS/Fall 2020/ARC 327R - ENERGY MODELING & THE DESIGN PROCESS/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/measures/replace_surface_construction",
       "name": "replace_surface_construction",
-      "directory": "/Users/kingsleyenweye/Desktop/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/measures/replace_surface_construction",
+      "directory": "/Users/kingsleyenweye/Desktop/GRADUATE SCHOOL SEMESTERS/Fall 2020/ARC 327R - ENERGY MODELING & THE DESIGN PROCESS/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/measures/replace_surface_construction",
       "uid": "991b211e-507d-4432-a6e1-b72e4ee322fd",
       "uuid": "{991b211e-507d-4432-a6e1-b72e4ee322fd}",
       "version_id": "1ceabec2-de04-437d-b1a9-8c795dd80f0d",
@@ -376,175 +376,15 @@
           "description": "Option 4 Description: Replaces the construction of all surface & sub surface objects matching a specified construction with new construction. The construction to replace with must already exist in the model."
         }
       ],
-      "instanceId": 0.5062713509958261,
+      "instanceId": 0.5284863312413959,
       "numberOfOptions": 4,
       "$$hashKey": "object:4147",
       "outputMeasure": false
     },
     {
-      "measure_dir": "/Users/kingsleyenweye/Desktop/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/measures/24f17993-91c8-439a-943b-332fab756e1c",
-      "name": "resize_existing_windows_to_match_a_given_wwr",
-      "directory": "/Users/kingsleyenweye/Desktop/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/measures/24f17993-91c8-439a-943b-332fab756e1c",
-      "uid": "b1c8aae7-db36-4461-88f8-d6ac57ec11d5",
-      "uuid": "{b1c8aae7-db36-4461-88f8-d6ac57ec11d5}",
-      "version_id": "d9ef6bb7-239a-4765-bb21-6cf7f42a3ddc",
-      "version_uuid": "{d9ef6bb7-239a-4765-bb21-6cf7f42a3ddc}",
-      "version_modified": "20201004T203109Z",
-      "xml_checksum": "A8B8B5E3",
-      "display_name": "Resize existing windows to match a given WWR",
-      "class_name": "ResizeExistingWindowsToMatchAGivenWWR",
-      "description": "This measure aims to resize all of the existing windows in order to produce a specified, user-input, window to wall ratio.\nThe windows will be resized around their centroid.\nIt should be noted that this measure should work in all cases when DOWNSIZING the windows (which is often the need given the 40% WWR imposed as baseline by ASHRAE Appendix G).\nIf you aim to increase the area, please note that this could result in subsurfaces being larger than their parent surface",
-      "modeler_description": "The measure works in several steps:\n\n1. Find the current Window to Wall Ratio (WWR).\nThis will compute the WWR by taking into account all of the surfaces that have all of the following characteristics:\n- They are walls\n- They have the outside boundary condition as 'Outdoors' (aims to not take into account the adiabatic surfaces)\n- They are SunExposed (could be removed...)\n\n2. Resize all of the existing windows by re-setting the vertices: scaled centered on centroid.\n\n",
-      "tags": "Envelope.Fenestration",
-      "outputs": [],
-      "attributes": [
-        {
-          "name": "Measure Type",
-          "display_name": "Measure Type",
-          "value": "ModelMeasure"
-        },
-        {
-          "name": "Intended Software Tool",
-          "display_name": "Intended Software Tool",
-          "value": "Apply Measure Now"
-        },
-        {
-          "name": "Intended Software Tool",
-          "display_name": "Intended Software Tool",
-          "value": "OpenStudio Application"
-        },
-        {
-          "name": "Intended Software Tool",
-          "display_name": "Intended Software Tool",
-          "value": "Parametric Analysis Tool"
-        },
-        {
-          "name": "Intended Use Case",
-          "display_name": "Intended Use Case",
-          "value": "New Construction EE"
-        },
-        {
-          "name": "Intended Use Case",
-          "display_name": "Intended Use Case",
-          "value": "Retrofit EE"
-        }
-      ],
-      "arguments": [
-        {
-          "specialRowId": "optionDelete",
-          "$$hashKey": "uiGrid-01LJ",
-          "variable": false,
-          "option_1": "option_1"
-        },
-        {
-          "specialRowId": "optionName",
-          "type": "String",
-          "$$hashKey": "uiGrid-01LL",
-          "variable": false,
-          "option_1": "1% WWR Option"
-        },
-        {
-          "specialRowId": "optionDescription",
-          "type": "String",
-          "$$hashKey": "uiGrid-01LN",
-          "variable": false,
-          "option_1": "Option 1 Description: This measure aims to resize all of the existing windows in order to produce a specified, user-input, window to wall ratio.\nThe windows will be resized around their centroid.\nIt should be noted that this measure should work in all cases when DOWNSIZING the windows (which is often the need given the 40% WWR imposed as baseline by ASHRAE Appendix G).\nIf you aim to increase the area, please note that this could result in subsurfaces being larger than their parent surface"
-        },
-        {
-          "name": "wwr",
-          "display_name": "Window to Wall Ratio (fraction).",
-          "description": "",
-          "type": "Double",
-          "required": true,
-          "model_dependent": false,
-          "default_value": 0.4,
-          "$$hashKey": "uiGrid-01LP",
-          "variable": false,
-          "option_1": 0.01
-        },
-        {
-          "name": "check_wall",
-          "display_name": "Only affect surfaces that are \"walls\"?",
-          "description": "",
-          "type": "Boolean",
-          "required": false,
-          "model_dependent": false,
-          "default_value": true,
-          "$$hashKey": "uiGrid-01LR",
-          "variable": false,
-          "option_1": true
-        },
-        {
-          "name": "check_outdoors",
-          "display_name": "Only affect surfaces that have boundary condition = \"Outdoor\"?",
-          "description": "",
-          "type": "Boolean",
-          "required": false,
-          "model_dependent": false,
-          "default_value": true,
-          "$$hashKey": "uiGrid-01LT",
-          "variable": false,
-          "option_1": true
-        },
-        {
-          "name": "check_sunexposed",
-          "display_name": "Only affect surfaces that are \"SunExposed\"?",
-          "description": "",
-          "type": "Boolean",
-          "required": false,
-          "model_dependent": false,
-          "default_value": true,
-          "$$hashKey": "uiGrid-01LV",
-          "variable": false,
-          "option_1": true
-        }
-      ],
-      "edit": "",
-      "status": "",
-      "bcl_update": false,
-      "location": "local",
-      "add": "",
-      "open": false,
-      "addedToProject": true,
-      "date": "10/4/2020",
-      "author": "",
-      "type": "ModelMeasure",
-      "seed": "retrofit_baseline.osm",
-      "workflow_index": 1,
-      "options": [
-        {
-          "id": "option_1",
-          "arguments": [
-            {
-              "name": "wwr",
-              "value": 0.01
-            },
-            {
-              "name": "check_wall",
-              "value": true
-            },
-            {
-              "name": "check_outdoors",
-              "value": true
-            },
-            {
-              "name": "check_sunexposed",
-              "value": true
-            }
-          ],
-          "name": "1% WWR Option",
-          "description": "Option 1 Description: This measure aims to resize all of the existing windows in order to produce a specified, user-input, window to wall ratio.\nThe windows will be resized around their centroid.\nIt should be noted that this measure should work in all cases when DOWNSIZING the windows (which is often the need given the 40% WWR imposed as baseline by ASHRAE Appendix G).\nIf you aim to increase the area, please note that this could result in subsurfaces being larger than their parent surface"
-        }
-      ],
-      "instanceId": 0.8176181457500884,
-      "numberOfOptions": 1,
-      "$$hashKey": "object:4148",
-      "outputMeasure": false
-    },
-    {
-      "measure_dir": "/Users/kingsleyenweye/Desktop/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/measures/a8b83ef3-2795-4ba9-a779-1c4b023009b1",
+      "measure_dir": "/Users/kingsleyenweye/Desktop/GRADUATE SCHOOL SEMESTERS/Fall 2020/ARC 327R - ENERGY MODELING & THE DESIGN PROCESS/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/measures/a8b83ef3-2795-4ba9-a779-1c4b023009b1",
       "name": "reduce_lighting_loads_by_percentage",
-      "directory": "/Users/kingsleyenweye/Desktop/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/measures/a8b83ef3-2795-4ba9-a779-1c4b023009b1",
+      "directory": "/Users/kingsleyenweye/Desktop/GRADUATE SCHOOL SEMESTERS/Fall 2020/ARC 327R - ENERGY MODELING & THE DESIGN PROCESS/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/measures/a8b83ef3-2795-4ba9-a779-1c4b023009b1",
       "uid": "791f3404-a28b-4a80-ba3f-e15b339e39ea",
       "uuid": "{791f3404-a28b-4a80-ba3f-e15b339e39ea}",
       "version_id": "a8b83ef3-2795-4ba9-a779-1c4b023009b1",
@@ -739,7 +579,7 @@
       "author": "",
       "type": "ModelMeasure",
       "seed": "retrofit_baseline.osm",
-      "workflow_index": 2,
+      "workflow_index": 1,
       "options": [
         {
           "id": "option_1",
@@ -785,15 +625,15 @@
           "description": "Option 1 Description: The lighting system in this building uses more power per area than is required with the latest lighting technologies.  Replace the lighting system with a newer, more efficient lighting technology.  Newer technologies provide the same amount of light but use less energy in the process."
         }
       ],
-      "instanceId": 0.590800437756895,
+      "instanceId": 0.21346359820247351,
       "numberOfOptions": 1,
       "$$hashKey": "object:4149",
       "outputMeasure": false
     },
     {
-      "measure_dir": "/Users/kingsleyenweye/Desktop/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/measures/a80fe19c-7db4-47c4-ba4e-bb02f009fb3a",
+      "measure_dir": "/Users/kingsleyenweye/Desktop/GRADUATE SCHOOL SEMESTERS/Fall 2020/ARC 327R - ENERGY MODELING & THE DESIGN PROCESS/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/measures/a80fe19c-7db4-47c4-ba4e-bb02f009fb3a",
       "name": "reduce_space_infiltration_by_percentage",
-      "directory": "/Users/kingsleyenweye/Desktop/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/measures/a80fe19c-7db4-47c4-ba4e-bb02f009fb3a",
+      "directory": "/Users/kingsleyenweye/Desktop/GRADUATE SCHOOL SEMESTERS/Fall 2020/ARC 327R - ENERGY MODELING & THE DESIGN PROCESS/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/measures/a80fe19c-7db4-47c4-ba4e-bb02f009fb3a",
       "uid": "6e9de4b1-aa97-4010-80c8-529e53ffe943",
       "uuid": "{6e9de4b1-aa97-4010-80c8-529e53ffe943}",
       "version_id": "a80fe19c-7db4-47c4-ba4e-bb02f009fb3a",
@@ -987,7 +827,7 @@
       "author": "",
       "type": "ModelMeasure",
       "seed": "retrofit_baseline.osm",
-      "workflow_index": 3,
+      "workflow_index": 2,
       "options": [
         {
           "id": "option_1",
@@ -1037,15 +877,178 @@
           "description": "Option 1 Description: This measure will reduce space infiltration rates by the requested percentage. A cost per square foot of building area can be added to the model."
         }
       ],
-      "instanceId": 0.8162137339801818,
+      "instanceId": 0.429345698634195,
       "numberOfOptions": 1,
       "$$hashKey": "object:4150",
       "outputMeasure": false
     },
     {
-      "measure_dir": "/Users/kingsleyenweye/Desktop/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/measures/5d24f032-e2e4-407f-a20d-9f76e15d4ac1",
+      "measure_dir": "/Users/kingsleyenweye/Desktop/GRADUATE SCHOOL SEMESTERS/Fall 2020/ARC 327R - ENERGY MODELING & THE DESIGN PROCESS/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/measures/resize_existing_windows_to_match_a_given_wwr_custom",
+      "name": "resize_existing_windows_to_match_a_given_wwr_custom",
+      "directory": "/Users/kingsleyenweye/OpenStudio/Measures/resize_existing_windows_to_match_a_given_wwr_custom",
+      "uid": "2a43dd50-7172-4c2d-8c93-2ad162e2630e",
+      "uuid": "{2a43dd50-7172-4c2d-8c93-2ad162e2630e}",
+      "version_id": "cddfa287-3c53-436e-a8ea-493e407d6480",
+      "version_uuid": "{cddfa287-3c53-436e-a8ea-493e407d6480}",
+      "version_modified": "20201018T181120Z",
+      "xml_checksum": "DF9C5490",
+      "display_name": "Resize existing windows to match a given WWR Custom",
+      "class_name": "ResizeExistingWindowsToMatchAGivenWwrCustom",
+      "description": "This measure aims to resize all of the existing windows in order to produce a specified, user-input, window to wall ratio.\nThe windows will be resized around their centroid but the offset from ceiling is maintained.\nIt should be noted that this measure should work in all cases when DOWNSIZING the windows (which is often the need given the 40% WWR imposed as baseline by ASHRAE Appendix G).\nIf you aim to increase the area, please note that this could result in subsurfaces being larger than their parent surface",
+      "modeler_description": "The measure works in several steps:\n\n1. Find the current Window to Wall Ratio (WWR).\nThis will compute the WWR by taking into account all of the surfaces that have all of the following characteristics:\n- They are walls\n- They have the outside boundary condition as 'Outdoors' (aims to not take into account the adiabatic surfaces)\n- They are SunExposed (could be removed...)\n\n2. Resize all of the existing windows by re-setting the vertices: scaled centered on centroid but the offset from ceiling is maintained.\n\n",
+      "tags": "Envelope.Fenestration",
+      "outputs": [],
+      "attributes": [
+        {
+          "name": "Intended Software Tool",
+          "display_name": "Intended Software Tool",
+          "value": "Apply Measure Now"
+        },
+        {
+          "name": "Intended Software Tool",
+          "display_name": "Intended Software Tool",
+          "value": "OpenStudio Application"
+        },
+        {
+          "name": "Intended Software Tool",
+          "display_name": "Intended Software Tool",
+          "value": "Parametric Analysis Tool"
+        },
+        {
+          "name": "Intended Use Case",
+          "display_name": "Intended Use Case",
+          "value": "New Construction EE"
+        },
+        {
+          "name": "Intended Use Case",
+          "display_name": "Intended Use Case",
+          "value": "Retrofit EE"
+        },
+        {
+          "name": "Measure Type",
+          "display_name": "Measure Type",
+          "value": "ModelMeasure"
+        }
+      ],
+      "arguments": [
+        {
+          "specialRowId": "optionDelete",
+          "$$hashKey": "uiGrid-09KB",
+          "variable": false,
+          "option_1": "option_1"
+        },
+        {
+          "specialRowId": "optionName",
+          "type": "String",
+          "$$hashKey": "uiGrid-09KD",
+          "variable": false,
+          "option_1": "1% WWR Option"
+        },
+        {
+          "specialRowId": "optionDescription",
+          "type": "String",
+          "$$hashKey": "uiGrid-09KF",
+          "variable": false,
+          "option_1": "Option 1 Description: This measure aims to resize all of the existing windows in order to produce a specified, user-input, window to wall ratio.\nThe windows will be resized around their centroid but the offset from ceiling is maintained.\nIt should be noted that this measure should work in all cases when DOWNSIZING the windows (which is often the need given the 40% WWR imposed as baseline by ASHRAE Appendix G).\nIf you aim to increase the area, please note that this could result in subsurfaces being larger than their parent surface"
+        },
+        {
+          "name": "wwr",
+          "display_name": "Window to Wall Ratio (fraction).",
+          "description": "",
+          "type": "Double",
+          "required": true,
+          "model_dependent": false,
+          "default_value": 0.4,
+          "$$hashKey": "uiGrid-09KH",
+          "variable": true,
+          "option_1": 0.01,
+          "units": "",
+          "minimum": 0.01,
+          "maximum": 0.01,
+          "mode": 0.01
+        },
+        {
+          "name": "check_wall",
+          "display_name": "Only affect surfaces that are \"walls\"?",
+          "description": "",
+          "type": "Boolean",
+          "required": false,
+          "model_dependent": false,
+          "default_value": true,
+          "$$hashKey": "uiGrid-09KJ",
+          "variable": false,
+          "option_1": true
+        },
+        {
+          "name": "check_outdoors",
+          "display_name": "Only affect surfaces that have boundary condition = \"Outdoor\"?",
+          "description": "",
+          "type": "Boolean",
+          "required": false,
+          "model_dependent": false,
+          "default_value": true,
+          "$$hashKey": "uiGrid-09KL",
+          "variable": false,
+          "option_1": true
+        },
+        {
+          "name": "check_sunexposed",
+          "display_name": "Only affect surfaces that are \"SunExposed\"?",
+          "description": "",
+          "type": "Boolean",
+          "required": false,
+          "model_dependent": false,
+          "default_value": true,
+          "$$hashKey": "uiGrid-09KN",
+          "variable": false,
+          "option_1": true
+        }
+      ],
+      "edit": "",
+      "status": "",
+      "bcl_update": false,
+      "location": "my",
+      "add": "",
+      "open": false,
+      "addedToProject": true,
+      "date": "10/18/2020",
+      "author": "",
+      "type": "ModelMeasure",
+      "seed": "retrofit_baseline.osm",
+      "workflow_index": 3,
+      "options": [
+        {
+          "id": "option_1",
+          "arguments": [
+            {
+              "name": "wwr",
+              "value": 0.01
+            },
+            {
+              "name": "check_wall",
+              "value": true
+            },
+            {
+              "name": "check_outdoors",
+              "value": true
+            },
+            {
+              "name": "check_sunexposed",
+              "value": true
+            }
+          ],
+          "name": "1% WWR Option",
+          "description": "Option 1 Description: This measure aims to resize all of the existing windows in order to produce a specified, user-input, window to wall ratio.\nThe windows will be resized around their centroid but the offset from ceiling is maintained.\nIt should be noted that this measure should work in all cases when DOWNSIZING the windows (which is often the need given the 40% WWR imposed as baseline by ASHRAE Appendix G).\nIf you aim to increase the area, please note that this could result in subsurfaces being larger than their parent surface"
+        }
+      ],
+      "instanceId": 0.8654701068559172,
+      "numberOfOptions": 1,
+      "$$hashKey": "object:36932"
+    },
+    {
+      "measure_dir": "/Users/kingsleyenweye/Desktop/GRADUATE SCHOOL SEMESTERS/Fall 2020/ARC 327R - ENERGY MODELING & THE DESIGN PROCESS/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/measures/5d24f032-e2e4-407f-a20d-9f76e15d4ac1",
       "name": "openstudio_results",
-      "directory": "/Users/kingsleyenweye/Desktop/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/measures/5d24f032-e2e4-407f-a20d-9f76e15d4ac1",
+      "directory": "/Users/kingsleyenweye/Desktop/GRADUATE SCHOOL SEMESTERS/Fall 2020/ARC 327R - ENERGY MODELING & THE DESIGN PROCESS/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/measures/5d24f032-e2e4-407f-a20d-9f76e15d4ac1",
       "uid": "a25386cd-60e4-46bc-8b11-c755f379d916",
       "uuid": "{a25386cd-60e4-46bc-8b11-c755f379d916}",
       "version_id": "5d24f032-e2e4-407f-a20d-9f76e15d4ac1",
@@ -1638,7 +1641,7 @@
           "description": "Option 1 Description: This measure creates high level tables and charts pulling both from model inputs and EnergyPlus results. It has building level information as well as detail on space types, thermal zones, HVAC systems, envelope characteristics, and economics. Click the heading above a chart to view a table of the chart data."
         }
       ],
-      "instanceId": 0.6182019233878484,
+      "instanceId": 0.1301257355216039,
       "numberOfOptions": 1,
       "$$hashKey": "object:6890",
       "outputMeasure": true,
@@ -1671,91 +1674,91 @@
       "seedModel": "retrofit_baseline.osm",
       "weatherFile": "USA_IL_Chicago-Midway.AP.725340_TMY3.epw",
       "replace_surface_construction": "None",
-      "resize_existing_windows_to_match_a_given_wwr": "None",
       "reduce_lighting_loads_by_percentage": "None",
       "reduce_space_infiltration_by_percentage": "None",
       "openstudio_results": "SI Option",
-      "$$hashKey": "uiGrid-026S"
+      "$$hashKey": "uiGrid-026S",
+      "resize_existing_windows_to_match_a_given_wwr_custom": "None"
     },
     {
       "name": "R-99 Window Alternative",
       "seedModel": "retrofit_baseline.osm",
       "weatherFile": "USA_IL_Chicago-Midway.AP.725340_TMY3.epw",
       "replace_surface_construction": "R-99 Window Option",
-      "resize_existing_windows_to_match_a_given_wwr": "None",
       "reduce_lighting_loads_by_percentage": "None",
       "reduce_space_infiltration_by_percentage": "None",
       "openstudio_results": "SI Option",
-      "$$hashKey": "uiGrid-027U"
+      "$$hashKey": "uiGrid-027U",
+      "resize_existing_windows_to_match_a_given_wwr_custom": "None"
     },
     {
       "name": "R-99 Exterior Wall Alternative",
       "seedModel": "retrofit_baseline.osm",
       "weatherFile": "USA_IL_Chicago-Midway.AP.725340_TMY3.epw",
       "replace_surface_construction": "R-99 Wall Option",
-      "resize_existing_windows_to_match_a_given_wwr": "None",
       "reduce_lighting_loads_by_percentage": "None",
       "reduce_space_infiltration_by_percentage": "None",
       "openstudio_results": "SI Option",
-      "$$hashKey": "uiGrid-028W"
+      "$$hashKey": "uiGrid-028W",
+      "resize_existing_windows_to_match_a_given_wwr_custom": "None"
     },
     {
       "name": "R-99 Roof Alternative",
       "seedModel": "retrofit_baseline.osm",
       "weatherFile": "USA_IL_Chicago-Midway.AP.725340_TMY3.epw",
       "replace_surface_construction": "R-99 Roof Option",
-      "resize_existing_windows_to_match_a_given_wwr": "None",
       "reduce_lighting_loads_by_percentage": "None",
       "reduce_space_infiltration_by_percentage": "None",
       "openstudio_results": "SI Option",
-      "$$hashKey": "uiGrid-029Y"
+      "$$hashKey": "uiGrid-029Y",
+      "resize_existing_windows_to_match_a_given_wwr_custom": "None"
     },
     {
       "name": "R-99 Floor Alternative",
       "seedModel": "retrofit_baseline.osm",
       "weatherFile": "USA_IL_Chicago-Midway.AP.725340_TMY3.epw",
       "replace_surface_construction": "R-99 Floor Option",
-      "resize_existing_windows_to_match_a_given_wwr": "None",
       "reduce_lighting_loads_by_percentage": "None",
       "reduce_space_infiltration_by_percentage": "None",
       "openstudio_results": "SI Option",
-      "$$hashKey": "uiGrid-02B0"
+      "$$hashKey": "uiGrid-02B0",
+      "resize_existing_windows_to_match_a_given_wwr_custom": "None"
     },
     {
       "name": "No Window Alternative",
       "seedModel": "retrofit_baseline.osm",
       "weatherFile": "USA_IL_Chicago-Midway.AP.725340_TMY3.epw",
       "replace_surface_construction": "None",
-      "resize_existing_windows_to_match_a_given_wwr": "1% WWR Option",
       "reduce_lighting_loads_by_percentage": "None",
       "reduce_space_infiltration_by_percentage": "None",
       "openstudio_results": "SI Option",
-      "$$hashKey": "uiGrid-03GA"
+      "$$hashKey": "uiGrid-03GA",
+      "resize_existing_windows_to_match_a_given_wwr_custom": "1% WWR Option"
     },
     {
       "name": "No Lighting Alternative",
       "seedModel": "retrofit_baseline.osm",
       "weatherFile": "USA_IL_Chicago-Midway.AP.725340_TMY3.epw",
       "replace_surface_construction": "None",
-      "resize_existing_windows_to_match_a_given_wwr": "None",
       "reduce_lighting_loads_by_percentage": "No Lighting Option",
       "reduce_space_infiltration_by_percentage": "None",
       "openstudio_results": "SI Option",
-      "$$hashKey": "uiGrid-03HC"
+      "$$hashKey": "uiGrid-03HC",
+      "resize_existing_windows_to_match_a_given_wwr_custom": "None"
     },
     {
       "name": "No Infiltration Alternative",
       "seedModel": "retrofit_baseline.osm",
       "weatherFile": "USA_IL_Chicago-Midway.AP.725340_TMY3.epw",
       "replace_surface_construction": "None",
-      "resize_existing_windows_to_match_a_given_wwr": "None",
       "reduce_lighting_loads_by_percentage": "None",
       "reduce_space_infiltration_by_percentage": "No Infiltration Option",
       "openstudio_results": "SI Option",
-      "$$hashKey": "uiGrid-03IE"
+      "$$hashKey": "uiGrid-03IE",
+      "resize_existing_windows_to_match_a_given_wwr_custom": "None"
     }
   ],
-  "analysisID": "1cd0cd76-1cf0-4dcb-bc4a-4fd7f236d9d2",
+  "analysisID": "4edd6a82-7130-4533-9bbb-93a08e8a01a4",
   "datapoints": [
     {
       "name": "Baseline",
@@ -11750,83 +11753,56 @@
     },
     {
       "name": "No Window Alternative",
-      "id": "1f5ad6f4-5886-4cd4-8815-97f849d1adc1",
+      "id": "075674e3-11cd-4652-899d-0a271e1ff5f5",
       "run": false,
       "modified": false,
-      "selected": false,
-      "_id": "1f5ad6f4-5886-4cd4-8815-97f849d1adc1",
-      "analysis_id": "1cd0cd76-1cf0-4dcb-bc4a-4fd7f236d9d2",
-      "created_at": "2020-10-18 10:01:30 -0500",
+      "selected": true,
+      "_id": "075674e3-11cd-4652-899d-0a271e1ff5f5",
+      "analysis_id": "4edd6a82-7130-4533-9bbb-93a08e8a01a4",
+      "created_at": "2020-10-18 13:21:27 -0500",
       "da_descriptions": [
         {
-          "name": "replace_surface_construction",
-          "description": "Replaces the construction of all surface & sub surface objects matching a specified construction with new construction. The construction to replace with must already exist in the model."
-        },
-        {
           "name": "1% WWR Option",
-          "description": "Option 1 Description: This measure aims to resize all of the existing windows in order to produce a specified, user-input, window to wall ratio.\nThe windows will be resized around their centroid.\nIt should be noted that this measure should work in all cases when DOWNSIZING the windows (which is often the need given the 40% WWR imposed as baseline by ASHRAE Appendix G).\nIf you aim to increase the area, please note that this could result in subsurfaces being larger than their parent surface"
-        },
-        {
-          "name": "reduce_lighting_loads_by_percentage",
-          "description": "The lighting system in this building uses more power per area than is required with the latest lighting technologies.  Replace the lighting system with a newer, more efficient lighting technology.  Newer technologies provide the same amount of light but use less energy in the process."
-        },
-        {
-          "name": "reduce_space_infiltration_by_percentage",
-          "description": "This measure will reduce space infiltration rates by the requested percentage. A cost per square foot of building area can be added to the model."
+          "description": "Option 1 Description: This measure aims to resize all of the existing windows in order to produce a specified, user-input, window to wall ratio.\nThe windows will be resized around their centroid but the offset from ceiling is maintained.\nIt should be noted that this measure should work in all cases when DOWNSIZING the windows (which is often the need given the 40% WWR imposed as baseline by ASHRAE Appendix G).\nIf you aim to increase the area, please note that this could result in subsurfaces being larger than their parent surface"
         },
         {
           "name": "SI Option",
           "description": "Option 1 Description: This measure creates high level tables and charts pulling both from model inputs and EnergyPlus results. It has building level information as well as detail on space types, thermal zones, HVAC systems, envelope characteristics, and economics. Click the heading above a chart to view a table of the chart data."
         }
       ],
-      "description": "Autogenerated 5",
+      "description": "Autogenerated 0",
       "internal_ip_address": null,
       "ip_address": null,
-      "job_id": "5f8c58c5c3153260de8c0046",
+      "job_id": "5f8c87a3c315326889c87d4f",
       "results": {},
       "run_end_time": null,
-      "run_queue_time": "2020-10-18T15:01:25.570+00:00",
-      "run_start_time": "2020-10-18T15:01:30.429+00:00",
+      "run_queue_time": "2020-10-18T18:21:23.058+00:00",
+      "run_start_time": "2020-10-18T18:21:23.123+00:00",
       "sdp_log_file": [],
       "seed": "",
       "set_variable_values": {
-        "cd50ddee-e66b-4b12-9cee-4387ab2cfaa7": true,
-        "62bca07e-a3e5-4869-9fa2-424d0765e6b2": true,
-        "7f6902f9-4a7b-4a0d-aa1f-b13c78fc5f67": true,
-        "c713ca8f-c7c7-40b7-9a4d-b4a31d7d8a2d": "R-99 Window",
-        "961a0f27-36c6-4b9c-bb84-0e164efdc099": "ASHRAE 189.1-2009 ExtWindow ClimateZone alt-res 4-5",
-        "8b99dc3f-ca4e-4da6-9625-46e5515a59ff": false
+        "dc82b095-0716-48e7-93b6-b765b056db9f": 0.01
       },
       "status": "completed",
       "status_message": "",
-      "updated_at": "20201018T150336Z",
-      "uuid": "1f5ad6f4-5886-4cd4-8815-97f849d1adc1",
+      "updated_at": "20201018T182211Z",
+      "uuid": "075674e3-11cd-4652-899d-0a271e1ff5f5",
       "variable_values": null,
       "weather_file": "USA_IL_Chicago-Midway.AP.725340_TMY3.epw",
       "worker_logs": {},
       "set_variable_values_names": {
-        "reduce_lighting_loads_by_percentage.__SKIP__": true,
-        "reduce_space_infiltration_by_percentage.__SKIP__": true,
-        "replace_surface_construction.__SKIP__": true,
-        "replace_surface_construction.new_construction": "R-99 Window",
-        "replace_surface_construction.old_construction": "ASHRAE 189.1-2009 ExtWindow ClimateZone alt-res 4-5",
-        "resize_existing_windows_to_match_a_given_wwr.__SKIP__": false
+        "resize_existing_windows_to_match_a_given_wwr_custom.wwr": 0.01
       },
       "set_variable_values_display_names": {
-        "Skip Reduce Lighting Loads by Percentage": true,
-        "Skip ReduceSpaceInfiltrationByPercentage": true,
-        "Skip Replace Surface Construction": true,
-        "Pick construction from the model to be used for replacement.": "R-99 Window",
-        "Pick a construction from the model to be replaced in utilised surfaces and sub surfaces.": "ASHRAE 189.1-2009 ExtWindow ClimateZone alt-res 4-5",
-        "Skip Resize existing windows to match a given WWR": false
+        "Window to Wall Ratio (fraction).": 0.01
       },
-      "completed_at": "20201018T150336Z",
+      "completed_at": "20201018T182210Z",
       "completed_status": "Success",
-      "current_step": 5,
-      "eplusout_err": "Program Version,EnergyPlus, Version 9.2.0-921312fa1d, YMD=2020.10.18 10:02,\n   ************* Beginning Zone Sizing Calculations\n   ** Warning ** ProcessScheduleInput: Schedule:Constant=\"ALWAYS OFF DISCRETE\", Blank Schedule Type Limits Name input -- will not be validated.\n   ** Warning ** ProcessScheduleInput: Schedule:Constant=\"ALWAYS ON CONTINUOUS\", Blank Schedule Type Limits Name input -- will not be validated.\n   ** Warning ** CheckUsedConstructions: There are 14 nominally unused constructions in input.\n   **   ~~~   ** For explicit details on each unused construction, use Output:Diagnostics,DisplayExtraWarnings;\n   ** Warning ** ManageSizing: For a plant sizing run, there must be at least 1 Sizing:Plant object input. SimulationControl Plant Sizing option ignored.\n   ** Warning ** Output:Meter: invalid Key Name=\"GAS:FACILITY\" - not found.\n   ** Warning ** Output:Meter:MeterFileOnly: invalid Key Name=\"GAS:FACILITY\" - not found.\n   ** Warning ** Output:Meter:MeterFileOnly requested for \"Electricity:Facility\" (TimeStep), already on \"Output:Meter\". Will report to both eplusout.eso and eplusout.mtr\n   ************* Testing Individual Branch Integrity\n   ************* All Branches passed integrity testing\n   ************* Testing Individual Supply Air Path Integrity\n   ************* All Supply Air Paths passed integrity testing\n   ************* Testing Individual Return Air Path Integrity\n   ************* All Return Air Paths passed integrity testing\n   ************* No node connection errors were found.\n   ************* Beginning Simulation\n   ** Warning ** Processing Monthly Tabular Reports: Variable names not valid for this simulation\n   **   ~~~   ** ...use Output:Diagnostics,DisplayExtraWarnings; to show more details on individual variables.\n   ** Warning ** The resource referenced by LifeCycleCost:UsePriceEscalation= \"U.S. AVG  COMMERCIAL-ELECTRICITY\" has no energy cost. \n   **   ~~~   ** ... It is likely that the wrong resource is used. The resource should match the meter used in Utility:Tariff.\n   ** Warning ** The resource referenced by LifeCycleCost:UsePriceEscalation= \"U.S. AVG  COMMERCIAL-DISTILLATE OIL\" has no energy cost. \n   **   ~~~   ** ... It is likely that the wrong resource is used. The resource should match the meter used in Utility:Tariff.\n   ** Warning ** The resource referenced by LifeCycleCost:UsePriceEscalation= \"U.S. AVG  COMMERCIAL-RESIDUAL OIL\" has no energy cost. \n   **   ~~~   ** ... It is likely that the wrong resource is used. The resource should match the meter used in Utility:Tariff.\n   ** Warning ** The resource referenced by LifeCycleCost:UsePriceEscalation= \"U.S. AVG  COMMERCIAL-NATURAL GAS\" has no energy cost. \n   **   ~~~   ** ... It is likely that the wrong resource is used. The resource should match the meter used in Utility:Tariff.\n   ** Warning ** The resource referenced by LifeCycleCost:UsePriceEscalation= \"U.S. AVG  COMMERCIAL-COAL\" has no energy cost. \n   **   ~~~   ** ... It is likely that the wrong resource is used. The resource should match the meter used in Utility:Tariff.\n   ************* Simulation Error Summary *************\n   ************* There are 6 unused schedules in input.\n   ************* There are 6 unused week schedules in input.\n   ************* There are 12 unused day schedules in input.\n   ************* Use Output:Diagnostics,DisplayUnusedSchedules; to see them.\n   *************\n   ************* ===== Final Error Summary =====\n   ************* The following error categories occurred.  Consider correcting or noting.\n   ************* Nominally Unused Constructions\n   ************* ..The nominally unused constructions warning is provided to alert you to potential conditions that can cause\n   ************* ..extra time during simulation. Each construction is calculated by the algorithm indicated in the HeatBalanceAlgorithm\n   ************* ..object. You may remove the constructions indicated (when you use the DisplayExtraWarnings option).\n   *************\n   ************* EnergyPlus Warmup Error Summary. During Warmup: 0 Warning; 0 Severe Errors.\n   ************* EnergyPlus Sizing Error Summary. During Sizing: 4 Warning; 0 Severe Errors.\n   ************* EnergyPlus Completed Successfully-- 13 Warning; 0 Severe Errors; Elapsed Time=00hr 00min 47.75sec\n",
+      "current_step": 2,
+      "eplusout_err": "Program Version,EnergyPlus, Version 9.2.0-921312fa1d, YMD=2020.10.18 13:21,\n   ************* Beginning Zone Sizing Calculations\n   ** Warning ** ProcessScheduleInput: Schedule:Constant=\"ALWAYS OFF DISCRETE\", Blank Schedule Type Limits Name input -- will not be validated.\n   ** Warning ** ProcessScheduleInput: Schedule:Constant=\"ALWAYS ON CONTINUOUS\", Blank Schedule Type Limits Name input -- will not be validated.\n   ** Warning ** CheckUsedConstructions: There are 14 nominally unused constructions in input.\n   **   ~~~   ** For explicit details on each unused construction, use Output:Diagnostics,DisplayExtraWarnings;\n   ** Warning ** ManageSizing: For a plant sizing run, there must be at least 1 Sizing:Plant object input. SimulationControl Plant Sizing option ignored.\n   ** Warning ** Output:Meter: invalid Key Name=\"GAS:FACILITY\" - not found.\n   ** Warning ** Output:Meter:MeterFileOnly: invalid Key Name=\"GAS:FACILITY\" - not found.\n   ** Warning ** Output:Meter:MeterFileOnly requested for \"Electricity:Facility\" (TimeStep), already on \"Output:Meter\". Will report to both eplusout.eso and eplusout.mtr\n   ************* Testing Individual Branch Integrity\n   ************* All Branches passed integrity testing\n   ************* Testing Individual Supply Air Path Integrity\n   ************* All Supply Air Paths passed integrity testing\n   ************* Testing Individual Return Air Path Integrity\n   ************* All Return Air Paths passed integrity testing\n   ************* No node connection errors were found.\n   ************* Beginning Simulation\n   ** Warning ** Processing Monthly Tabular Reports: Variable names not valid for this simulation\n   **   ~~~   ** ...use Output:Diagnostics,DisplayExtraWarnings; to show more details on individual variables.\n   ** Warning ** The resource referenced by LifeCycleCost:UsePriceEscalation= \"U.S. AVG  COMMERCIAL-ELECTRICITY\" has no energy cost. \n   **   ~~~   ** ... It is likely that the wrong resource is used. The resource should match the meter used in Utility:Tariff.\n   ** Warning ** The resource referenced by LifeCycleCost:UsePriceEscalation= \"U.S. AVG  COMMERCIAL-DISTILLATE OIL\" has no energy cost. \n   **   ~~~   ** ... It is likely that the wrong resource is used. The resource should match the meter used in Utility:Tariff.\n   ** Warning ** The resource referenced by LifeCycleCost:UsePriceEscalation= \"U.S. AVG  COMMERCIAL-RESIDUAL OIL\" has no energy cost. \n   **   ~~~   ** ... It is likely that the wrong resource is used. The resource should match the meter used in Utility:Tariff.\n   ** Warning ** The resource referenced by LifeCycleCost:UsePriceEscalation= \"U.S. AVG  COMMERCIAL-NATURAL GAS\" has no energy cost. \n   **   ~~~   ** ... It is likely that the wrong resource is used. The resource should match the meter used in Utility:Tariff.\n   ** Warning ** The resource referenced by LifeCycleCost:UsePriceEscalation= \"U.S. AVG  COMMERCIAL-COAL\" has no energy cost. \n   **   ~~~   ** ... It is likely that the wrong resource is used. The resource should match the meter used in Utility:Tariff.\n   ************* Simulation Error Summary *************\n   ************* There are 6 unused schedules in input.\n   ************* There are 6 unused week schedules in input.\n   ************* There are 12 unused day schedules in input.\n   ************* Use Output:Diagnostics,DisplayUnusedSchedules; to see them.\n   *************\n   ************* ===== Final Error Summary =====\n   ************* The following error categories occurred.  Consider correcting or noting.\n   ************* Nominally Unused Constructions\n   ************* ..The nominally unused constructions warning is provided to alert you to potential conditions that can cause\n   ************* ..extra time during simulation. Each construction is calculated by the algorithm indicated in the HeatBalanceAlgorithm\n   ************* ..object. You may remove the constructions indicated (when you use the DisplayExtraWarnings option).\n   *************\n   ************* EnergyPlus Warmup Error Summary. During Warmup: 0 Warning; 0 Severe Errors.\n   ************* EnergyPlus Sizing Error Summary. During Sizing: 4 Warning; 0 Severe Errors.\n   ************* EnergyPlus Completed Successfully-- 13 Warning; 0 Severe Errors; Elapsed Time=00hr 00min 10.56sec\n",
       "file_format_version": "0.0.1",
       "file_paths": [
-        "/Users/kingsleyenweye/Desktop/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/temp_data/analysis_1cd0cd76-1cf0-4dcb-bc4a-4fd7f236d9d2/data_point_1f5ad6f4-5886-4cd4-8815-97f849d1adc1/generated_files",
+        "/Users/kingsleyenweye/Desktop/GRADUATE SCHOOL SEMESTERS/Fall 2020/ARC 327R - ENERGY MODELING & THE DESIGN PROCESS/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/temp_data/analysis_4edd6a82-7130-4533-9bbb-93a08e8a01a4/data_point_075674e3-11cd-4652-899d-0a271e1ff5f5/generated_files",
         "../weather",
         "../seeds",
         "../seed",
@@ -11836,78 +11812,43 @@
         "../../weather",
         "./"
       ],
-      "hash": "91555EEB",
+      "hash": "8DB8E4FC",
       "measure_paths": [
         "../measures"
       ],
-      "osa_id": "1cd0cd76-1cf0-4dcb-bc4a-4fd7f236d9d2",
-      "osd_id": "1f5ad6f4-5886-4cd4-8815-97f849d1adc1",
+      "osa_id": "4edd6a82-7130-4533-9bbb-93a08e8a01a4",
+      "osd_id": "075674e3-11cd-4652-899d-0a271e1ff5f5",
       "run_directory": "./run",
       "seed_file": "retrofit_baseline.osm",
-      "started_at": "20201018T150136Z",
+      "started_at": "20201018T182130Z",
       "steps": [
         {
           "arguments": {
-            "__SKIP__": true,
-            "new_construction": "R-99 Window",
-            "old_construction": "ASHRAE 189.1-2009 ExtWindow ClimateZone alt-res 4-5",
-            "replace_sub_surface_construction": true,
-            "replace_surface_construction": true
-          },
-          "description": "Replaces the construction of all surface & sub surface objects matching a specified construction with new construction. The construction to replace with must already exist in the model.",
-          "measure_dir_name": "replace_surface_construction",
-          "name": "replace_surface_construction",
-          "result": {
-            "completed_at": "20201018T150136Z",
-            "measure_class_name": "ReplaceSurfaceConstruction",
-            "measure_display_name": "Replace Surface Construction",
-            "measure_name": "replace_surface_construction",
-            "measure_taxonomy": "Envelope.Opaque",
-            "measure_type": "ModelMeasure",
-            "measure_uid": "991b211e-507d-4432-a6e1-b72e4ee322fd",
-            "measure_version_id": "1ceabec2-de04-437d-b1a9-8c795dd80f0d",
-            "measure_version_modified": "20201016T231416Z",
-            "measure_xml_checksum": "8296E2DB",
-            "started_at": "20201018T150136Z",
-            "stderr": "",
-            "stdout": "",
-            "step_errors": [],
-            "step_files": [],
-            "step_info": [],
-            "step_result": "Skip",
-            "step_values": [],
-            "step_warnings": []
-          },
-          "$$hashKey": "object:15836"
-        },
-        {
-          "arguments": {
-            "__SKIP__": false,
             "check_outdoors": true,
             "check_sunexposed": true,
             "check_wall": true,
             "wwr": 0.01
           },
-          "description": "Option 1 Description: This measure aims to resize all of the existing windows in order to produce a specified, user-input, window to wall ratio.\nThe windows will be resized around their centroid.\nIt should be noted that this measure should work in all cases when DOWNSIZING the windows (which is often the need given the 40% WWR imposed as baseline by ASHRAE Appendix G).\nIf you aim to increase the area, please note that this could result in subsurfaces being larger than their parent surface",
-          "measure_dir_name": "24f17993-91c8-439a-943b-332fab756e1c",
+          "description": "Option 1 Description: This measure aims to resize all of the existing windows in order to produce a specified, user-input, window to wall ratio.\nThe windows will be resized around their centroid but the offset from ceiling is maintained.\nIt should be noted that this measure should work in all cases when DOWNSIZING the windows (which is often the need given the 40% WWR imposed as baseline by ASHRAE Appendix G).\nIf you aim to increase the area, please note that this could result in subsurfaces being larger than their parent surface",
+          "measure_dir_name": "resize_existing_windows_to_match_a_given_wwr_custom",
           "name": "1% WWR Option",
           "result": {
-            "completed_at": "20201018T150137Z",
-            "measure_class_name": "ResizeExistingWindowsToMatchAGivenWWR",
-            "measure_display_name": "Resize existing windows to match a given WWR",
-            "measure_name": "resize_existing_windows_to_match_a_given_wwr",
+            "completed_at": "20201018T182130Z",
+            "measure_class_name": "ResizeExistingWindowsToMatchAGivenWwrCustom",
+            "measure_display_name": "Resize existing windows to match a given WWR Custom",
+            "measure_name": "resize_existing_windows_to_match_a_given_wwr_custom",
             "measure_taxonomy": "Envelope.Fenestration",
             "measure_type": "ModelMeasure",
-            "measure_uid": "b1c8aae7-db36-4461-88f8-d6ac57ec11d5",
-            "measure_version_id": "d9ef6bb7-239a-4765-bb21-6cf7f42a3ddc",
-            "measure_version_modified": "20201004T203109Z",
-            "measure_xml_checksum": "A8B8B5E3",
-            "started_at": "20201018T150136Z",
+            "measure_uid": "2a43dd50-7172-4c2d-8c93-2ad162e2630e",
+            "measure_version_id": "cddfa287-3c53-436e-a8ea-493e407d6480",
+            "measure_version_modified": "20201018T181120Z",
+            "measure_xml_checksum": "DF9C5490",
+            "started_at": "20201018T182130Z",
             "stderr": "",
             "stdout": "[OpenStudio.Measure] <0> OSArgumentVector is deprecated, use OpenStudio::Measure::OSArgumentVector instead.\n[openstudio.model.PlanarSurface] <-2> Before setVertices have 23 fields.\n[openstudio.model.PlanarSurface] <-2> After clearExtensibleGroups in setVertices have 11 fields.\n[openstudio.model.PlanarSurface] <-2> After setVertices have 23 fields.  Size of vertices is 4.\n[openstudio.model.PlanarSurface] <-2> Before setVertices have 23 fields.\n[openstudio.model.PlanarSurface] <-2> After clearExtensibleGroups in setVertices have 11 fields.\n[openstudio.model.PlanarSurface] <-2> After setVertices have 23 fields.  Size of vertices is 4.\n[openstudio.model.PlanarSurface] <-2> Before setVertices have 23 fields.\n[openstudio.model.PlanarSurface] <-2> After clearExtensibleGroups in setVertices have 11 fields.\n[openstudio.model.PlanarSurface] <-2> After setVertices have 23 fields.  Size of vertices is 4.\n[openstudio.model.PlanarSurface] <-2> Before setVertices have 23 fields.\n[openstudio.model.PlanarSurface] <-2> After clearExtensibleGroups in setVertices have 11 fields.\n[openstudio.model.PlanarSurface] <-2> After setVertices have 23 fields.  Size of vertices is 4.\n[openstudio.model.PlanarSurface] <-2> Before setVertices have 23 fields.\n[openstudio.model.PlanarSurface] <-2> After clearExtensibleGroups in setVertices have 11 fields.\n[openstudio.model.PlanarSurface] <-2> After setVertices have 23 fields.  Size of vertices is 4.\n[openstudio.model.PlanarSurface] <-2> Before setVertices have 23 fields.\n[openstudio.model.PlanarSurface] <-2> After clearExtensibleGroups in setVertices have 11 fields.\n[openstudio.model.PlanarSurface] <-2> After setVertices have 23 fields.  Size of vertices is 4.\n[openstudio.model.PlanarSurface] <-2> Before setVertices have 23 fields.\n[openstudio.model.PlanarSurface] <-2> After clearExtensibleGroups in setVertices have 11 fields.\n[openstudio.model.PlanarSurface] <-2> After setVertices have 23 fields.  Size of vertices is 4.\n[openstudio.model.PlanarSurface] <-2> Before setVertices have 23 fields.\n[openstudio.model.PlanarSurface] <-2> After clearExtensibleGroups in setVertices have 11 fields.\n[openstudio.model.PlanarSurface] <-2> After setVertices have 23 fields.  Size of vertices is 4.\n[openstudio.model.PlanarSurface] <-2> Before setVertices have 23 fields.\n[openstudio.model.PlanarSurface] <-2> After clearExtensibleGroups in setVertices have 11 fields.\n[openstudio.model.PlanarSurface] <-2> After setVertices have 23 fields.  Size of vertices is 4.\n[openstudio.model.PlanarSurface] <-2> Before setVertices have 23 fields.\n[openstudio.model.PlanarSurface] <-2> After clearExtensibleGroups in setVertices have 11 fields.\n[openstudio.model.PlanarSurface] <-2> After setVertices have 23 fields.  Size of vertices is 4.\n[openstudio.model.PlanarSurface] <-2> Before setVertices have 23 fields.\n[openstudio.model.PlanarSurface] <-2> After clearExtensibleGroups in setVertices have 11 fields.\n[openstudio.model.PlanarSurface] <-2> After setVertices have 23 fields.  Size of vertices is 4.\n[openstudio.model.PlanarSurface] <-2> Before setVertices have 23 fields.\n[openstudio.model.PlanarSurface] <-2> After clearExtensibleGroups in setVertices have 11 fields.\n[openstudio.model.PlanarSurface] <-2> After setVertices have 23 fields.  Size of vertices is 4.\n",
             "step_errors": [],
             "step_files": [],
-            "step_final_condition": "Checking final WWR 1.00%. 12 surfaces were resized",
+            "step_final_condition": "Checking final WWR 8.12%. 12 surfaces were resized",
             "step_info": [
               "Click on 'Advanced' for a CSV of each surface WWR before and after"
             ],
@@ -11933,86 +11874,7 @@
             ],
             "step_warnings": []
           },
-          "$$hashKey": "object:15837"
-        },
-        {
-          "arguments": {
-            "__SKIP__": true,
-            "demo_cost_initial_const": false,
-            "demolition_cost": 0,
-            "expected_life": 15,
-            "lighting_power_reduction_percent": 100,
-            "material_and_installation_cost": 0,
-            "om_cost": 0,
-            "om_frequency": 1,
-            "space_type": "*Entire Building*",
-            "years_until_costs_start": 0
-          },
-          "description": "The lighting system in this building uses more power per area than is required with the latest lighting technologies.  Replace the lighting system with a newer, more efficient lighting technology.  Newer technologies provide the same amount of light but use less energy in the process.",
-          "measure_dir_name": "a8b83ef3-2795-4ba9-a779-1c4b023009b1",
-          "name": "reduce_lighting_loads_by_percentage",
-          "result": {
-            "completed_at": "20201018T150137Z",
-            "measure_class_name": "ReduceLightingLoadsByPercentage",
-            "measure_display_name": "Reduce Lighting Loads by Percentage",
-            "measure_name": "reduce_lighting_loads_by_percentage",
-            "measure_taxonomy": "Electric Lighting.Lighting Equipment",
-            "measure_type": "ModelMeasure",
-            "measure_uid": "791f3404-a28b-4a80-ba3f-e15b339e39ea",
-            "measure_version_id": "a8b83ef3-2795-4ba9-a779-1c4b023009b1",
-            "measure_version_modified": "20200316T215558Z",
-            "measure_xml_checksum": "293730A7",
-            "started_at": "20201018T150137Z",
-            "stderr": "",
-            "stdout": "",
-            "step_errors": [],
-            "step_files": [],
-            "step_info": [],
-            "step_result": "Skip",
-            "step_values": [],
-            "step_warnings": []
-          },
-          "$$hashKey": "object:15838"
-        },
-        {
-          "arguments": {
-            "__SKIP__": true,
-            "alter_coef": true,
-            "constant_coefficient": 1,
-            "material_and_installation_cost": 0,
-            "om_cost": 0,
-            "om_frequency": 1,
-            "space_infiltration_reduction_percent": 100,
-            "space_type": "*Entire Building*",
-            "temperature_coefficient": 0,
-            "wind_speed_coefficient": 0,
-            "wind_speed_squared_coefficient": 0
-          },
-          "description": "This measure will reduce space infiltration rates by the requested percentage. A cost per square foot of building area can be added to the model.",
-          "measure_dir_name": "a80fe19c-7db4-47c4-ba4e-bb02f009fb3a",
-          "name": "reduce_space_infiltration_by_percentage",
-          "result": {
-            "completed_at": "20201018T150137Z",
-            "measure_class_name": "ReduceSpaceInfiltrationByPercentage",
-            "measure_display_name": "ReduceSpaceInfiltrationByPercentage",
-            "measure_name": "reduce_space_infiltration_by_percentage",
-            "measure_taxonomy": "Envelope.Infiltration",
-            "measure_type": "ModelMeasure",
-            "measure_uid": "6e9de4b1-aa97-4010-80c8-529e53ffe943",
-            "measure_version_id": "a80fe19c-7db4-47c4-ba4e-bb02f009fb3a",
-            "measure_version_modified": "20200316T215553Z",
-            "measure_xml_checksum": "EACB548E",
-            "started_at": "20201018T150137Z",
-            "stderr": "",
-            "stdout": "",
-            "step_errors": [],
-            "step_files": [],
-            "step_info": [],
-            "step_result": "Skip",
-            "step_values": [],
-            "step_warnings": []
-          },
-          "$$hashKey": "object:15839"
+          "$$hashKey": "object:45865"
         },
         {
           "arguments": {
@@ -12045,7 +11907,7 @@
           "measure_dir_name": "5d24f032-e2e4-407f-a20d-9f76e15d4ac1",
           "name": "SI Option",
           "result": {
-            "completed_at": "20201018T150332Z",
+            "completed_at": "20201018T182209Z",
             "measure_class_name": "OpenStudioResults",
             "measure_display_name": "OpenStudio Results",
             "measure_name": "openstudio_results",
@@ -12055,12 +11917,12 @@
             "measure_version_id": "5d24f032-e2e4-407f-a20d-9f76e15d4ac1",
             "measure_version_modified": "20200626T221404Z",
             "measure_xml_checksum": "557BF06F",
-            "started_at": "20201018T150259Z",
+            "started_at": "20201018T182156Z",
             "stderr": "",
-            "stdout": "[openstudio.energyplus.SqlFile] <-2> Dictionary Built\n[openstudio.standards.standard] <-1> Using OpenStudio Standards version 0.2.10 with template 90.1-2013.\n[openstudio.standards.standard] <-1> Loading OpenStudio Standards data for 90.1-2013\n[openstudio.standards.standard] <-2> Loading JSON files from OpenStudio CLI embedded directory :/ruby/2.2.0/gems/openstudio-standards-0.2.10/lib/openstudio-standards/standards/ashrae_90_1\n[openstudio.standards.standard] <-2> Adding hvac_inference from Any.hvac_inference.json\n[openstudio.standards.standard] <-2> Adding size_category from Any.size_category.json\n[openstudio.standards.standard] <-2> Adding climate_zone_sets from ashrae_90_1.climate_zone_sets.json\n[openstudio.standards.standard] <-2> Adding climate_zones from ashrae_90_1.climate_zones.json\n[openstudio.standards.standard] <-2> Adding constructions from ashrae_90_1.constructions.json\n[openstudio.standards.standard] <-2> Adding curves from ashrae_90_1.curves.json\n[openstudio.standards.standard] <-2> Adding entryways from ashrae_90_1.entryways.json\n[openstudio.standards.standard] <-2> Adding fans from ashrae_90_1.fans.json\n[openstudio.standards.standard] <-2> Adding materials from ashrae_90_1.materials.json\n[openstudio.standards.standard] <-2> Adding parking from ashrae_90_1.parking.json\n[openstudio.standards.standard] <-2> Adding schedules from ashrae_90_1.schedules.json\n[openstudio.standards.standard] <-2> Loading JSON files from OpenStudio CLI embedded directory :/ruby/2.2.0/gems/openstudio-standards-0.2.10/lib/openstudio-standards/standards/ashrae_90_1/ashrae_90_1_2013\n[openstudio.standards.standard] <-2> Adding boilers from ashrae_90_1_2013.boilers.json\n[openstudio.standards.standard] <-2> Adding chillers from ashrae_90_1_2013.chillers.json\n[openstudio.standards.standard] <-2> Adding construction_properties from ashrae_90_1_2013.construction_properties.json\n[openstudio.standards.standard] <-2> Adding construction_sets from ashrae_90_1_2013.construction_sets.json\n[openstudio.standards.standard] <-2> Adding economizers from ashrae_90_1_2013.economizers.json\n[openstudio.standards.standard] <-2> Adding elevators from ashrae_90_1_2013.elevators.json\n[openstudio.standards.standard] <-2> Adding exterior_lighting from ashrae_90_1_2013.ext_ltg.json\n[openstudio.standards.standard] <-2> Adding ground_temperatures from ashrae_90_1_2013.ground_temperatures.json\n[openstudio.standards.standard] <-2> Adding heat_pumps from ashrae_90_1_2013.heat_pumps.json\n[openstudio.standards.standard] <-2> Adding heat_pumps_heating from ashrae_90_1_2013.heat_pumps_heating.json\n[openstudio.standards.standard] <-2> Adding heat_rejection from ashrae_90_1_2013.heat_rejection.json\n[openstudio.standards.standard] <-2> Adding motors from ashrae_90_1_2013.motors.json\n[openstudio.standards.standard] <-2> Adding prototype_inputs from ashrae_90_1_2013.prototype_inputs.json\n[openstudio.standards.standard] <-2> Adding refrigerated_cases from ashrae_90_1_2013.ref_cases.json\n[openstudio.standards.standard] <-2> Adding refrigeration_system_lineup from ashrae_90_1_2013.ref_lnup.json\n[openstudio.standards.standard] <-2> Adding refrigeration_compressors from ashrae_90_1_2013.refrigeration_compressors.json\n[openstudio.standards.standard] <-2> Adding refrigeration_condenser from ashrae_90_1_2013.refrigeration_condenser.json\n[openstudio.standards.standard] <-2> Adding refrigeration_system from ashrae_90_1_2013.refrigeration_system.json\n[openstudio.standards.standard] <-2> Adding refrigeration_walkins from ashrae_90_1_2013.refrigeration_walkins.json\n[openstudio.standards.standard] <-2> Adding space_types from ashrae_90_1_2013.spc_typ.json\n[openstudio.standards.standard] <-2> Adding unitary_acs from ashrae_90_1_2013.unitary_acs.json\n[openstudio.standards.standard] <-2> Adding water_heaters from ashrae_90_1_2013.water_heaters.json\n[openstudio.standards.standard] <-2> Adding water_source_heat_pumps from ashrae_90_1_2013.water_source_heat_pumps.json\n[openstudio.standards.standard] <-2> Adding water_source_heat_pumps_heating from ashrae_90_1_2013.water_source_heat_pumps_heating.json\n[openstudio.standards.standard] <-1> Using OpenStudio Standards version 0.2.10 with template 90.1-2013.\n[openstudio.standards.standard] <-1> Loading OpenStudio Standards data for 90.1-2013\n[openstudio.standards.standard] <-2> Loading JSON files from OpenStudio CLI embedded directory :/ruby/2.2.0/gems/openstudio-standards-0.2.10/lib/openstudio-standards/standards/ashrae_90_1\n[openstudio.standards.standard] <-2> Adding hvac_inference from Any.hvac_inference.json\n[openstudio.standards.standard] <-2> Adding size_category from Any.size_category.json\n[openstudio.standards.standard] <-2> Adding climate_zone_sets from ashrae_90_1.climate_zone_sets.json\n[openstudio.standards.standard] <-2> Adding climate_zones from ashrae_90_1.climate_zones.json\n[openstudio.standards.standard] <-2> Adding constructions from ashrae_90_1.constructions.json\n[openstudio.standards.standard] <-2> Adding curves from ashrae_90_1.curves.json\n[openstudio.standards.standard] <-2> Adding entryways from ashrae_90_1.entryways.json\n[openstudio.standards.standard] <-2> Adding fans from ashrae_90_1.fans.json\n[openstudio.standards.standard] <-2> Adding materials from ashrae_90_1.materials.json\n[openstudio.standards.standard] <-2> Adding parking from ashrae_90_1.parking.json\n[openstudio.standards.standard] <-2> Adding schedules from ashrae_90_1.schedules.json\n[openstudio.standards.standard] <-2> Loading JSON files from OpenStudio CLI embedded directory :/ruby/2.2.0/gems/openstudio-standards-0.2.10/lib/openstudio-standards/standards/ashrae_90_1/ashrae_90_1_2013\n[openstudio.standards.standard] <-2> Adding boilers from ashrae_90_1_2013.boilers.json\n[openstudio.standards.standard] <-2> Adding chillers from ashrae_90_1_2013.chillers.json\n[openstudio.standards.standard] <-2> Adding construction_properties from ashrae_90_1_2013.construction_properties.json\n[openstudio.standards.standard] <-2> Adding construction_sets from ashrae_90_1_2013.construction_sets.json\n[openstudio.standards.standard] <-2> Adding economizers from ashrae_90_1_2013.economizers.json\n[openstudio.standards.standard] <-2> Adding elevators from ashrae_90_1_2013.elevators.json\n[openstudio.standards.standard] <-2> Adding exterior_lighting from ashrae_90_1_2013.ext_ltg.json\n[openstudio.standards.standard] <-2> Adding ground_temperatures from ashrae_90_1_2013.ground_temperatures.json\n[openstudio.standards.standard] <-2> Adding heat_pumps from ashrae_90_1_2013.heat_pumps.json\n[openstudio.standards.standard] <-2> Adding heat_pumps_heating from ashrae_90_1_2013.heat_pumps_heating.json\n[openstudio.standards.standard] <-2> Adding heat_rejection from ashrae_90_1_2013.heat_rejection.json\n[openstudio.standards.standard] <-2> Adding motors from ashrae_90_1_2013.motors.json\n[openstudio.standards.standard] <-2> Adding prototype_inputs from ashrae_90_1_2013.prototype_inputs.json\n[openstudio.standards.standard] <-2> Adding refrigerated_cases from ashrae_90_1_2013.ref_cases.json\n[openstudio.standards.standard] <-2> Adding refrigeration_system_lineup from ashrae_90_1_2013.ref_lnup.json\n[openstudio.standards.standard] <-2> Adding refrigeration_compressors from ashrae_90_1_2013.refrigeration_compressors.json\n[openstudio.standards.standard] <-2> Adding refrigeration_condenser from ashrae_90_1_2013.refrigeration_condenser.json\n[openstudio.standards.standard] <-2> Adding refrigeration_system from ashrae_90_1_2013.refrigeration_system.json\n[openstudio.standards.standard] <-2> Adding refrigeration_walkins from ashrae_90_1_2013.refrigeration_walkins.json\n[openstudio.standards.standard] <-2> Adding space_types from ashrae_90_1_2013.spc_typ.json\n[openstudio.standards.standard] <-2> Adding unitary_acs from ashrae_90_1_2013.unitary_acs.json\n[openstudio.standards.standard] <-2> Adding water_heaters from ashrae_90_1_2013.water_heaters.json\n[openstudio.standards.standard] <-2> Adding water_source_heat_pumps from ashrae_90_1_2013.water_source_heat_pumps.json\n[openstudio.standards.standard] <-2> Adding water_source_heat_pumps_heating from ashrae_90_1_2013.water_source_heat_pumps_heating.json\n[openstudio.standards.standard] <-1> Using OpenStudio Standards version 0.2.10 with template 90.1-2013.\n[openstudio.standards.standard] <-1> Loading OpenStudio Standards data for 90.1-2013\n[openstudio.standards.standard] <-2> Loading JSON files from OpenStudio CLI embedded directory :/ruby/2.2.0/gems/openstudio-standards-0.2.10/lib/openstudio-standards/standards/ashrae_90_1\n[openstudio.standards.standard] <-2> Adding hvac_inference from Any.hvac_inference.json\n[openstudio.standards.standard] <-2> Adding size_category from Any.size_category.json\n[openstudio.standards.standard] <-2> Adding climate_zone_sets from ashrae_90_1.climate_zone_sets.json\n[openstudio.standards.standard] <-2> Adding climate_zones from ashrae_90_1.climate_zones.json\n[openstudio.standards.standard] <-2> Adding constructions from ashrae_90_1.constructions.json\n[openstudio.standards.standard] <-2> Adding curves from ashrae_90_1.curves.json\n[openstudio.standards.standard] <-2> Adding entryways from ashrae_90_1.entryways.json\n[openstudio.standards.standard] <-2> Adding fans from ashrae_90_1.fans.json\n[openstudio.standards.standard] <-2> Adding materials from ashrae_90_1.materials.json\n[openstudio.standards.standard] <-2> Adding parking from ashrae_90_1.parking.json\n[openstudio.standards.standard] <-2> Adding schedules from ashrae_90_1.schedules.json\n[openstudio.standards.standard] <-2> Loading JSON files from OpenStudio CLI embedded directory :/ruby/2.2.0/gems/openstudio-standards-0.2.10/lib/openstudio-standards/standards/ashrae_90_1/ashrae_90_1_2013\n[openstudio.standards.standard] <-2> Adding boilers from ashrae_90_1_2013.boilers.json\n[openstudio.standards.standard] <-2> Adding chillers from ashrae_90_1_2013.chillers.json\n[openstudio.standards.standard] <-2> Adding construction_properties from ashrae_90_1_2013.construction_properties.json\n[openstudio.standards.standard] <-2> Adding construction_sets from ashrae_90_1_2013.construction_sets.json\n[openstudio.standards.standard] <-2> Adding economizers from ashrae_90_1_2013.economizers.json\n[openstudio.standards.standard] <-2> Adding elevators from ashrae_90_1_2013.elevators.json\n[openstudio.standards.standard] <-2> Adding exterior_lighting from ashrae_90_1_2013.ext_ltg.json\n[openstudio.standards.standard] <-2> Adding ground_temperatures from ashrae_90_1_2013.ground_temperatures.json\n[openstudio.standards.standard] <-2> Adding heat_pumps from ashrae_90_1_2013.heat_pumps.json\n[openstudio.standards.standard] <-2> Adding heat_pumps_heating from ashrae_90_1_2013.heat_pumps_heating.json\n[openstudio.standards.standard] <-2> Adding heat_rejection from ashrae_90_1_2013.heat_rejection.json\n[openstudio.standards.standard] <-2> Adding motors from ashrae_90_1_2013.motors.json\n[openstudio.standards.standard] <-2> Adding prototype_inputs from ashrae_90_1_2013.prototype_inputs.json\n[openstudio.standards.standard] <-2> Adding refrigerated_cases from ashrae_90_1_2013.ref_cases.json\n[openstudio.standards.standard] <-2> Adding refrigeration_system_lineup from ashrae_90_1_2013.ref_lnup.json\n[openstudio.standards.standard] <-2> Adding refrigeration_compressors from ashrae_90_1_2013.refrigeration_compressors.json\n[openstudio.standards.standard] <-2> Adding refrigeration_condenser from ashrae_90_1_2013.refrigeration_condenser.json\n[openstudio.standards.standard] <-2> Adding refrigeration_system from ashrae_90_1_2013.refrigeration_system.json\n[openstudio.standards.standard] <-2> Adding refrigeration_walkins from ashrae_90_1_2013.refrigeration_walkins.json\n[openstudio.standards.standard] <-2> Adding space_types from ashrae_90_1_2013.spc_typ.json\n[openstudio.standards.standard] <-2> Adding unitary_acs from ashrae_90_1_2013.unitary_acs.json\n[openstudio.standards.standard] <-2> Adding water_heaters from ashrae_90_1_2013.water_heaters.json\n[openstudio.standards.standard] <-2> Adding water_source_heat_pumps from ashrae_90_1_2013.water_source_heat_pumps.json\n[openstudio.standards.standard] <-2> Adding water_source_heat_pumps_heating from ashrae_90_1_2013.water_source_heat_pumps_heating.json\n[openstudio.energyplus.SqlFile] <-2> Making time series for envPeriod = 'RUN PERIOD 1', reportingFrequency = 'Monthly', timeSeriesName = 'Site Outdoor Air Drybulb Temperature', keyValue = 'Environment'\n[openstudio.energyplus.SqlFile] <-2> RUN PERIOD 1\n[openstudio.energyplus.SqlFile] <-2> Site Outdoor Air Drybulb Temperature\n[openstudio.energyplus.SqlFile] <-2> SQL Query:\nSELECT dt.VariableValue, Time.Year, Time.Month, Time.Day, Time.Interval FROM ReportVariableData dt INNER JOIN Time ON Time.timeIndex = dt.TimeIndex WHERE  dt.ReportVariableDataDictionaryIndex=7 AND Time.EnvironmentPeriodIndex = 8Return Code:\n100\n[openstudio.energyplus.SqlFile] <-2> Time series found\n[openstudio.energyplus.SqlFile] <-2> Making time series for envPeriod = 'RUN PERIOD 1', reportingFrequency = 'Hourly', timeSeriesName = 'Zone Air Temperature', keyValue = 'THERMAL ZONE 1'\n[openstudio.energyplus.SqlFile] <-2> RUN PERIOD 1\n[openstudio.energyplus.SqlFile] <-2> Zone Air Temperature\n[openstudio.energyplus.SqlFile] <-2> SQL Query:\nSELECT dt.VariableValue, Time.Year, Time.Month, Time.Day, Time.Interval FROM ReportVariableData dt INNER JOIN Time ON Time.timeIndex = dt.TimeIndex WHERE  dt.ReportVariableDataDictionaryIndex=584 AND Time.EnvironmentPeriodIndex = 8Return Code:\n100\n[openstudio.energyplus.SqlFile] <-2> Time series found\n[openstudio.energyplus.SqlFile] <-2> Making time series for envPeriod = 'RUN PERIOD 1', reportingFrequency = 'Hourly', timeSeriesName = 'Zone Air Temperature', keyValue = 'THERMAL ZONE 10'\n[openstudio.energyplus.SqlFile] <-2> RUN PERIOD 1\n[openstudio.energyplus.SqlFile] <-2> Zone Air Temperature\n[openstudio.energyplus.SqlFile] <-2> SQL Query:\nSELECT dt.VariableValue, Time.Year, Time.Month, Time.Day, Time.Interval FROM ReportVariableData dt INNER JOIN Time ON Time.timeIndex = dt.TimeIndex WHERE  dt.ReportVariableDataDictionaryIndex=625 AND Time.EnvironmentPeriodIndex = 8Return Code:\n100\n[openstudio.energyplus.SqlFile] <-2> Time series found\n[openstudio.energyplus.SqlFile] <-2> Making time series for envPeriod = 'RUN PERIOD 1', reportingFrequency = 'Hourly', timeSeriesName = 'Zone Air Temperature', keyValue = 'THERMAL ZONE 11'\n[openstudio.energyplus.SqlFile] <-2> RUN PERIOD 1\n[openstudio.energyplus.SqlFile] <-2> Zone Air Temperature\n[openstudio.energyplus.SqlFile] <-2> SQL Query:\nSELECT dt.VariableValue, Time.Year, Time.Month, Time.Day, Time.Interval FROM ReportVariableData dt INNER JOIN Time ON Time.timeIndex = dt.TimeIndex WHERE  dt.ReportVariableDataDictionaryIndex=666 AND Time.EnvironmentPeriodIndex = 8Return Code:\n100\n[openstudio.energyplus.SqlFile] <-2> Time series found\n[openstudio.energyplus.SqlFile] <-2> Making time series for envPeriod = 'RUN PERIOD 1', reportingFrequency = 'Hourly', timeSeriesName = 'Zone Air Temperature', keyValue = 'THERMAL ZONE 3'\n[openstudio.energyplus.SqlFile] <-2> RUN PERIOD 1\n[openstudio.energyplus.SqlFile] <-2> Zone Air Temperature\n[openstudio.energyplus.SqlFile] <-2> SQL Query:\nSELECT dt.VariableValue, Time.Year, Time.Month, Time.Day, Time.Interval FROM ReportVariableData dt INNER JOIN Time ON Time.timeIndex = dt.TimeIndex WHERE  dt.ReportVariableDataDictionaryIndex=707 AND Time.EnvironmentPeriodIndex = 8Return Code:\n100\n[openstudio.energyplus.SqlFile] <-2> Time series found\n[openstudio.energyplus.SqlFile] <-2> Making time series for envPeriod = 'RUN PERIOD 1', reportingFrequency = 'Hourly', timeSeriesName = 'Zone Air Temperature', keyValue = 'THERMAL ZONE 4'\n[openstudio.energyplus.SqlFile] <-2> RUN PERIOD 1\n[openstudio.energyplus.SqlFile] <-2> Zone Air Temperature\n[openstudio.energyplus.SqlFile] <-2> SQL Query:\nSELECT dt.VariableValue, Time.Year, Time.Month, Time.Day, Time.Interval FROM ReportVariableData dt INNER JOIN Time ON Time.timeIndex = dt.TimeIndex WHERE  dt.ReportVariableDataDictionaryIndex=748 AND Time.EnvironmentPeriodIndex = 8Return Code:\n100\n[openstudio.energyplus.SqlFile] <-2> Time series found\n[openstudio.energyplus.SqlFile] <-2> Making time series for envPeriod = 'RUN PERIOD 1', reportingFrequency = 'Hourly', timeSeriesName = 'Zone Air Temperature', keyValue = 'THERMAL ZONE 5'\n[openstudio.energyplus.SqlFile] <-2> RUN PERIOD 1\n[openstudio.energyplus.SqlFile] <-2> Zone Air Temperature\n[openstudio.energyplus.SqlFile] <-2> SQL Query:\nSELECT dt.VariableValue, Time.Year, Time.Month, Time.Day, Time.Interval FROM ReportVariableData dt INNER JOIN Time ON Time.timeIndex = dt.TimeIndex WHERE  dt.ReportVariableDataDictionaryIndex=789 AND Time.EnvironmentPeriodIndex = 8Return Code:\n100\n[openstudio.energyplus.SqlFile] <-2> Time series found\n[openstudio.energyplus.SqlFile] <-2> Making time series for envPeriod = 'RUN PERIOD 1', reportingFrequency = 'Hourly', timeSeriesName = 'Zone Air Temperature', keyValue = 'THERMAL ZONE 6'\n[openstudio.energyplus.SqlFile] <-2> RUN PERIOD 1\n[openstudio.energyplus.SqlFile] <-2> Zone Air Temperature\n[openstudio.energyplus.SqlFile] <-2> SQL Query:\nSELECT dt.VariableValue, Time.Year, Time.Month, Time.Day, Time.Interval FROM ReportVariableData dt INNER JOIN Time ON Time.timeIndex = dt.TimeIndex WHERE  dt.ReportVariableDataDictionaryIndex=830 AND Time.EnvironmentPeriodIndex = 8Return Code:\n100\n[openstudio.energyplus.SqlFile] <-2> Time series found\n[openstudio.energyplus.SqlFile] <-2> Making time series for envPeriod = 'RUN PERIOD 1', reportingFrequency = 'Hourly', timeSeriesName = 'Zone Air Temperature', keyValue = 'THERMAL ZONE 7'\n[openstudio.energyplus.SqlFile] <-2> RUN PERIOD 1\n[openstudio.energyplus.SqlFile] <-2> Zone Air Temperature\n[openstudio.energyplus.SqlFile] <-2> SQL Query:\nSELECT dt.VariableValue, Time.Year, Time.Month, Time.Day, Time.Interval FROM ReportVariableData dt INNER JOIN Time ON Time.timeIndex = dt.TimeIndex WHERE  dt.ReportVariableDataDictionaryIndex=871 AND Time.EnvironmentPeriodIndex = 8Return Code:\n100\n[openstudio.energyplus.SqlFile] <-2> Time series found\n[openstudio.energyplus.SqlFile] <-2> Making time series for envPeriod = 'RUN PERIOD 1', reportingFrequency = 'Hourly', timeSeriesName = 'Zone Air Temperature', keyValue = 'THERMAL ZONE 8'\n[openstudio.energyplus.SqlFile] <-2> RUN PERIOD 1\n[openstudio.energyplus.SqlFile] <-2> Zone Air Temperature\n[openstudio.energyplus.SqlFile] <-2> SQL Query:\nSELECT dt.VariableValue, Time.Year, Time.Month, Time.Day, Time.Interval FROM ReportVariableData dt INNER JOIN Time ON Time.timeIndex = dt.TimeIndex WHERE  dt.ReportVariableDataDictionaryIndex=912 AND Time.EnvironmentPeriodIndex = 8Return Code:\n100\n[openstudio.energyplus.SqlFile] <-2> Time series found\n[openstudio.energyplus.SqlFile] <-2> Making time series for envPeriod = 'RUN PERIOD 1', reportingFrequency = 'Hourly', timeSeriesName = 'Zone Air Temperature', keyValue = 'THERMAL ZONE 9'\n[openstudio.energyplus.SqlFile] <-2> RUN PERIOD 1\n[openstudio.energyplus.SqlFile] <-2> Zone Air Temperature\n[openstudio.energyplus.SqlFile] <-2> SQL Query:\nSELECT dt.VariableValue, Time.Year, Time.Month, Time.Day, Time.Interval FROM ReportVariableData dt INNER JOIN Time ON Time.timeIndex = dt.TimeIndex WHERE  dt.ReportVariableDataDictionaryIndex=953 AND Time.EnvironmentPeriodIndex = 8Return Code:\n100\n[openstudio.energyplus.SqlFile] <-2> Time series found\n[openstudio.energyplus.SqlFile] <-2> Making time series for envPeriod = 'RUN PERIOD 1', reportingFrequency = 'Hourly', timeSeriesName = 'Zone Air Relative Humidity', keyValue = 'THERMAL ZONE 1'\n[openstudio.energyplus.SqlFile] <-2> RUN PERIOD 1\n[openstudio.energyplus.SqlFile] <-2> Zone Air Relative Humidity\n[openstudio.energyplus.SqlFile] <-2> SQL Query:\nSELECT dt.VariableValue, Time.Year, Time.Month, Time.Day, Time.Interval FROM ReportVariableData dt INNER JOIN Time ON Time.timeIndex = dt.TimeIndex WHERE  dt.ReportVariableDataDictionaryIndex=585 AND Time.EnvironmentPeriodIndex = 8Return Code:\n100\n[openstudio.energyplus.SqlFile] <-2> Time series found\n[openstudio.energyplus.SqlFile] <-2> Making time series for envPeriod = 'RUN PERIOD 1', reportingFrequency = 'Hourly', timeSeriesName = 'Zone Air Relative Humidity', keyValue = 'THERMAL ZONE 10'\n[openstudio.energyplus.SqlFile] <-2> RUN PERIOD 1\n[openstudio.energyplus.SqlFile] <-2> Zone Air Relative Humidity\n[openstudio.energyplus.SqlFile] <-2> SQL Query:\nSELECT dt.VariableValue, Time.Year, Time.Month, Time.Day, Time.Interval FROM ReportVariableData dt INNER JOIN Time ON Time.timeIndex = dt.TimeIndex WHERE  dt.ReportVariableDataDictionaryIndex=626 AND Time.EnvironmentPeriodIndex = 8Return Code:\n100\n[openstudio.energyplus.SqlFile] <-2> Time series found\n[openstudio.energyplus.SqlFile] <-2> Making time series for envPeriod = 'RUN PERIOD 1', reportingFrequency = 'Hourly', timeSeriesName = 'Zone Air Relative Humidity', keyValue = 'THERMAL ZONE 11'\n[openstudio.energyplus.SqlFile] <-2> RUN PERIOD 1\n[openstudio.energyplus.SqlFile] <-2> Zone Air Relative Humidity\n[openstudio.energyplus.SqlFile] <-2> SQL Query:\nSELECT dt.VariableValue, Time.Year, Time.Month, Time.Day, Time.Interval FROM ReportVariableData dt INNER JOIN Time ON Time.timeIndex = dt.TimeIndex WHERE  dt.ReportVariableDataDictionaryIndex=667 AND Time.EnvironmentPeriodIndex = 8Return Code:\n100\n[openstudio.energyplus.SqlFile] <-2> Time series found\n[openstudio.energyplus.SqlFile] <-2> Making time series for envPeriod = 'RUN PERIOD 1', reportingFrequency = 'Hourly', timeSeriesName = 'Zone Air Relative Humidity', keyValue = 'THERMAL ZONE 3'\n[openstudio.energyplus.SqlFile] <-2> RUN PERIOD 1\n[openstudio.energyplus.SqlFile] <-2> Zone Air Relative Humidity\n[openstudio.energyplus.SqlFile] <-2> SQL Query:\nSELECT dt.VariableValue, Time.Year, Time.Month, Time.Day, Time.Interval FROM ReportVariableData dt INNER JOIN Time ON Time.timeIndex = dt.TimeIndex WHERE  dt.ReportVariableDataDictionaryIndex=708 AND Time.EnvironmentPeriodIndex = 8Return Code:\n100\n[openstudio.energyplus.SqlFile] <-2> Time series found\n[openstudio.energyplus.SqlFile] <-2> Making time series for envPeriod = 'RUN PERIOD 1', reportingFrequency = 'Hourly', timeSeriesName = 'Zone Air Relative Humidity', keyValue = 'THERMAL ZONE 4'\n[openstudio.energyplus.SqlFile] <-2> RUN PERIOD 1\n[openstudio.energyplus.SqlFile] <-2> Zone Air Relative Humidity\n[openstudio.energyplus.SqlFile] <-2> SQL Query:\nSELECT dt.VariableValue, Time.Year, Time.Month, Time.Day, Time.Interval FROM ReportVariableData dt INNER JOIN Time ON Time.timeIndex = dt.TimeIndex WHERE  dt.ReportVariableDataDictionaryIndex=749 AND Time.EnvironmentPeriodIndex = 8Return Code:\n100\n[openstudio.energyplus.SqlFile] <-2> Time series found\n[openstudio.energyplus.SqlFile] <-2> Making time series for envPeriod = 'RUN PERIOD 1', reportingFrequency = 'Hourly', timeSeriesName = 'Zone Air Relative Humidity', keyValue = 'THERMAL ZONE 5'\n[openstudio.energyplus.SqlFile] <-2> RUN PERIOD 1\n[openstudio.energyplus.SqlFile] <-2> Zone Air Relative Humidity\n[openstudio.energyplus.SqlFile] <-2> SQL Query:\nSELECT dt.VariableValue, Time.Year, Time.Month, Time.Day, Time.Interval FROM ReportVariableData dt INNER JOIN Time ON Time.timeIndex = dt.TimeIndex WHERE  dt.ReportVariableDataDictionaryIndex=790 AND Time.EnvironmentPeriodIndex = 8Return Code:\n100\n[openstudio.energyplus.SqlFile] <-2> Time series found\n[openstudio.energyplus.SqlFile] <-2> Making time series for envPeriod = 'RUN PERIOD 1', reportingFrequency = 'Hourly', timeSeriesName = 'Zone Air Relative Humidity', keyValue = 'THERMAL ZONE 6'\n[openstudio.energyplus.SqlFile] <-2> RUN PERIOD 1\n[openstudio.energyplus.SqlFile] <-2> Zone Air Relative Humidity\n[openstudio.energyplus.SqlFile] <-2> SQL Query:\nSELECT dt.VariableValue, Time.Year, Time.Month, Time.Day, Time.Interval FROM ReportVariableData dt INNER JOIN Time ON Time.timeIndex = dt.TimeIndex WHERE  dt.ReportVariableDataDictionaryIndex=831 AND Time.EnvironmentPeriodIndex = 8Return Code:\n100\n[openstudio.energyplus.SqlFile] <-2> Time series found\n[openstudio.energyplus.SqlFile] <-2> Making time series for envPeriod = 'RUN PERIOD 1', reportingFrequency = 'Hourly', timeSeriesName = 'Zone Air Relative Humidity', keyValue = 'THERMAL ZONE 7'\n[openstudio.energyplus.SqlFile] <-2> RUN PERIOD 1\n[openstudio.energyplus.SqlFile] <-2> Zone Air Relative Humidity\n[openstudio.energyplus.SqlFile] <-2> SQL Query:\nSELECT dt.VariableValue, Time.Year, Time.Month, Time.Day, Time.Interval FROM ReportVariableData dt INNER JOIN Time ON Time.timeIndex = dt.TimeIndex WHERE  dt.ReportVariableDataDictionaryIndex=872 AND Time.EnvironmentPeriodIndex = 8Return Code:\n100\n[openstudio.energyplus.SqlFile] <-2> Time series found\n[openstudio.energyplus.SqlFile] <-2> Making time series for envPeriod = 'RUN PERIOD 1', reportingFrequency = 'Hourly', timeSeriesName = 'Zone Air Relative Humidity', keyValue = 'THERMAL ZONE 8'\n[openstudio.energyplus.SqlFile] <-2> RUN PERIOD 1\n[openstudio.energyplus.SqlFile] <-2> Zone Air Relative Humidity\n[openstudio.energyplus.SqlFile] <-2> SQL Query:\nSELECT dt.VariableValue, Time.Year, Time.Month, Time.Day, Time.Interval FROM ReportVariableData dt INNER JOIN Time ON Time.timeIndex = dt.TimeIndex WHERE  dt.ReportVariableDataDictionaryIndex=913 AND Time.EnvironmentPeriodIndex = 8Return Code:\n100\n[openstudio.energyplus.SqlFile] <-2> Time series found\n[openstudio.energyplus.SqlFile] <-2> Making time series for envPeriod = 'RUN PERIOD 1', reportingFrequency = 'Hourly', timeSeriesName = 'Zone Air Relative Humidity', keyValue = 'THERMAL ZONE 9'\n[openstudio.energyplus.SqlFile] <-2> RUN PERIOD 1\n[openstudio.energyplus.SqlFile] <-2> Zone Air Relative Humidity\n[openstudio.energyplus.SqlFile] <-2> SQL Query:\nSELECT dt.VariableValue, Time.Year, Time.Month, Time.Day, Time.Interval FROM ReportVariableData dt INNER JOIN Time ON Time.timeIndex = dt.TimeIndex WHERE  dt.ReportVariableDataDictionaryIndex=954 AND Time.EnvironmentPeriodIndex = 8Return Code:\n100\n[openstudio.energyplus.SqlFile] <-2> Time series found\n[openstudio.WorkflowStepResult] <-2> WorkflowStepResult::warnings is deprecated, use stepWarnings instead\n[openstudio.WorkflowStepResult] <-2> WorkflowStepResult::warnings is deprecated, use stepWarnings instead\n[openstudio.WorkflowStepResult] <-2> WorkflowStepResult::warnings is deprecated, use stepWarnings instead\n[openstudio.WorkflowStepResult] <-2> WorkflowStepResult::warnings is deprecated, use stepWarnings instead\n",
+            "stdout": "[openstudio.energyplus.SqlFile] <-2> Dictionary Built\n[openstudio.standards.standard] <-1> Using OpenStudio Standards version 0.2.10 with template 90.1-2013.\n[openstudio.standards.standard] <-1> Loading OpenStudio Standards data for 90.1-2013\n[openstudio.standards.standard] <-2> Loading JSON files from OpenStudio CLI embedded directory :/ruby/2.2.0/gems/openstudio-standards-0.2.10/lib/openstudio-standards/standards/ashrae_90_1\n[openstudio.standards.standard] <-2> Adding hvac_inference from Any.hvac_inference.json\n[openstudio.standards.standard] <-2> Adding size_category from Any.size_category.json\n[openstudio.standards.standard] <-2> Adding climate_zone_sets from ashrae_90_1.climate_zone_sets.json\n[openstudio.standards.standard] <-2> Adding climate_zones from ashrae_90_1.climate_zones.json\n[openstudio.standards.standard] <-2> Adding constructions from ashrae_90_1.constructions.json\n[openstudio.standards.standard] <-2> Adding curves from ashrae_90_1.curves.json\n[openstudio.standards.standard] <-2> Adding entryways from ashrae_90_1.entryways.json\n[openstudio.standards.standard] <-2> Adding fans from ashrae_90_1.fans.json\n[openstudio.standards.standard] <-2> Adding materials from ashrae_90_1.materials.json\n[openstudio.standards.standard] <-2> Adding parking from ashrae_90_1.parking.json\n[openstudio.standards.standard] <-2> Adding schedules from ashrae_90_1.schedules.json\n[openstudio.standards.standard] <-2> Loading JSON files from OpenStudio CLI embedded directory :/ruby/2.2.0/gems/openstudio-standards-0.2.10/lib/openstudio-standards/standards/ashrae_90_1/ashrae_90_1_2013\n[openstudio.standards.standard] <-2> Adding boilers from ashrae_90_1_2013.boilers.json\n[openstudio.standards.standard] <-2> Adding chillers from ashrae_90_1_2013.chillers.json\n[openstudio.standards.standard] <-2> Adding construction_properties from ashrae_90_1_2013.construction_properties.json\n[openstudio.standards.standard] <-2> Adding construction_sets from ashrae_90_1_2013.construction_sets.json\n[openstudio.standards.standard] <-2> Adding economizers from ashrae_90_1_2013.economizers.json\n[openstudio.standards.standard] <-2> Adding elevators from ashrae_90_1_2013.elevators.json\n[openstudio.standards.standard] <-2> Adding exterior_lighting from ashrae_90_1_2013.ext_ltg.json\n[openstudio.standards.standard] <-2> Adding ground_temperatures from ashrae_90_1_2013.ground_temperatures.json\n[openstudio.standards.standard] <-2> Adding heat_pumps from ashrae_90_1_2013.heat_pumps.json\n[openstudio.standards.standard] <-2> Adding heat_pumps_heating from ashrae_90_1_2013.heat_pumps_heating.json\n[openstudio.standards.standard] <-2> Adding heat_rejection from ashrae_90_1_2013.heat_rejection.json\n[openstudio.standards.standard] <-2> Adding motors from ashrae_90_1_2013.motors.json\n[openstudio.standards.standard] <-2> Adding prototype_inputs from ashrae_90_1_2013.prototype_inputs.json\n[openstudio.standards.standard] <-2> Adding refrigerated_cases from ashrae_90_1_2013.ref_cases.json\n[openstudio.standards.standard] <-2> Adding refrigeration_system_lineup from ashrae_90_1_2013.ref_lnup.json\n[openstudio.standards.standard] <-2> Adding refrigeration_compressors from ashrae_90_1_2013.refrigeration_compressors.json\n[openstudio.standards.standard] <-2> Adding refrigeration_condenser from ashrae_90_1_2013.refrigeration_condenser.json\n[openstudio.standards.standard] <-2> Adding refrigeration_system from ashrae_90_1_2013.refrigeration_system.json\n[openstudio.standards.standard] <-2> Adding refrigeration_walkins from ashrae_90_1_2013.refrigeration_walkins.json\n[openstudio.standards.standard] <-2> Adding space_types from ashrae_90_1_2013.spc_typ.json\n[openstudio.standards.standard] <-2> Adding unitary_acs from ashrae_90_1_2013.unitary_acs.json\n[openstudio.standards.standard] <-2> Adding water_heaters from ashrae_90_1_2013.water_heaters.json\n[openstudio.standards.standard] <-2> Adding water_source_heat_pumps from ashrae_90_1_2013.water_source_heat_pumps.json\n[openstudio.standards.standard] <-2> Adding water_source_heat_pumps_heating from ashrae_90_1_2013.water_source_heat_pumps_heating.json\n[openstudio.standards.standard] <-1> Using OpenStudio Standards version 0.2.10 with template 90.1-2013.\n[openstudio.standards.standard] <-1> Loading OpenStudio Standards data for 90.1-2013\n[openstudio.standards.standard] <-2> Loading JSON files from OpenStudio CLI embedded directory :/ruby/2.2.0/gems/openstudio-standards-0.2.10/lib/openstudio-standards/standards/ashrae_90_1\n[openstudio.standards.standard] <-2> Adding hvac_inference from Any.hvac_inference.json\n[openstudio.standards.standard] <-2> Adding size_category from Any.size_category.json\n[openstudio.standards.standard] <-2> Adding climate_zone_sets from ashrae_90_1.climate_zone_sets.json\n[openstudio.standards.standard] <-2> Adding climate_zones from ashrae_90_1.climate_zones.json\n[openstudio.standards.standard] <-2> Adding constructions from ashrae_90_1.constructions.json\n[openstudio.standards.standard] <-2> Adding curves from ashrae_90_1.curves.json\n[openstudio.standards.standard] <-2> Adding entryways from ashrae_90_1.entryways.json\n[openstudio.standards.standard] <-2> Adding fans from ashrae_90_1.fans.json\n[openstudio.standards.standard] <-2> Adding materials from ashrae_90_1.materials.json\n[openstudio.standards.standard] <-2> Adding parking from ashrae_90_1.parking.json\n[openstudio.standards.standard] <-2> Adding schedules from ashrae_90_1.schedules.json\n[openstudio.standards.standard] <-2> Loading JSON files from OpenStudio CLI embedded directory :/ruby/2.2.0/gems/openstudio-standards-0.2.10/lib/openstudio-standards/standards/ashrae_90_1/ashrae_90_1_2013\n[openstudio.standards.standard] <-2> Adding boilers from ashrae_90_1_2013.boilers.json\n[openstudio.standards.standard] <-2> Adding chillers from ashrae_90_1_2013.chillers.json\n[openstudio.standards.standard] <-2> Adding construction_properties from ashrae_90_1_2013.construction_properties.json\n[openstudio.standards.standard] <-2> Adding construction_sets from ashrae_90_1_2013.construction_sets.json\n[openstudio.standards.standard] <-2> Adding economizers from ashrae_90_1_2013.economizers.json\n[openstudio.standards.standard] <-2> Adding elevators from ashrae_90_1_2013.elevators.json\n[openstudio.standards.standard] <-2> Adding exterior_lighting from ashrae_90_1_2013.ext_ltg.json\n[openstudio.standards.standard] <-2> Adding ground_temperatures from ashrae_90_1_2013.ground_temperatures.json\n[openstudio.standards.standard] <-2> Adding heat_pumps from ashrae_90_1_2013.heat_pumps.json\n[openstudio.standards.standard] <-2> Adding heat_pumps_heating from ashrae_90_1_2013.heat_pumps_heating.json\n[openstudio.standards.standard] <-2> Adding heat_rejection from ashrae_90_1_2013.heat_rejection.json\n[openstudio.standards.standard] <-2> Adding motors from ashrae_90_1_2013.motors.json\n[openstudio.standards.standard] <-2> Adding prototype_inputs from ashrae_90_1_2013.prototype_inputs.json\n[openstudio.standards.standard] <-2> Adding refrigerated_cases from ashrae_90_1_2013.ref_cases.json\n[openstudio.standards.standard] <-2> Adding refrigeration_system_lineup from ashrae_90_1_2013.ref_lnup.json\n[openstudio.standards.standard] <-2> Adding refrigeration_compressors from ashrae_90_1_2013.refrigeration_compressors.json\n[openstudio.standards.standard] <-2> Adding refrigeration_condenser from ashrae_90_1_2013.refrigeration_condenser.json\n[openstudio.standards.standard] <-2> Adding refrigeration_system from ashrae_90_1_2013.refrigeration_system.json\n[openstudio.standards.standard] <-2> Adding refrigeration_walkins from ashrae_90_1_2013.refrigeration_walkins.json\n[openstudio.standards.standard] <-2> Adding space_types from ashrae_90_1_2013.spc_typ.json\n[openstudio.standards.standard] <-2> Adding unitary_acs from ashrae_90_1_2013.unitary_acs.json\n[openstudio.standards.standard] <-2> Adding water_heaters from ashrae_90_1_2013.water_heaters.json\n[openstudio.standards.standard] <-2> Adding water_source_heat_pumps from ashrae_90_1_2013.water_source_heat_pumps.json\n[openstudio.standards.standard] <-2> Adding water_source_heat_pumps_heating from ashrae_90_1_2013.water_source_heat_pumps_heating.json\n[openstudio.standards.standard] <-1> Using OpenStudio Standards version 0.2.10 with template 90.1-2013.\n[openstudio.standards.standard] <-1> Loading OpenStudio Standards data for 90.1-2013\n[openstudio.standards.standard] <-2> Loading JSON files from OpenStudio CLI embedded directory :/ruby/2.2.0/gems/openstudio-standards-0.2.10/lib/openstudio-standards/standards/ashrae_90_1\n[openstudio.standards.standard] <-2> Adding hvac_inference from Any.hvac_inference.json\n[openstudio.standards.standard] <-2> Adding size_category from Any.size_category.json\n[openstudio.standards.standard] <-2> Adding climate_zone_sets from ashrae_90_1.climate_zone_sets.json\n[openstudio.standards.standard] <-2> Adding climate_zones from ashrae_90_1.climate_zones.json\n[openstudio.standards.standard] <-2> Adding constructions from ashrae_90_1.constructions.json\n[openstudio.standards.standard] <-2> Adding curves from ashrae_90_1.curves.json\n[openstudio.standards.standard] <-2> Adding entryways from ashrae_90_1.entryways.json\n[openstudio.standards.standard] <-2> Adding fans from ashrae_90_1.fans.json\n[openstudio.standards.standard] <-2> Adding materials from ashrae_90_1.materials.json\n[openstudio.standards.standard] <-2> Adding parking from ashrae_90_1.parking.json\n[openstudio.standards.standard] <-2> Adding schedules from ashrae_90_1.schedules.json\n[openstudio.standards.standard] <-2> Loading JSON files from OpenStudio CLI embedded directory :/ruby/2.2.0/gems/openstudio-standards-0.2.10/lib/openstudio-standards/standards/ashrae_90_1/ashrae_90_1_2013\n[openstudio.standards.standard] <-2> Adding boilers from ashrae_90_1_2013.boilers.json\n[openstudio.standards.standard] <-2> Adding chillers from ashrae_90_1_2013.chillers.json\n[openstudio.standards.standard] <-2> Adding construction_properties from ashrae_90_1_2013.construction_properties.json\n[openstudio.standards.standard] <-2> Adding construction_sets from ashrae_90_1_2013.construction_sets.json\n[openstudio.standards.standard] <-2> Adding economizers from ashrae_90_1_2013.economizers.json\n[openstudio.standards.standard] <-2> Adding elevators from ashrae_90_1_2013.elevators.json\n[openstudio.standards.standard] <-2> Adding exterior_lighting from ashrae_90_1_2013.ext_ltg.json\n[openstudio.standards.standard] <-2> Adding ground_temperatures from ashrae_90_1_2013.ground_temperatures.json\n[openstudio.standards.standard] <-2> Adding heat_pumps from ashrae_90_1_2013.heat_pumps.json\n[openstudio.standards.standard] <-2> Adding heat_pumps_heating from ashrae_90_1_2013.heat_pumps_heating.json\n[openstudio.standards.standard] <-2> Adding heat_rejection from ashrae_90_1_2013.heat_rejection.json\n[openstudio.standards.standard] <-2> Adding motors from ashrae_90_1_2013.motors.json\n[openstudio.standards.standard] <-2> Adding prototype_inputs from ashrae_90_1_2013.prototype_inputs.json\n[openstudio.standards.standard] <-2> Adding refrigerated_cases from ashrae_90_1_2013.ref_cases.json\n[openstudio.standards.standard] <-2> Adding refrigeration_system_lineup from ashrae_90_1_2013.ref_lnup.json\n[openstudio.standards.standard] <-2> Adding refrigeration_compressors from ashrae_90_1_2013.refrigeration_compressors.json\n[openstudio.standards.standard] <-2> Adding refrigeration_condenser from ashrae_90_1_2013.refrigeration_condenser.json\n[openstudio.standards.standard] <-2> Adding refrigeration_system from ashrae_90_1_2013.refrigeration_system.json\n[openstudio.standards.standard] <-2> Adding refrigeration_walkins from ashrae_90_1_2013.refrigeration_walkins.json\n[openstudio.standards.standard] <-2> Adding space_types from ashrae_90_1_2013.spc_typ.json\n[openstudio.standards.standard] <-2> Adding unitary_acs from ashrae_90_1_2013.unitary_acs.json\n[openstudio.standards.standard] <-2> Adding water_heaters from ashrae_90_1_2013.water_heaters.json\n[openstudio.standards.standard] <-2> Adding water_source_heat_pumps from ashrae_90_1_2013.water_source_heat_pumps.json\n[openstudio.standards.standard] <-2> Adding water_source_heat_pumps_heating from ashrae_90_1_2013.water_source_heat_pumps_heating.json\n[openstudio.energyplus.SqlFile] <-2> Making time series for envPeriod = 'RUN PERIOD 1', reportingFrequency = 'Monthly', timeSeriesName = 'Site Outdoor Air Drybulb Temperature', keyValue = 'Environment'\n[openstudio.energyplus.SqlFile] <-2> RUN PERIOD 1\n[openstudio.energyplus.SqlFile] <-2> Site Outdoor Air Drybulb Temperature\n[openstudio.energyplus.SqlFile] <-2> SQL Query:\nSELECT dt.VariableValue, Time.Year, Time.Month, Time.Day, Time.Interval FROM ReportVariableData dt INNER JOIN Time ON Time.timeIndex = dt.TimeIndex WHERE  dt.ReportVariableDataDictionaryIndex=7 AND Time.EnvironmentPeriodIndex = 8Return Code:\n100\n[openstudio.energyplus.SqlFile] <-2> Time series found\n[openstudio.energyplus.SqlFile] <-2> Making time series for envPeriod = 'RUN PERIOD 1', reportingFrequency = 'Hourly', timeSeriesName = 'Zone Air Temperature', keyValue = 'THERMAL ZONE 1'\n[openstudio.energyplus.SqlFile] <-2> RUN PERIOD 1\n[openstudio.energyplus.SqlFile] <-2> Zone Air Temperature\n[openstudio.energyplus.SqlFile] <-2> SQL Query:\nSELECT dt.VariableValue, Time.Year, Time.Month, Time.Day, Time.Interval FROM ReportVariableData dt INNER JOIN Time ON Time.timeIndex = dt.TimeIndex WHERE  dt.ReportVariableDataDictionaryIndex=584 AND Time.EnvironmentPeriodIndex = 8Return Code:\n100\n[openstudio.energyplus.SqlFile] <-2> Time series found\n[openstudio.energyplus.SqlFile] <-2> Making time series for envPeriod = 'RUN PERIOD 1', reportingFrequency = 'Hourly', timeSeriesName = 'Zone Air Temperature', keyValue = 'THERMAL ZONE 10'\n[openstudio.energyplus.SqlFile] <-2> RUN PERIOD 1\n[openstudio.energyplus.SqlFile] <-2> Zone Air Temperature\n[openstudio.energyplus.SqlFile] <-2> SQL Query:\nSELECT dt.VariableValue, Time.Year, Time.Month, Time.Day, Time.Interval FROM ReportVariableData dt INNER JOIN Time ON Time.timeIndex = dt.TimeIndex WHERE  dt.ReportVariableDataDictionaryIndex=625 AND Time.EnvironmentPeriodIndex = 8Return Code:\n100\n[openstudio.energyplus.SqlFile] <-2> Time series found\n[openstudio.energyplus.SqlFile] <-2> Making time series for envPeriod = 'RUN PERIOD 1', reportingFrequency = 'Hourly', timeSeriesName = 'Zone Air Temperature', keyValue = 'THERMAL ZONE 11'\n[openstudio.energyplus.SqlFile] <-2> RUN PERIOD 1\n[openstudio.energyplus.SqlFile] <-2> Zone Air Temperature\n[openstudio.energyplus.SqlFile] <-2> SQL Query:\nSELECT dt.VariableValue, Time.Year, Time.Month, Time.Day, Time.Interval FROM ReportVariableData dt INNER JOIN Time ON Time.timeIndex = dt.TimeIndex WHERE  dt.ReportVariableDataDictionaryIndex=666 AND Time.EnvironmentPeriodIndex = 8Return Code:\n100\n[openstudio.energyplus.SqlFile] <-2> Time series found\n[openstudio.energyplus.SqlFile] <-2> Making time series for envPeriod = 'RUN PERIOD 1', reportingFrequency = 'Hourly', timeSeriesName = 'Zone Air Temperature', keyValue = 'THERMAL ZONE 3'\n[openstudio.energyplus.SqlFile] <-2> RUN PERIOD 1\n[openstudio.energyplus.SqlFile] <-2> Zone Air Temperature\n[openstudio.energyplus.SqlFile] <-2> SQL Query:\nSELECT dt.VariableValue, Time.Year, Time.Month, Time.Day, Time.Interval FROM ReportVariableData dt INNER JOIN Time ON Time.timeIndex = dt.TimeIndex WHERE  dt.ReportVariableDataDictionaryIndex=707 AND Time.EnvironmentPeriodIndex = 8Return Code:\n100\n[openstudio.energyplus.SqlFile] <-2> Time series found\n[openstudio.energyplus.SqlFile] <-2> Making time series for envPeriod = 'RUN PERIOD 1', reportingFrequency = 'Hourly', timeSeriesName = 'Zone Air Temperature', keyValue = 'THERMAL ZONE 4'\n[openstudio.energyplus.SqlFile] <-2> RUN PERIOD 1\n[openstudio.energyplus.SqlFile] <-2> Zone Air Temperature\n[openstudio.energyplus.SqlFile] <-2> SQL Query:\nSELECT dt.VariableValue, Time.Year, Time.Month, Time.Day, Time.Interval FROM ReportVariableData dt INNER JOIN Time ON Time.timeIndex = dt.TimeIndex WHERE  dt.ReportVariableDataDictionaryIndex=748 AND Time.EnvironmentPeriodIndex = 8Return Code:\n100\n[openstudio.energyplus.SqlFile] <-2> Time series found\n[openstudio.energyplus.SqlFile] <-2> Making time series for envPeriod = 'RUN PERIOD 1', reportingFrequency = 'Hourly', timeSeriesName = 'Zone Air Temperature', keyValue = 'THERMAL ZONE 5'\n[openstudio.energyplus.SqlFile] <-2> RUN PERIOD 1\n[openstudio.energyplus.SqlFile] <-2> Zone Air Temperature\n[openstudio.energyplus.SqlFile] <-2> SQL Query:\nSELECT dt.VariableValue, Time.Year, Time.Month, Time.Day, Time.Interval FROM ReportVariableData dt INNER JOIN Time ON Time.timeIndex = dt.TimeIndex WHERE  dt.ReportVariableDataDictionaryIndex=789 AND Time.EnvironmentPeriodIndex = 8Return Code:\n100\n[openstudio.energyplus.SqlFile] <-2> Time series found\n[openstudio.energyplus.SqlFile] <-2> Making time series for envPeriod = 'RUN PERIOD 1', reportingFrequency = 'Hourly', timeSeriesName = 'Zone Air Temperature', keyValue = 'THERMAL ZONE 6'\n[openstudio.energyplus.SqlFile] <-2> RUN PERIOD 1\n[openstudio.energyplus.SqlFile] <-2> Zone Air Temperature\n[openstudio.energyplus.SqlFile] <-2> SQL Query:\nSELECT dt.VariableValue, Time.Year, Time.Month, Time.Day, Time.Interval FROM ReportVariableData dt INNER JOIN Time ON Time.timeIndex = dt.TimeIndex WHERE  dt.ReportVariableDataDictionaryIndex=830 AND Time.EnvironmentPeriodIndex = 8Return Code:\n100\n[openstudio.energyplus.SqlFile] <-2> Time series found\n[openstudio.energyplus.SqlFile] <-2> Making time series for envPeriod = 'RUN PERIOD 1', reportingFrequency = 'Hourly', timeSeriesName = 'Zone Air Temperature', keyValue = 'THERMAL ZONE 7'\n[openstudio.energyplus.SqlFile] <-2> RUN PERIOD 1\n[openstudio.energyplus.SqlFile] <-2> Zone Air Temperature\n[openstudio.energyplus.SqlFile] <-2> SQL Query:\nSELECT dt.VariableValue, Time.Year, Time.Month, Time.Day, Time.Interval FROM ReportVariableData dt INNER JOIN Time ON Time.timeIndex = dt.TimeIndex WHERE  dt.ReportVariableDataDictionaryIndex=871 AND Time.EnvironmentPeriodIndex = 8Return Code:\n100\n[openstudio.energyplus.SqlFile] <-2> Time series found\n[openstudio.energyplus.SqlFile] <-2> Making time series for envPeriod = 'RUN PERIOD 1', reportingFrequency = 'Hourly', timeSeriesName = 'Zone Air Temperature', keyValue = 'THERMAL ZONE 8'\n[openstudio.energyplus.SqlFile] <-2> RUN PERIOD 1\n[openstudio.energyplus.SqlFile] <-2> Zone Air Temperature\n[openstudio.energyplus.SqlFile] <-2> SQL Query:\nSELECT dt.VariableValue, Time.Year, Time.Month, Time.Day, Time.Interval FROM ReportVariableData dt INNER JOIN Time ON Time.timeIndex = dt.TimeIndex WHERE  dt.ReportVariableDataDictionaryIndex=912 AND Time.EnvironmentPeriodIndex = 8Return Code:\n100\n[openstudio.energyplus.SqlFile] <-2> Time series found\n[openstudio.energyplus.SqlFile] <-2> Making time series for envPeriod = 'RUN PERIOD 1', reportingFrequency = 'Hourly', timeSeriesName = 'Zone Air Temperature', keyValue = 'THERMAL ZONE 9'\n[openstudio.energyplus.SqlFile] <-2> RUN PERIOD 1\n[openstudio.energyplus.SqlFile] <-2> Zone Air Temperature\n[openstudio.energyplus.SqlFile] <-2> SQL Query:\nSELECT dt.VariableValue, Time.Year, Time.Month, Time.Day, Time.Interval FROM ReportVariableData dt INNER JOIN Time ON Time.timeIndex = dt.TimeIndex WHERE  dt.ReportVariableDataDictionaryIndex=953 AND Time.EnvironmentPeriodIndex = 8Return Code:\n100\n[openstudio.energyplus.SqlFile] <-2> Time series found\n[openstudio.energyplus.SqlFile] <-2> Making time series for envPeriod = 'RUN PERIOD 1', reportingFrequency = 'Hourly', timeSeriesName = 'Zone Air Relative Humidity', keyValue = 'THERMAL ZONE 1'\n[openstudio.energyplus.SqlFile] <-2> RUN PERIOD 1\n[openstudio.energyplus.SqlFile] <-2> Zone Air Relative Humidity\n[openstudio.energyplus.SqlFile] <-2> SQL Query:\nSELECT dt.VariableValue, Time.Year, Time.Month, Time.Day, Time.Interval FROM ReportVariableData dt INNER JOIN Time ON Time.timeIndex = dt.TimeIndex WHERE  dt.ReportVariableDataDictionaryIndex=585 AND Time.EnvironmentPeriodIndex = 8Return Code:\n100\n[openstudio.energyplus.SqlFile] <-2> Time series found\n[openstudio.energyplus.SqlFile] <-2> Making time series for envPeriod = 'RUN PERIOD 1', reportingFrequency = 'Hourly', timeSeriesName = 'Zone Air Relative Humidity', keyValue = 'THERMAL ZONE 10'\n[openstudio.energyplus.SqlFile] <-2> RUN PERIOD 1\n[openstudio.energyplus.SqlFile] <-2> Zone Air Relative Humidity\n[openstudio.energyplus.SqlFile] <-2> SQL Query:\nSELECT dt.VariableValue, Time.Year, Time.Month, Time.Day, Time.Interval FROM ReportVariableData dt INNER JOIN Time ON Time.timeIndex = dt.TimeIndex WHERE  dt.ReportVariableDataDictionaryIndex=626 AND Time.EnvironmentPeriodIndex = 8Return Code:\n100\n[openstudio.energyplus.SqlFile] <-2> Time series found\n[openstudio.energyplus.SqlFile] <-2> Making time series for envPeriod = 'RUN PERIOD 1', reportingFrequency = 'Hourly', timeSeriesName = 'Zone Air Relative Humidity', keyValue = 'THERMAL ZONE 11'\n[openstudio.energyplus.SqlFile] <-2> RUN PERIOD 1\n[openstudio.energyplus.SqlFile] <-2> Zone Air Relative Humidity\n[openstudio.energyplus.SqlFile] <-2> SQL Query:\nSELECT dt.VariableValue, Time.Year, Time.Month, Time.Day, Time.Interval FROM ReportVariableData dt INNER JOIN Time ON Time.timeIndex = dt.TimeIndex WHERE  dt.ReportVariableDataDictionaryIndex=667 AND Time.EnvironmentPeriodIndex = 8Return Code:\n100\n[openstudio.energyplus.SqlFile] <-2> Time series found\n[openstudio.energyplus.SqlFile] <-2> Making time series for envPeriod = 'RUN PERIOD 1', reportingFrequency = 'Hourly', timeSeriesName = 'Zone Air Relative Humidity', keyValue = 'THERMAL ZONE 3'\n[openstudio.energyplus.SqlFile] <-2> RUN PERIOD 1\n[openstudio.energyplus.SqlFile] <-2> Zone Air Relative Humidity\n[openstudio.energyplus.SqlFile] <-2> SQL Query:\nSELECT dt.VariableValue, Time.Year, Time.Month, Time.Day, Time.Interval FROM ReportVariableData dt INNER JOIN Time ON Time.timeIndex = dt.TimeIndex WHERE  dt.ReportVariableDataDictionaryIndex=708 AND Time.EnvironmentPeriodIndex = 8Return Code:\n100\n[openstudio.energyplus.SqlFile] <-2> Time series found\n[openstudio.energyplus.SqlFile] <-2> Making time series for envPeriod = 'RUN PERIOD 1', reportingFrequency = 'Hourly', timeSeriesName = 'Zone Air Relative Humidity', keyValue = 'THERMAL ZONE 4'\n[openstudio.energyplus.SqlFile] <-2> RUN PERIOD 1\n[openstudio.energyplus.SqlFile] <-2> Zone Air Relative Humidity\n[openstudio.energyplus.SqlFile] <-2> SQL Query:\nSELECT dt.VariableValue, Time.Year, Time.Month, Time.Day, Time.Interval FROM ReportVariableData dt INNER JOIN Time ON Time.timeIndex = dt.TimeIndex WHERE  dt.ReportVariableDataDictionaryIndex=749 AND Time.EnvironmentPeriodIndex = 8Return Code:\n100\n[openstudio.energyplus.SqlFile] <-2> Time series found\n[openstudio.energyplus.SqlFile] <-2> Making time series for envPeriod = 'RUN PERIOD 1', reportingFrequency = 'Hourly', timeSeriesName = 'Zone Air Relative Humidity', keyValue = 'THERMAL ZONE 5'\n[openstudio.energyplus.SqlFile] <-2> RUN PERIOD 1\n[openstudio.energyplus.SqlFile] <-2> Zone Air Relative Humidity\n[openstudio.energyplus.SqlFile] <-2> SQL Query:\nSELECT dt.VariableValue, Time.Year, Time.Month, Time.Day, Time.Interval FROM ReportVariableData dt INNER JOIN Time ON Time.timeIndex = dt.TimeIndex WHERE  dt.ReportVariableDataDictionaryIndex=790 AND Time.EnvironmentPeriodIndex = 8Return Code:\n100\n[openstudio.energyplus.SqlFile] <-2> Time series found\n[openstudio.energyplus.SqlFile] <-2> Making time series for envPeriod = 'RUN PERIOD 1', reportingFrequency = 'Hourly', timeSeriesName = 'Zone Air Relative Humidity', keyValue = 'THERMAL ZONE 6'\n[openstudio.energyplus.SqlFile] <-2> RUN PERIOD 1\n[openstudio.energyplus.SqlFile] <-2> Zone Air Relative Humidity\n[openstudio.energyplus.SqlFile] <-2> SQL Query:\nSELECT dt.VariableValue, Time.Year, Time.Month, Time.Day, Time.Interval FROM ReportVariableData dt INNER JOIN Time ON Time.timeIndex = dt.TimeIndex WHERE  dt.ReportVariableDataDictionaryIndex=831 AND Time.EnvironmentPeriodIndex = 8Return Code:\n100\n[openstudio.energyplus.SqlFile] <-2> Time series found\n[openstudio.energyplus.SqlFile] <-2> Making time series for envPeriod = 'RUN PERIOD 1', reportingFrequency = 'Hourly', timeSeriesName = 'Zone Air Relative Humidity', keyValue = 'THERMAL ZONE 7'\n[openstudio.energyplus.SqlFile] <-2> RUN PERIOD 1\n[openstudio.energyplus.SqlFile] <-2> Zone Air Relative Humidity\n[openstudio.energyplus.SqlFile] <-2> SQL Query:\nSELECT dt.VariableValue, Time.Year, Time.Month, Time.Day, Time.Interval FROM ReportVariableData dt INNER JOIN Time ON Time.timeIndex = dt.TimeIndex WHERE  dt.ReportVariableDataDictionaryIndex=872 AND Time.EnvironmentPeriodIndex = 8Return Code:\n100\n[openstudio.energyplus.SqlFile] <-2> Time series found\n[openstudio.energyplus.SqlFile] <-2> Making time series for envPeriod = 'RUN PERIOD 1', reportingFrequency = 'Hourly', timeSeriesName = 'Zone Air Relative Humidity', keyValue = 'THERMAL ZONE 8'\n[openstudio.energyplus.SqlFile] <-2> RUN PERIOD 1\n[openstudio.energyplus.SqlFile] <-2> Zone Air Relative Humidity\n[openstudio.energyplus.SqlFile] <-2> SQL Query:\nSELECT dt.VariableValue, Time.Year, Time.Month, Time.Day, Time.Interval FROM ReportVariableData dt INNER JOIN Time ON Time.timeIndex = dt.TimeIndex WHERE  dt.ReportVariableDataDictionaryIndex=913 AND Time.EnvironmentPeriodIndex = 8Return Code:\n100\n[openstudio.energyplus.SqlFile] <-2> Time series found\n[openstudio.energyplus.SqlFile] <-2> Making time series for envPeriod = 'RUN PERIOD 1', reportingFrequency = 'Hourly', timeSeriesName = 'Zone Air Relative Humidity', keyValue = 'THERMAL ZONE 9'\n[openstudio.energyplus.SqlFile] <-2> RUN PERIOD 1\n[openstudio.energyplus.SqlFile] <-2> Zone Air Relative Humidity\n[openstudio.energyplus.SqlFile] <-2> SQL Query:\nSELECT dt.VariableValue, Time.Year, Time.Month, Time.Day, Time.Interval FROM ReportVariableData dt INNER JOIN Time ON Time.timeIndex = dt.TimeIndex WHERE  dt.ReportVariableDataDictionaryIndex=954 AND Time.EnvironmentPeriodIndex = 8Return Code:\n100\n[openstudio.energyplus.SqlFile] <-2> Time series found\n[openstudio.WorkflowStepResult] <-2> WorkflowStepResult::warnings is deprecated, use stepWarnings instead\n",
             "step_errors": [],
             "step_files": [
-              "/Users/kingsleyenweye/Desktop/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/temp_data/analysis_1cd0cd76-1cf0-4dcb-bc4a-4fd7f236d9d2/data_point_1f5ad6f4-5886-4cd4-8815-97f849d1adc1/run/004_5d24f032-e2e4-407f-a20d-9f76e15d4ac1/report.html"
+              "/Users/kingsleyenweye/Desktop/GRADUATE SCHOOL SEMESTERS/Fall 2020/ARC 327R - ENERGY MODELING & THE DESIGN PROCESS/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/temp_data/analysis_4edd6a82-7130-4533-9bbb-93a08e8a01a4/data_point_075674e3-11cd-4652-899d-0a271e1ff5f5/run/001_5d24f032-e2e4-407f-a20d-9f76e15d4ac1/report.html"
             ],
             "step_final_condition": "Generated report with 21 sections to ./report.html.",
             "step_info": [],
@@ -12179,12 +12041,12 @@
               {
                 "name": "total_site_energy",
                 "units": "kWh",
-                "value": 65925
+                "value": 67522.22222222222
               },
               {
                 "name": "net_site_energy",
                 "units": "kWh",
-                "value": 65925
+                "value": 67522.22222222222
               },
               {
                 "name": "total_building_area",
@@ -12194,12 +12056,12 @@
               {
                 "name": "total_site_eui",
                 "units": "kWh/m^2",
-                "value": 351.50626499600105
+                "value": 360.0225125151811
               },
               {
                 "name": "eui",
                 "units": "kWh/m^2",
-                "value": 351.50626499600105
+                "value": 360.0225125151811
               },
               {
                 "name": "unmet_hours_during_heating",
@@ -12234,12 +12096,12 @@
               {
                 "name": "end_use_heating",
                 "units": "kWh",
-                "value": 44572.222222222226
+                "value": 45236.11111111111
               },
               {
                 "name": "end_use_cooling",
                 "units": "kWh",
-                "value": 10833.333333333334
+                "value": 11763.888888888889
               },
               {
                 "name": "end_use_interior_lighting",
@@ -12319,12 +12181,12 @@
               {
                 "name": "fuel_district_cooling",
                 "units": "kBtu",
-                "value": 36964.86769221937
+                "value": 40140.055045268986
               },
               {
                 "name": "fuel_district_heating",
                 "units": "kBtu",
-                "value": 152086.7351254749
+                "value": 154352.0180430237
               },
               {
                 "name": "end_use_electricity_heating",
@@ -12699,7 +12561,7 @@
               {
                 "name": "district_cooling_cooling_ip",
                 "units": "kWh",
-                "value": 10833.224071352779
+                "value": 11765.222064536112
               },
               {
                 "name": "district_cooling_interior_lighting_ip",
@@ -12764,12 +12626,12 @@
               {
                 "name": "district_cooling_ip",
                 "units": "kWh",
-                "value": 10833.224071352779
+                "value": 11765.222064536112
               },
               {
                 "name": "district_heating_heating_ip",
                 "units": "kWh",
-                "value": 44571.55051084722
+                "value": 45237.31631073889
               },
               {
                 "name": "district_heating_cooling_ip",
@@ -12839,7 +12701,7 @@
               {
                 "name": "district_heating_ip",
                 "units": "kWh",
-                "value": 44571.55051084722
+                "value": 45237.31631073889
               },
               {
                 "name": "water_heating_ip",
@@ -13524,7 +13386,7 @@
               {
                 "name": "ashrae_189_1_2009_ext_wall_steel_frame_climate_zone_4_8",
                 "units": "m^2",
-                "value": 237.140046
+                "value": 220.08714463820064
               },
               {
                 "name": "ext_slab_carpet_4_in_climate_zone_1_8",
@@ -13534,22 +13396,22 @@
               {
                 "name": "ashrae_189_1_2009_ext_window_climate_zone_alt_res_4_5",
                 "units": "m^2",
-                "value": 2.2263646225386777
+                "value": 18.07620406320252
               },
               {
                 "name": "exterior_door",
                 "units": "m^2",
-                "value": 0.16898937746131115
+                "value": 1.3720512985968345
               },
               {
                 "name": "gross_window_wall_ratio",
                 "units": "%",
-                "value": 1.26
+                "value": 10.2
               },
               {
                 "name": "gross_window_wall_ratio_conditioned",
                 "units": "%",
-                "value": 1.26
+                "value": 10.2
               },
               {
                 "name": "skylight_roof_ratio",
@@ -13574,12 +13436,12 @@
               {
                 "name": "zone_max_hours_over_70_rh",
                 "units": "hr",
-                "value": 298
+                "value": 297
               },
               {
                 "name": "zone_max_hours_over_55_rh",
                 "units": "hr",
-                "value": 1643
+                "value": 1634
               },
               {
                 "name": "num_zones_x_hours_over_70",
@@ -13632,119 +13494,119 @@
             "step_warnings": [
               "EnergyPlus reported area is 188 (m^2). OpenStudio reported area is 231 (m^2).",
               "Interior Lighting Summary section failed and was skipped because: Optional not initialized. Detail on error follows.",
-              "/Users/kingsleyenweye/Desktop/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/temp_data/analysis_1cd0cd76-1cf0-4dcb-bc4a-4fd7f236d9d2/measures/5d24f032-e2e4-407f-a20d-9f76e15d4ac1/measure.rb:286:in `eval'\n/Users/kingsleyenweye/Desktop/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/temp_data/analysis_1cd0cd76-1cf0-4dcb-bc4a-4fd7f236d9d2/measures/5d24f032-e2e4-407f-a20d-9f76e15d4ac1/resources/os_lib_reporting.rb:3293:in `block in interior_lighting_section'\n/Users/kingsleyenweye/Desktop/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/temp_data/analysis_1cd0cd76-1cf0-4dcb-bc4a-4fd7f236d9d2/measures/5d24f032-e2e4-407f-a20d-9f76e15d4ac1/resources/os_lib_reporting.rb:3292:in `each'\n/Users/kingsleyenweye/Desktop/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/temp_data/analysis_1cd0cd76-1cf0-4dcb-bc4a-4fd7f236d9d2/measures/5d24f032-e2e4-407f-a20d-9f76e15d4ac1/resources/os_lib_reporting.rb:3292:in `interior_lighting_section'\n(eval):1:in `block in run'\n/Users/kingsleyenweye/Desktop/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/temp_data/analysis_1cd0cd76-1cf0-4dcb-bc4a-4fd7f236d9d2/measures/5d24f032-e2e4-407f-a20d-9f76e15d4ac1/measure.rb:286:in `eval'\n/Users/kingsleyenweye/Desktop/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/temp_data/analysis_1cd0cd76-1cf0-4dcb-bc4a-4fd7f236d9d2/measures/5d24f032-e2e4-407f-a20d-9f76e15d4ac1/measure.rb:286:in `block in run'\n/Users/kingsleyenweye/Desktop/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/temp_data/analysis_1cd0cd76-1cf0-4dcb-bc4a-4fd7f236d9d2/measures/5d24f032-e2e4-407f-a20d-9f76e15d4ac1/measure.rb:282:in `each'\n/Users/kingsleyenweye/Desktop/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/temp_data/analysis_1cd0cd76-1cf0-4dcb-bc4a-4fd7f236d9d2/measures/5d24f032-e2e4-407f-a20d-9f76e15d4ac1/measure.rb:282:in `run'\n:/ruby/2.2.0/gems/openstudio-workflow-1.3.4/lib/openstudio/workflow/util/measure.rb:506:in `apply_measure'\n:/ruby/2.2.0/gems/openstudio-workflow-1.3.4/lib/openstudio/workflow/util/measure.rb:109:in `block in apply_measures'\n:/ruby/2.2.0/gems/openstudio-workflow-1.3.4/lib/openstudio/workflow/util/measure.rb:67:in `each_index'\n:/ruby/2.2.0/gems/openstudio-workflow-1.3.4/lib/openstudio/workflow/util/measure.rb:67:in `apply_measures'\n:/ruby/2.2.0/gems/openstudio-workflow-1.3.4/lib/openstudio/workflow/jobs/run_reporting_measures.rb:101:in `perform'\n:/ruby/2.2.0/gems/openstudio-workflow-1.3.4/lib/openstudio/workflow/run.rb:285:in `step'\n:/ruby/2.2.0/gems/openstudio-workflow-1.3.4/lib/openstudio/workflow/run.rb:232:in `run'\n:/openstudio_cli.rb:975:in `execute'\n:/openstudio_cli.rb:763:in `execute'\n:/openstudio_cli.rb:1746:in `<main>'\neval:116:in `eval'\neval:116:in `require_embedded_absolute'\neval:101:in `block in require'\neval:95:in `each'\neval:95:in `require'\neval:3:in `<main>'"
+              "/Users/kingsleyenweye/Desktop/GRADUATE SCHOOL SEMESTERS/Fall 2020/ARC 327R - ENERGY MODELING & THE DESIGN PROCESS/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/temp_data/analysis_4edd6a82-7130-4533-9bbb-93a08e8a01a4/measures/5d24f032-e2e4-407f-a20d-9f76e15d4ac1/measure.rb:286:in `eval'\n/Users/kingsleyenweye/Desktop/GRADUATE SCHOOL SEMESTERS/Fall 2020/ARC 327R - ENERGY MODELING & THE DESIGN PROCESS/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/temp_data/analysis_4edd6a82-7130-4533-9bbb-93a08e8a01a4/measures/5d24f032-e2e4-407f-a20d-9f76e15d4ac1/resources/os_lib_reporting.rb:3293:in `block in interior_lighting_section'\n/Users/kingsleyenweye/Desktop/GRADUATE SCHOOL SEMESTERS/Fall 2020/ARC 327R - ENERGY MODELING & THE DESIGN PROCESS/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/temp_data/analysis_4edd6a82-7130-4533-9bbb-93a08e8a01a4/measures/5d24f032-e2e4-407f-a20d-9f76e15d4ac1/resources/os_lib_reporting.rb:3292:in `each'\n/Users/kingsleyenweye/Desktop/GRADUATE SCHOOL SEMESTERS/Fall 2020/ARC 327R - ENERGY MODELING & THE DESIGN PROCESS/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/temp_data/analysis_4edd6a82-7130-4533-9bbb-93a08e8a01a4/measures/5d24f032-e2e4-407f-a20d-9f76e15d4ac1/resources/os_lib_reporting.rb:3292:in `interior_lighting_section'\n(eval):1:in `block in run'\n/Users/kingsleyenweye/Desktop/GRADUATE SCHOOL SEMESTERS/Fall 2020/ARC 327R - ENERGY MODELING & THE DESIGN PROCESS/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/temp_data/analysis_4edd6a82-7130-4533-9bbb-93a08e8a01a4/measures/5d24f032-e2e4-407f-a20d-9f76e15d4ac1/measure.rb:286:in `eval'\n/Users/kingsleyenweye/Desktop/GRADUATE SCHOOL SEMESTERS/Fall 2020/ARC 327R - ENERGY MODELING & THE DESIGN PROCESS/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/temp_data/analysis_4edd6a82-7130-4533-9bbb-93a08e8a01a4/measures/5d24f032-e2e4-407f-a20d-9f76e15d4ac1/measure.rb:286:in `block in run'\n/Users/kingsleyenweye/Desktop/GRADUATE SCHOOL SEMESTERS/Fall 2020/ARC 327R - ENERGY MODELING & THE DESIGN PROCESS/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/temp_data/analysis_4edd6a82-7130-4533-9bbb-93a08e8a01a4/measures/5d24f032-e2e4-407f-a20d-9f76e15d4ac1/measure.rb:282:in `each'\n/Users/kingsleyenweye/Desktop/GRADUATE SCHOOL SEMESTERS/Fall 2020/ARC 327R - ENERGY MODELING & THE DESIGN PROCESS/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/temp_data/analysis_4edd6a82-7130-4533-9bbb-93a08e8a01a4/measures/5d24f032-e2e4-407f-a20d-9f76e15d4ac1/measure.rb:282:in `run'\n:/ruby/2.2.0/gems/openstudio-workflow-1.3.4/lib/openstudio/workflow/util/measure.rb:506:in `apply_measure'\n:/ruby/2.2.0/gems/openstudio-workflow-1.3.4/lib/openstudio/workflow/util/measure.rb:109:in `block in apply_measures'\n:/ruby/2.2.0/gems/openstudio-workflow-1.3.4/lib/openstudio/workflow/util/measure.rb:67:in `each_index'\n:/ruby/2.2.0/gems/openstudio-workflow-1.3.4/lib/openstudio/workflow/util/measure.rb:67:in `apply_measures'\n:/ruby/2.2.0/gems/openstudio-workflow-1.3.4/lib/openstudio/workflow/jobs/run_reporting_measures.rb:101:in `perform'\n:/ruby/2.2.0/gems/openstudio-workflow-1.3.4/lib/openstudio/workflow/run.rb:285:in `step'\n:/ruby/2.2.0/gems/openstudio-workflow-1.3.4/lib/openstudio/workflow/run.rb:232:in `run'\n:/openstudio_cli.rb:975:in `execute'\n:/openstudio_cli.rb:763:in `execute'\n:/openstudio_cli.rb:1746:in `<main>'\neval:116:in `eval'\neval:116:in `require_embedded_absolute'\neval:101:in `block in require'\neval:95:in `each'\neval:95:in `require'\neval:3:in `<main>'"
             ]
           },
-          "$$hashKey": "object:15840"
+          "$$hashKey": "object:45866"
         }
       ],
       "result_files": [
         {
           "_id": {
-            "$oid": "5f8c5948c3153260dcb3225b"
+            "$oid": "5f8c87d3c3153268878de9f8"
           },
           "attachment_content_type": "text/html",
           "attachment_file_name": "openstudio_results_report.html",
-          "attachment_file_size": 1045199,
-          "attachment_fingerprint": "1c576e2b5e7a7e3f2faf7d6be6dc2f8f",
-          "attachment_updated_at": "2020-10-18T15:03:36.532+00:00",
-          "created_at": "2020-10-18T15:03:36.536Z",
+          "attachment_file_size": 1045839,
+          "attachment_fingerprint": "b903863bc81c49c2b5ce877c9953f15e",
+          "attachment_updated_at": "2020-10-18T18:22:11.236+00:00",
+          "created_at": "2020-10-18T18:22:11.238Z",
           "display_name": "openstudio_results_report",
           "type": "Report",
-          "updated_at": "2020-10-18T15:03:36.536Z",
-          "$$hashKey": "object:16282",
+          "updated_at": "2020-10-18T18:22:11.238Z",
+          "$$hashKey": "object:45922",
           "downloaded": true
         },
         {
           "_id": {
-            "$oid": "5f8c5948c3153260dcb3225c"
+            "$oid": "5f8c87d3c3153268878de9f9"
           },
           "attachment_content_type": "text/html",
           "attachment_file_name": "eplustbl.html",
           "attachment_file_size": 499981,
-          "attachment_fingerprint": "43075a2671239bbe33e14f360a7f1943",
-          "attachment_updated_at": "2020-10-18T15:03:36.573+00:00",
-          "created_at": "2020-10-18T15:03:36.576Z",
+          "attachment_fingerprint": "18760b17d7b98a9ed7c0c07e275e4e81",
+          "attachment_updated_at": "2020-10-18T18:22:11.271+00:00",
+          "created_at": "2020-10-18T18:22:11.272Z",
           "display_name": "eplustbl",
           "type": "Report",
-          "updated_at": "2020-10-18T15:03:36.576Z",
-          "$$hashKey": "object:16283",
+          "updated_at": "2020-10-18T18:22:11.272Z",
+          "$$hashKey": "object:45923",
           "downloaded": true
         },
         {
           "_id": {
-            "$oid": "5f8c5948c3153260dcb3225d"
+            "$oid": "5f8c87d3c3153268878de9fa"
           },
           "attachment_content_type": "application/json",
           "attachment_file_name": "objectives.json",
           "attachment_file_size": 4,
           "attachment_fingerprint": "22e67cc3ae278cb47bca0058382d3330",
-          "attachment_updated_at": "2020-10-18T15:03:36.606+00:00",
-          "created_at": "2020-10-18T15:03:36.608Z",
+          "attachment_updated_at": "2020-10-18T18:22:11.301+00:00",
+          "created_at": "2020-10-18T18:22:11.303Z",
           "display_name": "objectives",
           "type": "Report",
-          "updated_at": "2020-10-18T15:03:36.608Z",
+          "updated_at": "2020-10-18T18:22:11.303Z",
           "downloaded": true
         },
         {
           "_id": {
-            "$oid": "5f8c5948c3153260dcb3225e"
+            "$oid": "5f8c87d3c3153268878de9fb"
           },
           "attachment_content_type": "text/plain",
           "attachment_file_name": "out.osw",
-          "attachment_file_size": 98952,
-          "attachment_fingerprint": "d33eed181e5115e9fcb032a0e7fcde17",
-          "attachment_updated_at": "2020-10-18T15:03:36.651+00:00",
-          "created_at": "2020-10-18T15:03:36.654Z",
+          "attachment_file_size": 94370,
+          "attachment_fingerprint": "18337d94422c41362499f925d77af22e",
+          "attachment_updated_at": "2020-10-18T18:22:11.325+00:00",
+          "created_at": "2020-10-18T18:22:11.327Z",
           "display_name": "Final OSW File",
           "type": "Report",
-          "updated_at": "2020-10-18T15:03:36.654Z",
+          "updated_at": "2020-10-18T18:22:11.327Z",
           "downloaded": true
         },
         {
           "_id": {
-            "$oid": "5f8c5948c3153260dcb3225f"
+            "$oid": "5f8c87d3c3153268878de9fc"
           },
           "attachment_content_type": "text/plain",
           "attachment_file_name": "in.osm",
-          "attachment_file_size": 325571,
-          "attachment_fingerprint": "caf9fc7f0ff8d063a3f1d9d7c05999af",
-          "attachment_updated_at": "2020-10-18T15:03:36.892+00:00",
-          "created_at": "2020-10-18T15:03:36.895Z",
+          "attachment_file_size": 325576,
+          "attachment_fingerprint": "9dc29e69e6cbac402a4f582ea0c2ceb8",
+          "attachment_updated_at": "2020-10-18T18:22:11.353+00:00",
+          "created_at": "2020-10-18T18:22:11.355Z",
           "display_name": "model",
           "type": "OpenStudio Model",
-          "updated_at": "2020-10-18T15:03:36.895Z",
+          "updated_at": "2020-10-18T18:22:11.355Z",
           "downloaded": true
         },
         {
           "_id": {
-            "$oid": "5f8c5949c3153260dcb32262"
+            "$oid": "5f8c87d3c3153268878de9fd"
           },
           "attachment_content_type": "application/zip",
           "attachment_file_name": "data_point.zip",
-          "attachment_file_size": 10184629,
-          "attachment_fingerprint": "95b23f7a7be1527b06b7fdb535974189",
-          "attachment_updated_at": "2020-10-18T15:03:37.277+00:00",
-          "created_at": "2020-10-18T15:03:37.297Z",
+          "attachment_file_size": 10123928,
+          "attachment_fingerprint": "613db35035262175943e19e82deeba5c",
+          "attachment_updated_at": "2020-10-18T18:22:11.528+00:00",
+          "created_at": "2020-10-18T18:22:11.540Z",
           "display_name": "Zip File",
           "type": "Data Point",
-          "updated_at": "2020-10-18T15:03:37.297Z",
+          "updated_at": "2020-10-18T18:22:11.540Z",
           "downloaded": true
         },
         {
           "_id": {
-            "$oid": "5f8c5949c3153260dcb32263"
+            "$oid": "5f8c87d3c3153268878de9fe"
           },
           "attachment_content_type": "text/plain",
-          "attachment_file_name": "1f5ad6f4-5886-4cd4-8815-97f849d1adc1.log",
+          "attachment_file_name": "075674e3-11cd-4652-899d-0a271e1ff5f5.log",
           "attachment_file_size": 66,
-          "attachment_fingerprint": "e8e3d7201447015008bb062058ff41b2",
-          "attachment_updated_at": "2020-10-18T15:03:37.343+00:00",
-          "created_at": "2020-10-18T15:03:37.345Z",
+          "attachment_fingerprint": "84c23bc55c799eb5c6b7b3e8b73a2dcf",
+          "attachment_updated_at": "2020-10-18T18:22:11.572+00:00",
+          "created_at": "2020-10-18T18:22:11.574Z",
           "display_name": "Datapoint Simulation Log",
           "type": "Report",
-          "updated_at": "2020-10-18T15:03:37.345Z",
-          "$$hashKey": "object:16284",
+          "updated_at": "2020-10-18T18:22:11.574Z",
+          "$$hashKey": "object:45924",
           "downloaded": true
         }
       ],

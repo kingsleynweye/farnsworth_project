@@ -1,0 +1,138 @@
+{
+  "analysis": {
+    "output_variables": [],
+    "problem": {
+      "workflow": [
+        {
+          "name": "resize_existing_windows_to_match_a_given_wwr_custom",
+          "display_name": "Resize existing windows to match a given WWR Custom",
+          "measure_type": "RubyMeasure",
+          "measure_definition_class_name": "ResizeExistingWindowsToMatchAGivenWwrCustom",
+          "measure_definition_directory": "./measures/resize_existing_windows_to_match_a_given_wwr_custom",
+          "measure_definition_directory_local": "/Users/kingsleyenweye/OpenStudio/Measures/resize_existing_windows_to_match_a_given_wwr_custom",
+          "measure_definition_display_name": "Resize existing windows to match a given WWR Custom",
+          "measure_definition_name": "resize_existing_windows_to_match_a_given_wwr_custom",
+          "measure_definition_name_xml": null,
+          "measure_definition_uuid": "2a43dd50-7172-4c2d-8c93-2ad162e2630e",
+          "measure_definition_version_uuid": "cddfa287-3c53-436e-a8ea-493e407d6480",
+          "uuid": "2a43dd50-7172-4c2d-8c93-2ad162e2630e",
+          "version_uuid": "cddfa287-3c53-436e-a8ea-493e407d6480",
+          "description": "This measure aims to resize all of the existing windows in order to produce a specified, user-input, window to wall ratio.\nThe windows will be resized around their centroid but the offset from ceiling is maintained.\nIt should be noted that this measure should work in all cases when DOWNSIZING the windows (which is often the need given the 40% WWR imposed as baseline by ASHRAE Appendix G).\nIf you aim to increase the area, please note that this could result in subsurfaces being larger than their parent surface",
+          "taxonomy": "Envelope.Fenestration",
+          "arguments": [
+            {
+              "display_name": "Only affect surfaces that are \"walls\"?",
+              "display_name_short": "check_wall",
+              "name": "check_wall",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Only affect surfaces that have boundary condition = \"Outdoor\"?",
+              "display_name_short": "check_outdoors",
+              "name": "check_outdoors",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            },
+            {
+              "display_name": "Only affect surfaces that are \"SunExposed\"?",
+              "display_name_short": "check_sunexposed",
+              "name": "check_sunexposed",
+              "value_type": "boolean",
+              "default_value": true,
+              "value": true
+            }
+          ],
+          "variables": [
+            {
+              "argument": {
+                "display_name": "Window to Wall Ratio (fraction).",
+                "display_name_short": "wwr",
+                "name": "wwr",
+                "value_type": "double",
+                "default_value": 0.4,
+                "value": 0.2
+              },
+              "display_name": "Window to Wall Ratio (fraction).",
+              "display_name_short": "Window to Wall Ratio (fraction).",
+              "variable_type": "variable",
+              "units": "",
+              "minimum": 0.2,
+              "maximum": 0.2,
+              "relation_to_output": null,
+              "static_value": 0.2,
+              "uuid": "",
+              "version_uuid": "",
+              "variable": true,
+              "uncertainty_description": {
+                "type": "discrete",
+                "attributes": [
+                  {
+                    "name": "discrete",
+                    "values_and_weights": [
+                      {
+                        "value": 0.2,
+                        "weight": 1
+                      }
+                    ]
+                  },
+                  {
+                    "name": "lower_bounds",
+                    "value": 0.2
+                  },
+                  {
+                    "name": "upper_bounds",
+                    "value": 0.2
+                  },
+                  {
+                    "name": "modes",
+                    "value": 0.2
+                  },
+                  {
+                    "name": "delta_x",
+                    "value": null
+                  },
+                  {
+                    "name": "stddev",
+                    "value": null
+                  }
+                ]
+              },
+              "workflow_index": 0
+            }
+          ],
+          "workflow_index": 0
+        }
+      ],
+      "algorithm": {
+        "objective_functions": []
+      },
+      "analysis_type": null,
+      "design_alternatives": [
+        {
+          "name": "20% WWR Alternative",
+          "options": [
+            {
+              "measure_name": "resize_existing_windows_to_match_a_given_wwr_custom",
+              "workflow_index": 0,
+              "name": "20% WWR Option",
+              "description": "Option 1 Description: This measure aims to resize all of the existing windows in order to produce a specified, user-input, window to wall ratio.\nThe windows will be resized around their centroid.\nIt should be noted that this measure should work in all cases when DOWNSIZING the windows (which is often the need given the 40% WWR imposed as baseline by ASHRAE Appendix G).\nIf you aim to increase the area, please note that this could result in subsurfaces being larger than their parent surface"
+            }
+          ]
+        }
+      ]
+    },
+    "seed": {
+      "file_type": "OSM",
+      "path": "./seeds/retrofit_baseline.osm"
+    },
+    "weather_file": {
+      "file_type": "EPW",
+      "path": "./weather/USA_IL_Chicago-Midway.AP.725340_TMY3.epw"
+    },
+    "file_format_version": 1,
+    "server_scripts": {}
+  }
+}
