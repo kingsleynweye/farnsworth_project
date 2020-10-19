@@ -376,7 +376,7 @@
           "description": "Option 4 Description: Replaces the construction of all surface & sub surface objects matching a specified construction with new construction. The construction to replace with must already exist in the model."
         }
       ],
-      "instanceId": 0.5284863312413959,
+      "instanceId": 0.2148759798062232,
       "numberOfOptions": 4,
       "$$hashKey": "object:4147",
       "outputMeasure": false
@@ -625,7 +625,7 @@
           "description": "Option 1 Description: The lighting system in this building uses more power per area than is required with the latest lighting technologies.  Replace the lighting system with a newer, more efficient lighting technology.  Newer technologies provide the same amount of light but use less energy in the process."
         }
       ],
-      "instanceId": 0.21346359820247351,
+      "instanceId": 0.28120078399446125,
       "numberOfOptions": 1,
       "$$hashKey": "object:4149",
       "outputMeasure": false
@@ -877,7 +877,7 @@
           "description": "Option 1 Description: This measure will reduce space infiltration rates by the requested percentage. A cost per square foot of building area can be added to the model."
         }
       ],
-      "instanceId": 0.429345698634195,
+      "instanceId": 0.4011142964022403,
       "numberOfOptions": 1,
       "$$hashKey": "object:4150",
       "outputMeasure": false
@@ -885,7 +885,7 @@
     {
       "measure_dir": "/Users/kingsleyenweye/Desktop/GRADUATE SCHOOL SEMESTERS/Fall 2020/ARC 327R - ENERGY MODELING & THE DESIGN PROCESS/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/measures/resize_existing_windows_to_match_a_given_wwr_custom",
       "name": "resize_existing_windows_to_match_a_given_wwr_custom",
-      "directory": "/Users/kingsleyenweye/OpenStudio/Measures/resize_existing_windows_to_match_a_given_wwr_custom",
+      "directory": "/Users/kingsleyenweye/Desktop/GRADUATE SCHOOL SEMESTERS/Fall 2020/ARC 327R - ENERGY MODELING & THE DESIGN PROCESS/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/measures/resize_existing_windows_to_match_a_given_wwr_custom",
       "uid": "2a43dd50-7172-4c2d-8c93-2ad162e2630e",
       "uuid": "{2a43dd50-7172-4c2d-8c93-2ad162e2630e}",
       "version_id": "cddfa287-3c53-436e-a8ea-493e407d6480",
@@ -1041,9 +1041,10 @@
           "description": "Option 1 Description: This measure aims to resize all of the existing windows in order to produce a specified, user-input, window to wall ratio.\nThe windows will be resized around their centroid but the offset from ceiling is maintained.\nIt should be noted that this measure should work in all cases when DOWNSIZING the windows (which is often the need given the 40% WWR imposed as baseline by ASHRAE Appendix G).\nIf you aim to increase the area, please note that this could result in subsurfaces being larger than their parent surface"
         }
       ],
-      "instanceId": 0.8654701068559172,
+      "instanceId": 0.7066068168064781,
       "numberOfOptions": 1,
-      "$$hashKey": "object:36932"
+      "$$hashKey": "object:36932",
+      "outputMeasure": false
     },
     {
       "measure_dir": "/Users/kingsleyenweye/Desktop/GRADUATE SCHOOL SEMESTERS/Fall 2020/ARC 327R - ENERGY MODELING & THE DESIGN PROCESS/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/measures/5d24f032-e2e4-407f-a20d-9f76e15d4ac1",
@@ -1529,7 +1530,7 @@
       "bcl_update": false,
       "location": "local",
       "add": "",
-      "open": false,
+      "open": true,
       "addedToProject": true,
       "date": "6/26/2020",
       "author": "",
@@ -1641,7 +1642,7 @@
           "description": "Option 1 Description: This measure creates high level tables and charts pulling both from model inputs and EnergyPlus results. It has building level information as well as detail on space types, thermal zones, HVAC systems, envelope characteristics, and economics. Click the heading above a chart to view a table of the chart data."
         }
       ],
-      "instanceId": 0.1301257355216039,
+      "instanceId": 0.1931024843753717,
       "numberOfOptions": 1,
       "$$hashKey": "object:6890",
       "outputMeasure": true,
