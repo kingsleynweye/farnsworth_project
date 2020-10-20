@@ -6,65 +6,105 @@
     "problem": {
       "workflow": [
         {
-          "name": "resize_existing_windows_to_match_a_given_wwr_custom",
-          "display_name": "Resize existing windows to match a given WWR Custom",
+          "name": "reduce_electric_equipment_loads_by_percentage",
+          "display_name": "Reduce Electric Equipment Loads by Percentage",
           "measure_type": "RubyMeasure",
-          "measure_definition_class_name": "ResizeExistingWindowsToMatchAGivenWwrCustom",
-          "measure_definition_directory": "./measures/resize_existing_windows_to_match_a_given_wwr_custom",
-          "measure_definition_directory_local": "/Users/kingsleyenweye/Desktop/GRADUATE SCHOOL SEMESTERS/Fall 2020/ARC 327R - ENERGY MODELING & THE DESIGN PROCESS/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/measures/resize_existing_windows_to_match_a_given_wwr_custom",
-          "measure_definition_display_name": "Resize existing windows to match a given WWR Custom",
-          "measure_definition_name": "resize_existing_windows_to_match_a_given_wwr_custom",
+          "measure_definition_class_name": "ReduceElectricEquipmentLoadsByPercentage",
+          "measure_definition_directory": "./measures/5a5c83a1-1847-4b93-969b-bf78c64fcbd7",
+          "measure_definition_directory_local": "/Users/kingsleyenweye/Desktop/GRADUATE SCHOOL SEMESTERS/Fall 2020/ARC 327R - ENERGY MODELING & THE DESIGN PROCESS/farnsworth_project/parametric_analysis/retrofit_baseline_parametric_analysis/measures/5a5c83a1-1847-4b93-969b-bf78c64fcbd7",
+          "measure_definition_display_name": "Reduce Electric Equipment Loads by Percentage",
+          "measure_definition_name": "reduce_electric_equipment_loads_by_percentage",
           "measure_definition_name_xml": null,
-          "measure_definition_uuid": "2a43dd50-7172-4c2d-8c93-2ad162e2630e",
-          "measure_definition_version_uuid": "cddfa287-3c53-436e-a8ea-493e407d6480",
-          "uuid": "2a43dd50-7172-4c2d-8c93-2ad162e2630e",
-          "version_uuid": "cddfa287-3c53-436e-a8ea-493e407d6480",
-          "description": "This measure aims to resize all of the existing windows in order to produce a specified, user-input, window to wall ratio.\nThe windows will be resized around their centroid but the offset from ceiling is maintained.\nIt should be noted that this measure should work in all cases when DOWNSIZING the windows (which is often the need given the 40% WWR imposed as baseline by ASHRAE Appendix G).\nIf you aim to increase the area, please note that this could result in subsurfaces being larger than their parent surface",
-          "taxonomy": "Envelope.Fenestration",
+          "measure_definition_uuid": "0902e302-70db-4339-99b0-17f08bc93629",
+          "measure_definition_version_uuid": "5a5c83a1-1847-4b93-969b-bf78c64fcbd7",
+          "uuid": "0902e302-70db-4339-99b0-17f08bc93629",
+          "version_uuid": "5a5c83a1-1847-4b93-969b-bf78c64fcbd7",
+          "description": "Reduce Electric Equipment Loads by Percentage</display_name>\n  <description>Reduce electric equipment loads. This will affect equipment that have a, power, power per area (LPD), or power per person value. This can be applied to the entire building or a specific space type. A positive percentage represents an increase electric equipment power, while a negative percentage can be used for an increase in electric equipment power.",
+          "taxonomy": "Equipment.Electric Equipment",
           "arguments": [
             {
-              "display_name": "Only affect surfaces that are \"walls\"?",
-              "display_name_short": "check_wall",
-              "name": "check_wall",
-              "value_type": "boolean",
-              "default_value": true,
-              "value": true
+              "display_name": "Apply the Measure to a Specific Space Type or to the Entire Model",
+              "display_name_short": "space_type",
+              "name": "space_type",
+              "value_type": "string",
+              "default_value": "*Entire Building*",
+              "value": "*Entire Building*"
             },
             {
-              "display_name": "Only affect surfaces that have boundary condition = \"Outdoor\"?",
-              "display_name_short": "check_outdoors",
-              "name": "check_outdoors",
-              "value_type": "boolean",
-              "default_value": true,
-              "value": true
+              "display_name": "Increase in Material and Installation Cost for Electric Equipment per Floor Area",
+              "display_name_short": "material_and_installation_cost",
+              "name": "material_and_installation_cost",
+              "value_type": "double",
+              "default_value": 0,
+              "value": 0
             },
             {
-              "display_name": "Only affect surfaces that are \"SunExposed\"?",
-              "display_name_short": "check_sunexposed",
-              "name": "check_sunexposed",
+              "display_name": "Increase in Demolition Costs for Electric Equipment per Floor Area",
+              "display_name_short": "demolition_cost",
+              "name": "demolition_cost",
+              "value_type": "double",
+              "default_value": 0,
+              "value": 0
+            },
+            {
+              "display_name": "Years Until Costs Start",
+              "display_name_short": "years_until_costs_start",
+              "name": "years_until_costs_start",
+              "value_type": "integer",
+              "default_value": 0,
+              "value": 0
+            },
+            {
+              "display_name": "Demolition Costs Occur During Initial Construction",
+              "display_name_short": "demo_cost_initial_const",
+              "name": "demo_cost_initial_const",
               "value_type": "boolean",
-              "default_value": true,
-              "value": true
+              "default_value": false,
+              "value": false
+            },
+            {
+              "display_name": "Expected Life",
+              "display_name_short": "expected_life",
+              "name": "expected_life",
+              "value_type": "integer",
+              "default_value": 15,
+              "value": 15
+            },
+            {
+              "display_name": "Increase O & M Costs for Electric Equipment per Floor Area",
+              "display_name_short": "om_cost",
+              "name": "om_cost",
+              "value_type": "double",
+              "default_value": 0,
+              "value": 0
+            },
+            {
+              "display_name": "O & M Frequency",
+              "display_name_short": "om_frequency",
+              "name": "om_frequency",
+              "value_type": "integer",
+              "default_value": 1,
+              "value": 1
             }
           ],
           "variables": [
             {
               "argument": {
-                "display_name": "Window to Wall Ratio (fraction).",
-                "display_name_short": "wwr",
-                "name": "wwr",
+                "display_name": "Electric Equipment Power Reduction",
+                "display_name_short": "elecequip_power_reduction_percent",
+                "name": "elecequip_power_reduction_percent",
                 "value_type": "double",
-                "default_value": 0.4,
-                "value": 0.01
+                "default_value": 30,
+                "value": -50
               },
-              "display_name": "Window to Wall Ratio (fraction).",
-              "display_name_short": "Window to Wall Ratio (fraction).",
+              "display_name": "Electric Equipment Power Reduction",
+              "display_name_short": "Electric Equipment Power Reduction",
               "variable_type": "variable",
               "units": "",
-              "minimum": 0.01,
-              "maximum": 0.01,
+              "minimum": -50,
+              "maximum": 50,
               "relation_to_output": null,
-              "static_value": 0.01,
+              "static_value": -50,
               "uuid": "",
               "version_uuid": "",
               "variable": true,
@@ -75,22 +115,26 @@
                     "name": "discrete",
                     "values_and_weights": [
                       {
-                        "value": 0.01,
-                        "weight": 1
+                        "value": -50,
+                        "weight": 0.5
+                      },
+                      {
+                        "value": 50,
+                        "weight": 0.5
                       }
                     ]
                   },
                   {
                     "name": "lower_bounds",
-                    "value": 0.01
+                    "value": -50
                   },
                   {
                     "name": "upper_bounds",
-                    "value": 0.01
+                    "value": 50
                   },
                   {
                     "name": "modes",
-                    "value": 0.01
+                    "value": -50
                   },
                   {
                     "name": "delta_x",
@@ -327,13 +371,38 @@
       "analysis_type": null,
       "design_alternatives": [
         {
-          "name": "No Window Alternative",
+          "name": "Retrofit PHIUS Envelope, Fenestration, Schedule & 150%Loads Revision Alternative",
+          "seed": {
+            "file_type": "OSM",
+            "path": "./seeds/retrofit_envelope_fenestration_schedules_and_loads_revised.osm"
+          },
           "options": [
             {
-              "measure_name": "resize_existing_windows_to_match_a_given_wwr_custom",
+              "measure_name": "reduce_electric_equipment_loads_by_percentage",
               "workflow_index": 0,
-              "name": "1% WWR Option",
-              "description": "Option 1 Description: This measure aims to resize all of the existing windows in order to produce a specified, user-input, window to wall ratio.\nThe windows will be resized around their centroid but the offset from ceiling is maintained.\nIt should be noted that this measure should work in all cases when DOWNSIZING the windows (which is often the need given the 40% WWR imposed as baseline by ASHRAE Appendix G).\nIf you aim to increase the area, please note that this could result in subsurfaces being larger than their parent surface"
+              "name": "50% Increase Option",
+              "description": "Option 1 Description: Reduce Electric Equipment Loads by Percentage</display_name>\n  <description>Reduce electric equipment loads. This will affect equipment that have a, power, power per area (LPD), or power per person value. This can be applied to the entire building or a specific space type. A positive percentage represents an increase electric equipment power, while a negative percentage can be used for an increase in electric equipment power."
+            },
+            {
+              "measure_name": "openstudio_results",
+              "workflow_index": 1,
+              "name": "SI Option",
+              "description": "Option 1 Description: This measure creates high level tables and charts pulling both from model inputs and EnergyPlus results. It has building level information as well as detail on space types, thermal zones, HVAC systems, envelope characteristics, and economics. Click the heading above a chart to view a table of the chart data."
+            }
+          ]
+        },
+        {
+          "name": "Retrofit PHIUS Envelope, Fenestration, Schedule & 50%Loads Revision Alternative",
+          "seed": {
+            "file_type": "OSM",
+            "path": "./seeds/retrofit_envelope_fenestration_schedules_and_loads_revised.osm"
+          },
+          "options": [
+            {
+              "measure_name": "reduce_electric_equipment_loads_by_percentage",
+              "workflow_index": 0,
+              "name": "50% Decrease Option",
+              "description": "Option 2 Description: Reduce Electric Equipment Loads by Percentage</display_name>\n  <description>Reduce electric equipment loads. This will affect equipment that have a, power, power per area (LPD), or power per person value. This can be applied to the entire building or a specific space type. A positive percentage represents an increase electric equipment power, while a negative percentage can be used for an increase in electric equipment power."
             },
             {
               "measure_name": "openstudio_results",

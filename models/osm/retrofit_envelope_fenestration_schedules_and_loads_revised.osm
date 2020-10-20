@@ -2596,7 +2596,7 @@ OS:SpaceType,
   {617ad9ac-a772-4823-9c7e-087b05d61c5e}, !- Handle
   Space Type - Office,                    !- Name
   ,                                       !- Default Construction Set Name
-  {1244c68a-c228-4045-88a3-d0d23c0aa19e}, !- Default Schedule Set Name
+  {517dc6ec-b247-4897-92a0-215d253fdd19}, !- Default Schedule Set Name
   {3076a705-3e20-4186-9ec2-188d759e31b5}, !- Group Rendering Name
   {67ed6e27-8b39-432f-8c72-08774fb80693}, !- Design Specification Outdoor Air Object Name
   ,                                       !- Standards Template
@@ -2632,16 +2632,6 @@ OS:Lights:Definition,
   ,                                       !- Lighting Level {W}
   10.6562713125426,                       !- Watts per Space Floor Area {W/m2}
   ;                                       !- Watts per Person {W/person}
-
-OS:Lights,
-  {0805c024-0bea-4668-a7f9-dac79e36d74d}, !- Handle
-  189.1-2009 - MidriseApartment - Office - CZ4-8 Lights, !- Name
-  {a4f57230-9d78-482f-9579-447f997aac74}, !- Lights Definition Name
-  {617ad9ac-a772-4823-9c7e-087b05d61c5e}, !- Space or SpaceType Name
-  ,                                       !- Schedule Name
-  1,                                      !- Fraction Replaceable
-  ,                                       !- Multiplier
-  General;                                !- End-Use Subcategory
 
 OS:Schedule:Ruleset,
   {0bdbcce0-0f69-4da7-87ce-d9ceda2b083f}, ! Handle
@@ -2749,19 +2739,6 @@ OS:People:Definition,
   0.0227118509792575,                     !- People per Space Floor Area {person/m2}
   ,                                       !- Space Floor Area per Person {m2/person}
   0.3;                                    !- Fraction Radiant
-
-OS:People,
-  {b5e64a51-e58d-4c86-bb5b-a086d2ac403d}, !- Handle
-  189.1-2009 - MidriseApartment - Office - CZ4-8 People, !- Name
-  {ce914db3-6f6d-41f2-9025-7ee2c7d3ec4d}, !- People Definition Name
-  {617ad9ac-a772-4823-9c7e-087b05d61c5e}, !- Space or SpaceType Name
-  ,                                       !- Number of People Schedule Name
-  ,                                       !- Activity Level Schedule Name
-  ,                                       !- Surface Name/Angle Factor List Name
-  ,                                       !- Work Efficiency Schedule Name
-  ,                                       !- Clothing Insulation Schedule Name
-  ,                                       !- Air Velocity Schedule Name
-  1;                                      !- Multiplier
 
 OS:Schedule:Ruleset,
   {e570ee2c-6691-4684-b8f1-7237a70a5938}, ! Handle
@@ -2885,15 +2862,6 @@ OS:ElectricEquipment:Definition,
   ,                                       !- Design Level {W}
   9.36460206253746,                       !- Watts per Space Floor Area {W/m2}
   ;                                       !- Watts per Person {W/person}
-
-OS:ElectricEquipment,
-  {a309e8db-42e8-4c4c-904e-da8c3a67c2b3}, !- Handle
-  189.1-2009 - MidriseApartment - Office - CZ4-8 Electric Equipment, !- Name
-  {825752c3-2bfc-490b-b8e7-4b0d8c71723d}, !- Electric Equipment Definition Name
-  {617ad9ac-a772-4823-9c7e-087b05d61c5e}, !- Space or SpaceType Name
-  ,                                       !- Schedule Name
-  ,                                       !- Multiplier
-  General;                                !- End-Use Subcategory
 
 OS:Schedule:Ruleset,
   {b7949580-3821-4bd3-b0a2-c2d7f96ceb47}, ! Handle
@@ -4730,159 +4698,6 @@ OS:ThermostatSetpoint:DualSetpoint,
   {dc2e2f4a-f99f-43c2-af3e-3ae58b2b6734}, !- Heating Setpoint Temperature Schedule Name
   {e1a6b55c-4086-4d28-9779-c6d2db063206}; !- Cooling Setpoint Temperature Schedule Name
 
-OS:SubSurface,
-  {f2dea5a3-f88d-43ae-a6f3-5cd9f3386a69}, !- Handle
-  Sub Surface 1,                          !- Name
-  FixedWindow,                            !- Sub Surface Type
-  ,                                       !- Construction Name
-  {52d75fe3-748d-4000-bc51-cf4f62e05096}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  ,                                       !- Multiplier
-  ,                                       !- Number of Vertices
-  -3.93, 7.6346, 2.50578641644325,        !- X,Y,Z Vertex 1 {m}
-  -3.93, 7.6346, 0.05,                    !- X,Y,Z Vertex 2 {m}
-  -3.93, 0.0254, 0.05,                    !- X,Y,Z Vertex 3 {m}
-  -3.93, 0.0254, 2.50578641644325;        !- X,Y,Z Vertex 4 {m}
-
-OS:SubSurface,
-  {93e70986-b058-446e-866a-26cac5873d80}, !- Handle
-  Sub Surface 2,                          !- Name
-  FixedWindow,                            !- Sub Surface Type
-  ,                                       !- Construction Name
-  {82ba3b02-73a5-4fbd-90b8-5314ac2ac955}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  ,                                       !- Multiplier
-  ,                                       !- Number of Vertices
-  1.3346, 7.66, 2.51315372575966,         !- X,Y,Z Vertex 1 {m}
-  1.3346, 7.66, 0.05,                     !- X,Y,Z Vertex 2 {m}
-  -3.9046, 7.66, 0.05,                    !- X,Y,Z Vertex 3 {m}
-  -3.9046, 7.66, 2.51315372575966;        !- X,Y,Z Vertex 4 {m}
-
-OS:SubSurface,
-  {dc88080b-08c6-4580-aed1-05b474ef698a}, !- Handle
-  Sub Surface 3,                          !- Name
-  FixedWindow,                            !- Sub Surface Type
-  ,                                       !- Construction Name
-  {aa031a96-ff86-4b75-99a1-075dc2afccc4}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  ,                                       !- Multiplier
-  ,                                       !- Number of Vertices
-  1.36, 0.0254, 2.50578641644325,         !- X,Y,Z Vertex 1 {m}
-  1.36, 0.0254, 0.05,                     !- X,Y,Z Vertex 2 {m}
-  1.36, 7.6346, 0.05,                     !- X,Y,Z Vertex 3 {m}
-  1.36, 7.6346, 2.50578641644325;         !- X,Y,Z Vertex 4 {m}
-
-OS:SubSurface,
-  {0dfc8c46-1034-4f6d-80bf-4a379ceb75b3}, !- Handle
-  Sub Surface 4,                          !- Name
-  FixedWindow,                            !- Sub Surface Type
-  ,                                       !- Construction Name
-  {1c9c1a14-c985-491a-8d8a-09ef1505d039}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  ,                                       !- Multiplier
-  ,                                       !- Number of Vertices
-  1.36, -8.6746, 2.50382809970864,        !- X,Y,Z Vertex 1 {m}
-  1.36, -8.6746, 0.05,                    !- X,Y,Z Vertex 2 {m}
-  1.36, -0.0254000000000014, 0.05,        !- X,Y,Z Vertex 3 {m}
-  1.36, -0.0254000000000014, 2.50382809970864; !- X,Y,Z Vertex 4 {m}
-
-OS:SubSurface,
-  {927849f6-caac-4c61-9402-a6acdec94e13}, !- Handle
-  Sub Surface 5,                          !- Name
-  FixedWindow,                            !- Sub Surface Type
-  ,                                       !- Construction Name
-  {422d9fbf-9add-4389-8b92-4500f20a0926}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  ,                                       !- Multiplier
-  ,                                       !- Number of Vertices
-  -2.4146, -8.7, 2.52255414488424,        !- X,Y,Z Vertex 1 {m}
-  -2.4146, -8.7, 0.05,                    !- X,Y,Z Vertex 2 {m}
-  1.3346, -8.7, 0.05,                     !- X,Y,Z Vertex 3 {m}
-  1.3346, -8.7, 2.52255414488424;         !- X,Y,Z Vertex 4 {m}
-
-OS:SubSurface,
-  {37352a9d-19c4-4a58-a5d6-bea1703e749b}, !- Handle
-  Sub Surface 6,                          !- Name
-  FixedWindow,                            !- Sub Surface Type
-  ,                                       !- Construction Name
-  {32d0b65d-4383-4f84-8603-86cfb7085ec3}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  ,                                       !- Multiplier
-  ,                                       !- Number of Vertices
-  -5.6, -0.0254, 2.51832550241905,        !- X,Y,Z Vertex 1 {m}
-  -5.6, -0.0254, 0.05,                    !- X,Y,Z Vertex 2 {m}
-  -5.6, -4.3246, 0.05,                    !- X,Y,Z Vertex 3 {m}
-  -5.6, -4.3246, 2.51832550241905;        !- X,Y,Z Vertex 4 {m}
-
-OS:SubSurface,
-  {1903c862-0779-41b9-92a8-f839dec82a6c}, !- Handle
-  Sub Surface 7,                          !- Name
-  FixedWindow,                            !- Sub Surface Type
-  ,                                       !- Construction Name
-  {bcb8348e-b9bf-47cf-b009-acd6bd198d23}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  ,                                       !- Multiplier
-  ,                                       !- Number of Vertices
-  0, -0.0254, 2.51832550241905,           !- X,Y,Z Vertex 1 {m}
-  0, -0.0254, 0.05,                       !- X,Y,Z Vertex 2 {m}
-  0, -4.3246, 0.05,                       !- X,Y,Z Vertex 3 {m}
-  0, -4.3246, 2.51832550241905;           !- X,Y,Z Vertex 4 {m}
-
-OS:SubSurface,
-  {fa50f92c-c92c-435f-b7cf-3cc6232f3e93}, !- Handle
-  Sub Surface 8,                          !- Name
-  FixedWindow,                            !- Sub Surface Type
-  ,                                       !- Construction Name
-  {f67de1cc-5104-4655-91bb-ac5f00c2e7d7}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  ,                                       !- Multiplier
-  ,                                       !- Number of Vertices
-  5.5746, 0, 2.5118323361926,             !- X,Y,Z Vertex 1 {m}
-  5.5746, 0, 0.05,                        !- X,Y,Z Vertex 2 {m}
-  0.0253999999999994, 0, 0.05,            !- X,Y,Z Vertex 3 {m}
-  0.0253999999999994, 0, 2.5118323361926; !- X,Y,Z Vertex 4 {m}
-
-OS:SubSurface,
-  {91037c6c-8da0-4598-a5fd-20cf279b8b54}, !- Handle
-  Sub Surface 9,                          !- Name
-  FixedWindow,                            !- Sub Surface Type
-  ,                                       !- Construction Name
-  {c22cedbb-8534-493d-a2c7-8754f8a1941a}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  ,                                       !- Multiplier
-  ,                                       !- Number of Vertices
-  3.4846, 1.99, 2.51029584507988,         !- X,Y,Z Vertex 1 {m}
-  3.4846, 1.99, 0.05,                     !- X,Y,Z Vertex 2 {m}
-  -2.4746, 1.99, 0.05,                    !- X,Y,Z Vertex 3 {m}
-  -2.4746, 1.99, 2.51029584507988;        !- X,Y,Z Vertex 4 {m}
-
 OS:Surface,
   {64136cf6-f7b0-4d0e-a3ed-b3325f05c907}, !- Handle
   Surface 83,                             !- Name
@@ -4900,23 +4715,6 @@ OS:Surface,
   -0.879999999999999, -4.35, 0,           !- X,Y,Z Vertex 3 {m}
   -0.879999999999999, -4.35, 2.16;        !- X,Y,Z Vertex 4 {m}
 
-OS:SubSurface,
-  {9bfccfcf-447c-4235-b3cf-b62d06806b55}, !- Handle
-  Sub Surface 10,                         !- Name
-  FixedWindow,                            !- Sub Surface Type
-  ,                                       !- Construction Name
-  {71837408-95d4-4ac7-994d-c54afa5448a3}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  ,                                       !- Multiplier
-  ,                                       !- Number of Vertices
-  -0.855, -4.35, 2.523,                   !- X,Y,Z Vertex 1 {m}
-  -0.855, -4.35, 0.05,                    !- X,Y,Z Vertex 2 {m}
-  2.475, -4.35, 0.05,                     !- X,Y,Z Vertex 3 {m}
-  2.475, -4.35, 2.523;                    !- X,Y,Z Vertex 4 {m}
-
 OS:Surface,
   {c15d0e4e-20f5-47bc-b505-f5800a1894d5}, !- Handle
   Surface 84,                             !- Name
@@ -4933,23 +4731,6 @@ OS:Surface,
   -5.6, -4.35, 0,                         !- X,Y,Z Vertex 2 {m}
   -2.23, -4.35, 0,                        !- X,Y,Z Vertex 3 {m}
   -2.23, -4.35, 2.87;                     !- X,Y,Z Vertex 4 {m}
-
-OS:SubSurface,
-  {fad349d4-f4f7-48ea-a517-a556d5d341ed}, !- Handle
-  Sub Surface 11,                         !- Name
-  FixedWindow,                            !- Sub Surface Type
-  ,                                       !- Construction Name
-  {c15d0e4e-20f5-47bc-b505-f5800a1894d5}, !- Surface Name
-  ,                                       !- Outside Boundary Condition Object
-  ,                                       !- View Factor to Ground
-  ,                                       !- Shading Control Name
-  ,                                       !- Frame and Divider Name
-  ,                                       !- Multiplier
-  ,                                       !- Number of Vertices
-  -5.575, -4.35, 2.523,                   !- X,Y,Z Vertex 1 {m}
-  -5.575, -4.35, 0.05,                    !- X,Y,Z Vertex 2 {m}
-  -2.255, -4.35, 0.05,                    !- X,Y,Z Vertex 3 {m}
-  -2.255, -4.35, 2.523;                   !- X,Y,Z Vertex 4 {m}
 
 OS:SubSurface,
   {fc0c9c76-8b46-42ff-8798-4ee0f1ef4286}, !- Handle
@@ -6571,7 +6352,7 @@ OS:DefaultScheduleSet,
   {29344214-e59c-4516-b918-099496d53e18}, !- Electric Equipment Schedule Name
   ,                                       !- Gas Equipment Schedule Name
   ,                                       !- Hot Water Equipment Schedule Name
-  {4c0cfcc1-2b1d-47da-9cea-c1aa5a360487}, !- Infiltration Schedule Name
+  {b89b1d89-b1e6-42a6-b773-b00990ed74e4}, !- Infiltration Schedule Name
   ,                                       !- Steam Equipment Schedule Name
   ;                                       !- Other Equipment Schedule Name
 
@@ -6726,44 +6507,12 @@ OS:SpaceType,
   {dc144420-9a0e-46e3-84c9-0217457923cb}, !- Handle
   Space Type - Bedroom,                   !- Name
   ,                                       !- Default Construction Set Name
-  {b7d564aa-314c-4bba-b79a-498168f56220}, !- Default Schedule Set Name
+  {fc1dc0de-393e-4e7e-a7be-da8ee49f84d8}, !- Default Schedule Set Name
   {3076a705-3e20-4186-9ec2-188d759e31b5}, !- Group Rendering Name
   {67ed6e27-8b39-432f-8c72-08774fb80693}, !- Design Specification Outdoor Air Object Name
   ,                                       !- Standards Template
   MidriseApartment,                       !- Standards Building Type
   Office;                                 !- Standards Space Type
-
-OS:People,
-  {55952fec-ef28-4c80-8222-6cd6be02c5d5}, !- Handle
-  189.1-2009 - MidriseApartment - Office - CZ4-8 People 2, !- Name
-  {ce914db3-6f6d-41f2-9025-7ee2c7d3ec4d}, !- People Definition Name
-  {dc144420-9a0e-46e3-84c9-0217457923cb}, !- Space or SpaceType Name
-  ,                                       !- Number of People Schedule Name
-  ,                                       !- Activity Level Schedule Name
-  ,                                       !- Surface Name/Angle Factor List Name
-  ,                                       !- Work Efficiency Schedule Name
-  ,                                       !- Clothing Insulation Schedule Name
-  ,                                       !- Air Velocity Schedule Name
-  1;                                      !- Multiplier
-
-OS:Lights,
-  {bd958004-187f-477b-a6bb-dcbc49132311}, !- Handle
-  189.1-2009 - MidriseApartment - Office - CZ4-8 Lights 2, !- Name
-  {a4f57230-9d78-482f-9579-447f997aac74}, !- Lights Definition Name
-  {dc144420-9a0e-46e3-84c9-0217457923cb}, !- Space or SpaceType Name
-  ,                                       !- Schedule Name
-  1,                                      !- Fraction Replaceable
-  ,                                       !- Multiplier
-  General;                                !- End-Use Subcategory
-
-OS:ElectricEquipment,
-  {af635e31-2c32-4a83-aa41-4e6b18e54f67}, !- Handle
-  189.1-2009 - MidriseApartment - Office - CZ4-8 Electric Equipment 2, !- Name
-  {825752c3-2bfc-490b-b8e7-4b0d8c71723d}, !- Electric Equipment Definition Name
-  {dc144420-9a0e-46e3-84c9-0217457923cb}, !- Space or SpaceType Name
-  ,                                       !- Schedule Name
-  ,                                       !- Multiplier
-  General;                                !- End-Use Subcategory
 
 OS:SpaceInfiltration:DesignFlowRate,
   {65beb3cc-7a7d-44bd-8839-01a8b6fbbbb3}, !- Handle
@@ -6784,44 +6533,12 @@ OS:SpaceType,
   {e02d53db-6a4e-4927-a536-67802d13d6b3}, !- Handle
   Space Type - Living Room,               !- Name
   ,                                       !- Default Construction Set Name
-  {b7d564aa-314c-4bba-b79a-498168f56220}, !- Default Schedule Set Name
+  {aa427f45-ffa4-439e-bb6b-14012491be31}, !- Default Schedule Set Name
   {3076a705-3e20-4186-9ec2-188d759e31b5}, !- Group Rendering Name
   {67ed6e27-8b39-432f-8c72-08774fb80693}, !- Design Specification Outdoor Air Object Name
   ,                                       !- Standards Template
   MidriseApartment,                       !- Standards Building Type
   Office;                                 !- Standards Space Type
-
-OS:People,
-  {82674ea4-f070-44d3-9460-cb1ef0fe3167}, !- Handle
-  189.1-2009 - MidriseApartment - Office - CZ4-8 People 3, !- Name
-  {ce914db3-6f6d-41f2-9025-7ee2c7d3ec4d}, !- People Definition Name
-  {e02d53db-6a4e-4927-a536-67802d13d6b3}, !- Space or SpaceType Name
-  ,                                       !- Number of People Schedule Name
-  ,                                       !- Activity Level Schedule Name
-  ,                                       !- Surface Name/Angle Factor List Name
-  ,                                       !- Work Efficiency Schedule Name
-  ,                                       !- Clothing Insulation Schedule Name
-  ,                                       !- Air Velocity Schedule Name
-  1;                                      !- Multiplier
-
-OS:Lights,
-  {dc98a2b5-8bcd-4b21-8255-7e40436eadd1}, !- Handle
-  189.1-2009 - MidriseApartment - Office - CZ4-8 Lights 3, !- Name
-  {a4f57230-9d78-482f-9579-447f997aac74}, !- Lights Definition Name
-  {e02d53db-6a4e-4927-a536-67802d13d6b3}, !- Space or SpaceType Name
-  ,                                       !- Schedule Name
-  1,                                      !- Fraction Replaceable
-  ,                                       !- Multiplier
-  General;                                !- End-Use Subcategory
-
-OS:ElectricEquipment,
-  {e1e39d73-574d-4574-ba69-6e9f640f845a}, !- Handle
-  189.1-2009 - MidriseApartment - Office - CZ4-8 Electric Equipment 3, !- Name
-  {825752c3-2bfc-490b-b8e7-4b0d8c71723d}, !- Electric Equipment Definition Name
-  {e02d53db-6a4e-4927-a536-67802d13d6b3}, !- Space or SpaceType Name
-  ,                                       !- Schedule Name
-  ,                                       !- Multiplier
-  General;                                !- End-Use Subcategory
 
 OS:SpaceInfiltration:DesignFlowRate,
   {8da28601-03ce-48c7-81e6-4015e066823a}, !- Handle
@@ -6842,44 +6559,12 @@ OS:SpaceType,
   {f1699e1e-d77a-4045-a2b7-43138fdf3677}, !- Handle
   Space Type - Kitchen,                   !- Name
   ,                                       !- Default Construction Set Name
-  {b7d564aa-314c-4bba-b79a-498168f56220}, !- Default Schedule Set Name
+  {9dfbd7e4-40cd-4088-ad13-964ab7e5840e}, !- Default Schedule Set Name
   {3076a705-3e20-4186-9ec2-188d759e31b5}, !- Group Rendering Name
   {67ed6e27-8b39-432f-8c72-08774fb80693}, !- Design Specification Outdoor Air Object Name
   ,                                       !- Standards Template
   MidriseApartment,                       !- Standards Building Type
   Office;                                 !- Standards Space Type
-
-OS:People,
-  {b85a6989-30e0-4763-af62-62a4b27f5b0e}, !- Handle
-  189.1-2009 - MidriseApartment - Office - CZ4-8 People 4, !- Name
-  {ce914db3-6f6d-41f2-9025-7ee2c7d3ec4d}, !- People Definition Name
-  {f1699e1e-d77a-4045-a2b7-43138fdf3677}, !- Space or SpaceType Name
-  ,                                       !- Number of People Schedule Name
-  ,                                       !- Activity Level Schedule Name
-  ,                                       !- Surface Name/Angle Factor List Name
-  ,                                       !- Work Efficiency Schedule Name
-  ,                                       !- Clothing Insulation Schedule Name
-  ,                                       !- Air Velocity Schedule Name
-  1;                                      !- Multiplier
-
-OS:Lights,
-  {3196098b-439b-43ea-ace2-3add34771cda}, !- Handle
-  189.1-2009 - MidriseApartment - Office - CZ4-8 Lights 4, !- Name
-  {a4f57230-9d78-482f-9579-447f997aac74}, !- Lights Definition Name
-  {f1699e1e-d77a-4045-a2b7-43138fdf3677}, !- Space or SpaceType Name
-  ,                                       !- Schedule Name
-  1,                                      !- Fraction Replaceable
-  ,                                       !- Multiplier
-  General;                                !- End-Use Subcategory
-
-OS:ElectricEquipment,
-  {ad7ea1fa-0180-43ee-9f8f-ddeceacc1cf7}, !- Handle
-  189.1-2009 - MidriseApartment - Office - CZ4-8 Electric Equipment 4, !- Name
-  {825752c3-2bfc-490b-b8e7-4b0d8c71723d}, !- Electric Equipment Definition Name
-  {f1699e1e-d77a-4045-a2b7-43138fdf3677}, !- Space or SpaceType Name
-  ,                                       !- Schedule Name
-  ,                                       !- Multiplier
-  General;                                !- End-Use Subcategory
 
 OS:SpaceInfiltration:DesignFlowRate,
   {1dd695b0-cf98-4db2-abcc-ab8c2297a172}, !- Handle
@@ -7070,44 +6755,12 @@ OS:SpaceType,
   {994e2c83-196f-4c71-98e1-2190f9d01258}, !- Handle
   Space Type - Dining,                    !- Name
   ,                                       !- Default Construction Set Name
-  {b7d564aa-314c-4bba-b79a-498168f56220}, !- Default Schedule Set Name
+  {14319a87-df94-4990-a2c8-4c8c3649f502}, !- Default Schedule Set Name
   {3076a705-3e20-4186-9ec2-188d759e31b5}, !- Group Rendering Name
   {67ed6e27-8b39-432f-8c72-08774fb80693}, !- Design Specification Outdoor Air Object Name
   ,                                       !- Standards Template
   MidriseApartment,                       !- Standards Building Type
   Office;                                 !- Standards Space Type
-
-OS:People,
-  {63f1a3f1-c339-471b-8955-bdd3f71af569}, !- Handle
-  189.1-2009 - MidriseApartment - Office - CZ4-8 People 5, !- Name
-  {ce914db3-6f6d-41f2-9025-7ee2c7d3ec4d}, !- People Definition Name
-  {994e2c83-196f-4c71-98e1-2190f9d01258}, !- Space or SpaceType Name
-  ,                                       !- Number of People Schedule Name
-  ,                                       !- Activity Level Schedule Name
-  ,                                       !- Surface Name/Angle Factor List Name
-  ,                                       !- Work Efficiency Schedule Name
-  ,                                       !- Clothing Insulation Schedule Name
-  ,                                       !- Air Velocity Schedule Name
-  1;                                      !- Multiplier
-
-OS:Lights,
-  {7a566ec5-ef65-4421-843f-53fe815ee4d6}, !- Handle
-  189.1-2009 - MidriseApartment - Office - CZ4-8 Lights 5, !- Name
-  {a4f57230-9d78-482f-9579-447f997aac74}, !- Lights Definition Name
-  {994e2c83-196f-4c71-98e1-2190f9d01258}, !- Space or SpaceType Name
-  ,                                       !- Schedule Name
-  1,                                      !- Fraction Replaceable
-  ,                                       !- Multiplier
-  General;                                !- End-Use Subcategory
-
-OS:ElectricEquipment,
-  {42c85b2b-1dda-41d2-8487-9e3dc66e304c}, !- Handle
-  189.1-2009 - MidriseApartment - Office - CZ4-8 Electric Equipment 5, !- Name
-  {825752c3-2bfc-490b-b8e7-4b0d8c71723d}, !- Electric Equipment Definition Name
-  {994e2c83-196f-4c71-98e1-2190f9d01258}, !- Space or SpaceType Name
-  ,                                       !- Schedule Name
-  ,                                       !- Multiplier
-  General;                                !- End-Use Subcategory
 
 OS:SpaceInfiltration:DesignFlowRate,
   {e074918f-05e6-44d6-84f8-4d55e801e087}, !- Handle
@@ -7128,44 +6781,12 @@ OS:SpaceType,
   {111a6928-40ec-475b-89cf-debbdb1a14dd}, !- Handle
   Space Type - Bathroom,                  !- Name
   ,                                       !- Default Construction Set Name
-  {b7d564aa-314c-4bba-b79a-498168f56220}, !- Default Schedule Set Name
+  {375eb117-a19a-4a1d-a8f7-d933b39b8dbc}, !- Default Schedule Set Name
   {3076a705-3e20-4186-9ec2-188d759e31b5}, !- Group Rendering Name
   {67ed6e27-8b39-432f-8c72-08774fb80693}, !- Design Specification Outdoor Air Object Name
   ,                                       !- Standards Template
   MidriseApartment,                       !- Standards Building Type
   Office;                                 !- Standards Space Type
-
-OS:People,
-  {226df417-4cdd-402c-b86b-a9c1dd39a89e}, !- Handle
-  189.1-2009 - MidriseApartment - Office - CZ4-8 People 6, !- Name
-  {ce914db3-6f6d-41f2-9025-7ee2c7d3ec4d}, !- People Definition Name
-  {111a6928-40ec-475b-89cf-debbdb1a14dd}, !- Space or SpaceType Name
-  ,                                       !- Number of People Schedule Name
-  ,                                       !- Activity Level Schedule Name
-  ,                                       !- Surface Name/Angle Factor List Name
-  ,                                       !- Work Efficiency Schedule Name
-  ,                                       !- Clothing Insulation Schedule Name
-  ,                                       !- Air Velocity Schedule Name
-  1;                                      !- Multiplier
-
-OS:Lights,
-  {c848f822-aa7e-471c-85bc-4e72745f0c77}, !- Handle
-  189.1-2009 - MidriseApartment - Office - CZ4-8 Lights 6, !- Name
-  {a4f57230-9d78-482f-9579-447f997aac74}, !- Lights Definition Name
-  {111a6928-40ec-475b-89cf-debbdb1a14dd}, !- Space or SpaceType Name
-  ,                                       !- Schedule Name
-  1,                                      !- Fraction Replaceable
-  ,                                       !- Multiplier
-  General;                                !- End-Use Subcategory
-
-OS:ElectricEquipment,
-  {42c45aa2-fcaa-45e6-b051-9c99f263cc3d}, !- Handle
-  189.1-2009 - MidriseApartment - Office - CZ4-8 Electric Equipment 6, !- Name
-  {825752c3-2bfc-490b-b8e7-4b0d8c71723d}, !- Electric Equipment Definition Name
-  {111a6928-40ec-475b-89cf-debbdb1a14dd}, !- Space or SpaceType Name
-  ,                                       !- Schedule Name
-  ,                                       !- Multiplier
-  General;                                !- End-Use Subcategory
 
 OS:SpaceInfiltration:DesignFlowRate,
   {efa732cd-52c5-4d49-95cb-5bdcafd47987}, !- Handle
@@ -7354,44 +6975,12 @@ OS:SpaceType,
   {aef3a4b3-b1d8-4e75-80c2-46d5165e7fdb}, !- Handle
   Space Type - Mechanical Room,           !- Name
   ,                                       !- Default Construction Set Name
-  {b7d564aa-314c-4bba-b79a-498168f56220}, !- Default Schedule Set Name
+  {60cd5595-4386-4606-bc26-e6fdd806a3d7}, !- Default Schedule Set Name
   {3076a705-3e20-4186-9ec2-188d759e31b5}, !- Group Rendering Name
   {67ed6e27-8b39-432f-8c72-08774fb80693}, !- Design Specification Outdoor Air Object Name
   ,                                       !- Standards Template
   MidriseApartment,                       !- Standards Building Type
   Office;                                 !- Standards Space Type
-
-OS:People,
-  {6136698c-2c88-4747-834f-b9b31dba6df4}, !- Handle
-  189.1-2009 - MidriseApartment - Office - CZ4-8 People 7, !- Name
-  {ce914db3-6f6d-41f2-9025-7ee2c7d3ec4d}, !- People Definition Name
-  {aef3a4b3-b1d8-4e75-80c2-46d5165e7fdb}, !- Space or SpaceType Name
-  ,                                       !- Number of People Schedule Name
-  ,                                       !- Activity Level Schedule Name
-  ,                                       !- Surface Name/Angle Factor List Name
-  ,                                       !- Work Efficiency Schedule Name
-  ,                                       !- Clothing Insulation Schedule Name
-  ,                                       !- Air Velocity Schedule Name
-  1;                                      !- Multiplier
-
-OS:Lights,
-  {21c4f55a-9466-4b2a-85d5-fdb1c89f1a5b}, !- Handle
-  189.1-2009 - MidriseApartment - Office - CZ4-8 Lights 7, !- Name
-  {a4f57230-9d78-482f-9579-447f997aac74}, !- Lights Definition Name
-  {aef3a4b3-b1d8-4e75-80c2-46d5165e7fdb}, !- Space or SpaceType Name
-  ,                                       !- Schedule Name
-  1,                                      !- Fraction Replaceable
-  ,                                       !- Multiplier
-  General;                                !- End-Use Subcategory
-
-OS:ElectricEquipment,
-  {e0b8c007-6a1a-45a7-8ff1-820d03409550}, !- Handle
-  189.1-2009 - MidriseApartment - Office - CZ4-8 Electric Equipment 7, !- Name
-  {825752c3-2bfc-490b-b8e7-4b0d8c71723d}, !- Electric Equipment Definition Name
-  {aef3a4b3-b1d8-4e75-80c2-46d5165e7fdb}, !- Space or SpaceType Name
-  ,                                       !- Schedule Name
-  ,                                       !- Multiplier
-  General;                                !- End-Use Subcategory
 
 OS:SpaceInfiltration:DesignFlowRate,
   {1850b427-6dcf-4e3f-a9ed-58a25eab68d5}, !- Handle
@@ -7412,44 +7001,12 @@ OS:SpaceType,
   {afe26a02-00e4-479f-8e9c-1b2b05b47a0d}, !- Handle
   Space Type - Garage,                    !- Name
   ,                                       !- Default Construction Set Name
-  {b7d564aa-314c-4bba-b79a-498168f56220}, !- Default Schedule Set Name
+  {77e1a5fe-d998-44e5-993b-cde76544c24c}, !- Default Schedule Set Name
   {3076a705-3e20-4186-9ec2-188d759e31b5}, !- Group Rendering Name
   {67ed6e27-8b39-432f-8c72-08774fb80693}, !- Design Specification Outdoor Air Object Name
   ,                                       !- Standards Template
   MidriseApartment,                       !- Standards Building Type
   Office;                                 !- Standards Space Type
-
-OS:People,
-  {26848b16-4a5a-4082-b2e3-10d7dd9bb3f5}, !- Handle
-  189.1-2009 - MidriseApartment - Office - CZ4-8 People 8, !- Name
-  {ce914db3-6f6d-41f2-9025-7ee2c7d3ec4d}, !- People Definition Name
-  {afe26a02-00e4-479f-8e9c-1b2b05b47a0d}, !- Space or SpaceType Name
-  ,                                       !- Number of People Schedule Name
-  ,                                       !- Activity Level Schedule Name
-  ,                                       !- Surface Name/Angle Factor List Name
-  ,                                       !- Work Efficiency Schedule Name
-  ,                                       !- Clothing Insulation Schedule Name
-  ,                                       !- Air Velocity Schedule Name
-  1;                                      !- Multiplier
-
-OS:Lights,
-  {e1949cc1-de51-4123-8b46-1ef9e1303536}, !- Handle
-  189.1-2009 - MidriseApartment - Office - CZ4-8 Lights 8, !- Name
-  {a4f57230-9d78-482f-9579-447f997aac74}, !- Lights Definition Name
-  {afe26a02-00e4-479f-8e9c-1b2b05b47a0d}, !- Space or SpaceType Name
-  ,                                       !- Schedule Name
-  1,                                      !- Fraction Replaceable
-  ,                                       !- Multiplier
-  General;                                !- End-Use Subcategory
-
-OS:ElectricEquipment,
-  {4cefedef-693e-4733-b406-5f00cb1e038a}, !- Handle
-  189.1-2009 - MidriseApartment - Office - CZ4-8 Electric Equipment 8, !- Name
-  {825752c3-2bfc-490b-b8e7-4b0d8c71723d}, !- Electric Equipment Definition Name
-  {afe26a02-00e4-479f-8e9c-1b2b05b47a0d}, !- Space or SpaceType Name
-  ,                                       !- Schedule Name
-  ,                                       !- Multiplier
-  General;                                !- End-Use Subcategory
 
 OS:SpaceInfiltration:DesignFlowRate,
   {520091e8-a30f-47fe-b4e0-62242e7a57c7}, !- Handle
@@ -7559,4 +7116,528 @@ OS:Rendering:Color,
   255,                                    !- Rendering Red Value
   235,                                    !- Rendering Green Value
   205;                                    !- Rendering Blue Value
+
+OS:SubSurface,
+  {14090da4-4cd4-4f52-a238-90dfe477c9d3}, !- Handle
+  Sub Surface 13,                         !- Name
+  FixedWindow,                            !- Sub Surface Type
+  ,                                       !- Construction Name
+  {85be1571-f985-4bd0-a3b0-e83ab2838154}, !- Surface Name
+  ,                                       !- Outside Boundary Condition Object
+  ,                                       !- View Factor to Ground
+  ,                                       !- Shading Control Name
+  ,                                       !- Frame and Divider Name
+  ,                                       !- Multiplier
+  ,                                       !- Number of Vertices
+  -4.9746, -4.35, 2.77,                   !- X,Y,Z Vertex 1 {m}
+  -4.9746, -4.35, 2.19490907303647,       !- X,Y,Z Vertex 2 {m}
+  -0.905399999999998, -4.35, 2.19490907303647, !- X,Y,Z Vertex 3 {m}
+  -0.905399999999998, -4.35, 2.77;        !- X,Y,Z Vertex 4 {m}
+
+OS:SubSurface,
+  {5eafa886-e61a-4b3e-9ac0-29ed19259bcc}, !- Handle
+  Sub Surface 14,                         !- Name
+  FixedWindow,                            !- Sub Surface Type
+  ,                                       !- Construction Name
+  {dabc57d5-ea22-42bc-aaac-57bc6a34b92d}, !- Surface Name
+  ,                                       !- Outside Boundary Condition Object
+  ,                                       !- View Factor to Ground
+  ,                                       !- Shading Control Name
+  ,                                       !- Frame and Divider Name
+  ,                                       !- Multiplier
+  ,                                       !- Number of Vertices
+  -2.2046, -4.35, 2.77,                   !- X,Y,Z Vertex 1 {m}
+  -2.2046, -4.35, 2.18875917767988,       !- X,Y,Z Vertex 2 {m}
+  -0.0254, -4.35, 2.18875917767988,       !- X,Y,Z Vertex 3 {m}
+  -0.0254, -4.35, 2.77;                   !- X,Y,Z Vertex 4 {m}
+
+OS:SubSurface,
+  {b500d39c-f37d-4c3e-8218-96092e520b68}, !- Handle
+  Sub Surface 2,                          !- Name
+  FixedWindow,                            !- Sub Surface Type
+  ,                                       !- Construction Name
+  {1c9c1a14-c985-491a-8d8a-09ef1505d039}, !- Surface Name
+  ,                                       !- Outside Boundary Condition Object
+  ,                                       !- View Factor to Ground
+  ,                                       !- Shading Control Name
+  ,                                       !- Frame and Divider Name
+  ,                                       !- Multiplier
+  ,                                       !- Number of Vertices
+  1.36, -8.2, 2.50382809970864,           !- X,Y,Z Vertex 1 {m}
+  1.36, -8.2, 1.10382809970864,           !- X,Y,Z Vertex 2 {m}
+  1.36, -6.2, 1.10382809970864,           !- X,Y,Z Vertex 3 {m}
+  1.36, -6.2, 2.50382809970864;           !- X,Y,Z Vertex 4 {m}
+
+OS:SubSurface,
+  {7f652a24-f0d1-4412-9477-eb6cfb4ad046}, !- Handle
+  Sub Surface 3,                          !- Name
+  FixedWindow,                            !- Sub Surface Type
+  ,                                       !- Construction Name
+  {82ba3b02-73a5-4fbd-90b8-5314ac2ac955}, !- Surface Name
+  ,                                       !- Outside Boundary Condition Object
+  ,                                       !- View Factor to Ground
+  ,                                       !- Shading Control Name
+  ,                                       !- Frame and Divider Name
+  ,                                       !- Multiplier
+  ,                                       !- Number of Vertices
+  0.860000000000001, 7.66, 2.51315372575966, !- X,Y,Z Vertex 1 {m}
+  0.860000000000001, 7.66, 1.93915372575966, !- X,Y,Z Vertex 2 {m}
+  -3.43, 7.66, 1.93915372575966,          !- X,Y,Z Vertex 3 {m}
+  -3.43, 7.66, 2.51315372575966;          !- X,Y,Z Vertex 4 {m}
+
+OS:SubSurface,
+  {73fa05b4-a454-4161-9ba9-bc86c7361aae}, !- Handle
+  Sub Surface 4,                          !- Name
+  FixedWindow,                            !- Sub Surface Type
+  ,                                       !- Construction Name
+  {c22cedbb-8534-493d-a2c7-8754f8a1941a}, !- Surface Name
+  ,                                       !- Outside Boundary Condition Object
+  ,                                       !- View Factor to Ground
+  ,                                       !- Shading Control Name
+  ,                                       !- Frame and Divider Name
+  ,                                       !- Multiplier
+  ,                                       !- Number of Vertices
+  3.01, 1.99, 2.50778293726963,           !- X,Y,Z Vertex 1 {m}
+  3.01, 1.99, 1.93378293726963,           !- X,Y,Z Vertex 2 {m}
+  -2, 1.99, 1.93378293726963,             !- X,Y,Z Vertex 3 {m}
+  -2, 1.99, 2.50778293726963;             !- X,Y,Z Vertex 4 {m}
+
+OS:SubSurface,
+  {3733befc-19aa-4984-a934-3ddc5e15e17f}, !- Handle
+  Sub Surface 1,                          !- Name
+  FixedWindow,                            !- Sub Surface Type
+  ,                                       !- Construction Name
+  {52d75fe3-748d-4000-bc51-cf4f62e05096}, !- Surface Name
+  ,                                       !- Outside Boundary Condition Object
+  ,                                       !- View Factor to Ground
+  ,                                       !- Shading Control Name
+  ,                                       !- Frame and Divider Name
+  ,                                       !- Multiplier
+  ,                                       !- Number of Vertices
+  -3.93, 7.16, 2.50578641644325,          !- X,Y,Z Vertex 1 {m}
+  -3.93, 7.16, 1.10578641644325,          !- X,Y,Z Vertex 2 {m}
+  -3.93, 5.16, 1.10578641644325,          !- X,Y,Z Vertex 3 {m}
+  -3.93, 5.16, 2.50578641644325;          !- X,Y,Z Vertex 4 {m}
+
+OS:SubSurface,
+  {9b4c4541-dfa4-4700-83a1-62dd26336103}, !- Handle
+  Sub Surface 5,                          !- Name
+  FixedWindow,                            !- Sub Surface Type
+  ,                                       !- Construction Name
+  {52d75fe3-748d-4000-bc51-cf4f62e05096}, !- Surface Name
+  ,                                       !- Outside Boundary Condition Object
+  ,                                       !- View Factor to Ground
+  ,                                       !- Shading Control Name
+  ,                                       !- Frame and Divider Name
+  ,                                       !- Multiplier
+  ,                                       !- Number of Vertices
+  -3.93, 2.5, 2.50578641644325,           !- X,Y,Z Vertex 1 {m}
+  -3.93, 2.5, 1.10578641644325,           !- X,Y,Z Vertex 2 {m}
+  -3.93, 0.5, 1.10578641644325,           !- X,Y,Z Vertex 3 {m}
+  -3.93, 0.5, 2.50578641644325;           !- X,Y,Z Vertex 4 {m}
+
+OS:SubSurface,
+  {7c87ec6a-3a32-4851-9d70-d526dee56389}, !- Handle
+  Sub Surface 8,                          !- Name
+  FixedWindow,                            !- Sub Surface Type
+  ,                                       !- Construction Name
+  {f67de1cc-5104-4655-91bb-ac5f00c2e7d7}, !- Surface Name
+  ,                                       !- Outside Boundary Condition Object
+  ,                                       !- View Factor to Ground
+  ,                                       !- Shading Control Name
+  ,                                       !- Frame and Divider Name
+  ,                                       !- Multiplier
+  ,                                       !- Number of Vertices
+  5.1, 0, 2.5118323361926,                !- X,Y,Z Vertex 1 {m}
+  5.1, 0, 1.93378293726963,               !- X,Y,Z Vertex 2 {m}
+  0.5, 0, 1.93378293726963,               !- X,Y,Z Vertex 3 {m}
+  0.5, 0, 2.5118323361926;                !- X,Y,Z Vertex 4 {m}
+
+OS:SubSurface,
+  {b7933c16-cb29-47a3-aa46-87168ec198bb}, !- Handle
+  Sub Surface 6,                          !- Name
+  Door,                                   !- Sub Surface Type
+  ,                                       !- Construction Name
+  {32d0b65d-4383-4f84-8603-86cfb7085ec3}, !- Surface Name
+  ,                                       !- Outside Boundary Condition Object
+  ,                                       !- View Factor to Ground
+  ,                                       !- Shading Control Name
+  ,                                       !- Frame and Divider Name
+  ,                                       !- Multiplier
+  ,                                       !- Number of Vertices
+  -5.6, -0.0254, 2.51832550241905,        !- X,Y,Z Vertex 1 {m}
+  -5.6, -0.0254, 0,                       !- X,Y,Z Vertex 2 {m}
+  -5.6, -1.0922, -9.02389274415327e-17,   !- X,Y,Z Vertex 3 {m}
+  -5.6, -1.0922, 2.51832550241905;        !- X,Y,Z Vertex 4 {m}
+
+OS:SubSurface,
+  {2acd722d-5202-4c24-b658-39e693adfcce}, !- Handle
+  Sub Surface 7,                          !- Name
+  FixedWindow,                            !- Sub Surface Type
+  ,                                       !- Construction Name
+  {bcb8348e-b9bf-47cf-b009-acd6bd198d23}, !- Surface Name
+  ,                                       !- Outside Boundary Condition Object
+  ,                                       !- View Factor to Ground
+  ,                                       !- Shading Control Name
+  ,                                       !- Frame and Divider Name
+  ,                                       !- Multiplier
+  ,                                       !- Number of Vertices
+  0, -1.175, 2.51832550241905,            !- X,Y,Z Vertex 1 {m}
+  0, -1.175, 1.11832550241905,            !- X,Y,Z Vertex 2 {m}
+  0, -3.175, 1.11832550241905,            !- X,Y,Z Vertex 3 {m}
+  0, -3.175, 2.51832550241905;            !- X,Y,Z Vertex 4 {m}
+
+OS:SubSurface,
+  {41e2be6f-bca7-4abb-8caf-d4f0f0d965cf}, !- Handle
+  Sub Surface 9,                          !- Name
+  FixedWindow,                            !- Sub Surface Type
+  ,                                       !- Construction Name
+  {32d0b65d-4383-4f84-8603-86cfb7085ec3}, !- Surface Name
+  ,                                       !- Outside Boundary Condition Object
+  ,                                       !- View Factor to Ground
+  ,                                       !- Shading Control Name
+  ,                                       !- Frame and Divider Name
+  ,                                       !- Multiplier
+  ,                                       !- Number of Vertices
+  -5.6, -1.5922, 2.51832550241905,        !- X,Y,Z Vertex 1 {m}
+  -5.6, -1.5922, 1.94432550241905,        !- X,Y,Z Vertex 2 {m}
+  -5.6, -3.85, 1.94432550241905,          !- X,Y,Z Vertex 3 {m}
+  -5.6, -3.85, 2.51832550241905;          !- X,Y,Z Vertex 4 {m}
+
+OS:SubSurface,
+  {21ff7564-97f0-4a52-bb1c-56235d4b29d3}, !- Handle
+  Sub Surface 10,                         !- Name
+  FixedWindow,                            !- Sub Surface Type
+  ,                                       !- Construction Name
+  {422d9fbf-9add-4389-8b92-4500f20a0926}, !- Surface Name
+  ,                                       !- Outside Boundary Condition Object
+  ,                                       !- View Factor to Ground
+  ,                                       !- Shading Control Name
+  ,                                       !- Frame and Divider Name
+  ,                                       !- Multiplier
+  ,                                       !- Number of Vertices
+  -1.94, -8.7, 2.50382809970864,          !- X,Y,Z Vertex 1 {m}
+  -1.94, -8.7, 1.92982809970864,          !- X,Y,Z Vertex 2 {m}
+  0.860000000000001, -8.7, 1.92982809970864, !- X,Y,Z Vertex 3 {m}
+  0.860000000000001, -8.7, 2.50382809970864; !- X,Y,Z Vertex 4 {m}
+
+OS:People,
+  {172c573c-06bb-4c29-9bbe-8183c33b6233}, !- Handle
+  People 1,                               !- Name
+  {34c1d8d2-024a-4058-ac8a-28a9c05998c3}, !- People Definition Name
+  {111a6928-40ec-475b-89cf-debbdb1a14dd}, !- Space or SpaceType Name
+  ,                                       !- Number of People Schedule Name
+  ,                                       !- Activity Level Schedule Name
+  ,                                       !- Surface Name/Angle Factor List Name
+  ,                                       !- Work Efficiency Schedule Name
+  ,                                       !- Clothing Insulation Schedule Name
+  ,                                       !- Air Velocity Schedule Name
+  1;                                      !- Multiplier
+
+OS:People,
+  {67e06dcb-4da1-4ec3-b998-325be26829cd}, !- Handle
+  People 2,                               !- Name
+  {34c1d8d2-024a-4058-ac8a-28a9c05998c3}, !- People Definition Name
+  {dc144420-9a0e-46e3-84c9-0217457923cb}, !- Space or SpaceType Name
+  ,                                       !- Number of People Schedule Name
+  ,                                       !- Activity Level Schedule Name
+  ,                                       !- Surface Name/Angle Factor List Name
+  ,                                       !- Work Efficiency Schedule Name
+  ,                                       !- Clothing Insulation Schedule Name
+  ,                                       !- Air Velocity Schedule Name
+  1;                                      !- Multiplier
+
+OS:People,
+  {eda2882f-3dae-424a-8a72-20863105dcde}, !- Handle
+  People 3,                               !- Name
+  {a448141e-9113-4cbe-a94d-58d7965c200f}, !- People Definition Name
+  {994e2c83-196f-4c71-98e1-2190f9d01258}, !- Space or SpaceType Name
+  ,                                       !- Number of People Schedule Name
+  ,                                       !- Activity Level Schedule Name
+  ,                                       !- Surface Name/Angle Factor List Name
+  ,                                       !- Work Efficiency Schedule Name
+  ,                                       !- Clothing Insulation Schedule Name
+  ,                                       !- Air Velocity Schedule Name
+  1;                                      !- Multiplier
+
+OS:People,
+  {c9612aeb-26c4-4cd1-948d-08d076132fb9}, !- Handle
+  People 4,                               !- Name
+  {34c1d8d2-024a-4058-ac8a-28a9c05998c3}, !- People Definition Name
+  {f1699e1e-d77a-4045-a2b7-43138fdf3677}, !- Space or SpaceType Name
+  ,                                       !- Number of People Schedule Name
+  ,                                       !- Activity Level Schedule Name
+  ,                                       !- Surface Name/Angle Factor List Name
+  ,                                       !- Work Efficiency Schedule Name
+  ,                                       !- Clothing Insulation Schedule Name
+  ,                                       !- Air Velocity Schedule Name
+  1;                                      !- Multiplier
+
+OS:People,
+  {ff69cee1-bc85-4f88-8d08-d2daf5561d34}, !- Handle
+  People 5,                               !- Name
+  {a448141e-9113-4cbe-a94d-58d7965c200f}, !- People Definition Name
+  {e02d53db-6a4e-4927-a536-67802d13d6b3}, !- Space or SpaceType Name
+  ,                                       !- Number of People Schedule Name
+  ,                                       !- Activity Level Schedule Name
+  ,                                       !- Surface Name/Angle Factor List Name
+  ,                                       !- Work Efficiency Schedule Name
+  ,                                       !- Clothing Insulation Schedule Name
+  ,                                       !- Air Velocity Schedule Name
+  1;                                      !- Multiplier
+
+OS:People,
+  {de259260-bcf5-4d9b-b0ed-ccc337c1f8c7}, !- Handle
+  People 6,                               !- Name
+  {34c1d8d2-024a-4058-ac8a-28a9c05998c3}, !- People Definition Name
+  {617ad9ac-a772-4823-9c7e-087b05d61c5e}, !- Space or SpaceType Name
+  ,                                       !- Number of People Schedule Name
+  ,                                       !- Activity Level Schedule Name
+  ,                                       !- Surface Name/Angle Factor List Name
+  ,                                       !- Work Efficiency Schedule Name
+  ,                                       !- Clothing Insulation Schedule Name
+  ,                                       !- Air Velocity Schedule Name
+  1;                                      !- Multiplier
+
+OS:Lights,
+  {00d36540-d594-48e4-9f77-eaf481e92585}, !- Handle
+  Lights 1,                               !- Name
+  {0042a568-7e67-4c1d-9fb2-9800766698fc}, !- Lights Definition Name
+  {111a6928-40ec-475b-89cf-debbdb1a14dd}, !- Space or SpaceType Name
+  ,                                       !- Schedule Name
+  1,                                      !- Fraction Replaceable
+  ,                                       !- Multiplier
+  General;                                !- End-Use Subcategory
+
+OS:Lights,
+  {e80e3201-dfff-427a-b6b3-54575fc3c81d}, !- Handle
+  Lights 2,                               !- Name
+  {3aba9bb8-402a-448f-b387-a507b229312a}, !- Lights Definition Name
+  {dc144420-9a0e-46e3-84c9-0217457923cb}, !- Space or SpaceType Name
+  ,                                       !- Schedule Name
+  1,                                      !- Fraction Replaceable
+  ,                                       !- Multiplier
+  General;                                !- End-Use Subcategory
+
+OS:Lights,
+  {72c14d25-1e1c-4c10-9d58-c924f42d913f}, !- Handle
+  Lights 3,                               !- Name
+  {a4afa860-cbfc-47eb-94f8-9d55fbc0c351}, !- Lights Definition Name
+  {994e2c83-196f-4c71-98e1-2190f9d01258}, !- Space or SpaceType Name
+  ,                                       !- Schedule Name
+  1,                                      !- Fraction Replaceable
+  ,                                       !- Multiplier
+  General;                                !- End-Use Subcategory
+
+OS:Lights,
+  {6009f9ad-f855-45cc-9a2c-b91a2c6f8872}, !- Handle
+  Lights 4,                               !- Name
+  {59cba02e-6aee-450e-b967-a249e4b8ea7f}, !- Lights Definition Name
+  {afe26a02-00e4-479f-8e9c-1b2b05b47a0d}, !- Space or SpaceType Name
+  ,                                       !- Schedule Name
+  1,                                      !- Fraction Replaceable
+  ,                                       !- Multiplier
+  General;                                !- End-Use Subcategory
+
+OS:Lights,
+  {c5f8e3ed-08de-4b6b-8f6a-277d0e9a432d}, !- Handle
+  Lights 5,                               !- Name
+  {5751fef7-e032-4439-bad1-46736c8149d8}, !- Lights Definition Name
+  {f1699e1e-d77a-4045-a2b7-43138fdf3677}, !- Space or SpaceType Name
+  ,                                       !- Schedule Name
+  1,                                      !- Fraction Replaceable
+  ,                                       !- Multiplier
+  General;                                !- End-Use Subcategory
+
+OS:Lights,
+  {d9e9aac7-79c8-4315-8a32-42a46a30c670}, !- Handle
+  Lights 6,                               !- Name
+  {eab1e85b-9c5b-44b1-bce0-18ee9b69e1e6}, !- Lights Definition Name
+  {e02d53db-6a4e-4927-a536-67802d13d6b3}, !- Space or SpaceType Name
+  ,                                       !- Schedule Name
+  1,                                      !- Fraction Replaceable
+  ,                                       !- Multiplier
+  General;                                !- End-Use Subcategory
+
+OS:Lights,
+  {bd5b0f43-7fe9-45cb-b538-26dfa98a90d0}, !- Handle
+  Lights 7,                               !- Name
+  {7beb13a1-c1f1-46b0-abde-b7371de50c48}, !- Lights Definition Name
+  {aef3a4b3-b1d8-4e75-80c2-46d5165e7fdb}, !- Space or SpaceType Name
+  ,                                       !- Schedule Name
+  1,                                      !- Fraction Replaceable
+  ,                                       !- Multiplier
+  General;                                !- End-Use Subcategory
+
+OS:Lights,
+  {0f87b2ca-8f4b-4fe5-9afc-2cf52dd55ccb}, !- Handle
+  Lights 8,                               !- Name
+  {f8d6d173-61a1-4232-9a74-105d33426baa}, !- Lights Definition Name
+  {617ad9ac-a772-4823-9c7e-087b05d61c5e}, !- Space or SpaceType Name
+  ,                                       !- Schedule Name
+  1,                                      !- Fraction Replaceable
+  ,                                       !- Multiplier
+  General;                                !- End-Use Subcategory
+
+OS:ElectricEquipment:Definition,
+  {4d7794da-fdee-47b2-9e04-bd958004d444}, !- Handle
+  189.1-2009 - Office - Restroom - CZ1-3 Electric Equipment Definition, !- Name
+  Watts/Area,                             !- Design Level Calculation Method
+  ,                                       !- Design Level {W}
+  0.753473729169681,                      !- Watts per Space Floor Area {W/m2}
+  ;                                       !- Watts per Person {W/person}
+
+OS:ElectricEquipment:Definition,
+  {d9a5e710-030f-4b37-9572-c4102f077c1f}, !- Handle
+  189.1-2009 - Office - BreakRoom - CZ4-8 Electric Equipment Definition, !- Name
+  Watts/Area,                             !- Design Level Calculation Method
+  ,                                       !- Design Level {W}
+  48.0070404585254,                       !- Watts per Space Floor Area {W/m2}
+  ;                                       !- Watts per Person {W/person}
+
+OS:ElectricEquipment:Definition,
+  {3ba4ea1b-68c5-4764-bdd6-1bf856bf52b1}, !- Handle
+  189.1-2009 - Office - Corridor - CZ1-3 Electric Equipment Definition, !- Name
+  Watts/Area,                             !- Design Level Calculation Method
+  ,                                       !- Design Level {W}
+  1.72222566667356,                       !- Watts per Space Floor Area {W/m2}
+  ;                                       !- Watts per Person {W/person}
+
+OS:ElectricEquipment:Definition,
+  {ad36df9a-8940-4819-b347-88ec168e269e}, !- Handle
+  189.1-2009 - Office - Elec/MechRoom - CZ4-8 Electric Equipment Definition, !- Name
+  Watts/Area,                             !- Design Level Calculation Method
+  ,                                       !- Design Level {W}
+  2.90625581251162,                       !- Watts per Space Floor Area {W/m2}
+  ;                                       !- Watts per Person {W/person}
+
+OS:ElectricEquipment:Definition,
+  {601ce076-7349-4f29-99ca-cfd331260dc5}, !- Handle
+  189.1-2009 - Office - BreakRoom - CZ4-8 Electric Equipment Definition 1, !- Name
+  Watts/Area,                             !- Design Level Calculation Method
+  ,                                       !- Design Level {W}
+  48.0070404585254,                       !- Watts per Space Floor Area {W/m2}
+  ;                                       !- Watts per Person {W/person}
+
+OS:ElectricEquipment,
+  {84e68e75-245a-4e8f-8d9f-d57b0889bbe1}, !- Handle
+  Electric Equipment 1,                   !- Name
+  {601ce076-7349-4f29-99ca-cfd331260dc5}, !- Electric Equipment Definition Name
+  {f1699e1e-d77a-4045-a2b7-43138fdf3677}, !- Space or SpaceType Name
+  ,                                       !- Schedule Name
+  ,                                       !- Multiplier
+  General;                                !- End-Use Subcategory
+
+OS:ElectricEquipment:Definition,
+  {4afb6502-ce71-40d7-bb22-a318e7393019}, !- Handle
+  189.1-2009 - Office - Corridor - CZ4-8 Electric Equipment Definition, !- Name
+  Watts/Area,                             !- Design Level Calculation Method
+  ,                                       !- Design Level {W}
+  1.72222566667356,                       !- Watts per Space Floor Area {W/m2}
+  ;                                       !- Watts per Person {W/person}
+
+OS:ElectricEquipment,
+  {1cd7c122-bafb-44bd-b8a3-46adcf864415}, !- Handle
+  Electric Equipment 2,                   !- Name
+  {4afb6502-ce71-40d7-bb22-a318e7393019}, !- Electric Equipment Definition Name
+  {afe26a02-00e4-479f-8e9c-1b2b05b47a0d}, !- Space or SpaceType Name
+  ,                                       !- Schedule Name
+  ,                                       !- Multiplier
+  General;                                !- End-Use Subcategory
+
+OS:ElectricEquipment:Definition,
+  {4ef8f485-c65a-4431-ae60-382d8fd8a43a}, !- Handle
+  189.1-2009 - Office - Elec/MechRoom - CZ4-8 Electric Equipment Definition 1, !- Name
+  Watts/Area,                             !- Design Level Calculation Method
+  ,                                       !- Design Level {W}
+  2.90625581251162,                       !- Watts per Space Floor Area {W/m2}
+  ;                                       !- Watts per Person {W/person}
+
+OS:ElectricEquipment,
+  {4acea588-bf9f-446a-acab-764bffae7b10}, !- Handle
+  Electric Equipment 3,                   !- Name
+  {4ef8f485-c65a-4431-ae60-382d8fd8a43a}, !- Electric Equipment Definition Name
+  {aef3a4b3-b1d8-4e75-80c2-46d5165e7fdb}, !- Space or SpaceType Name
+  ,                                       !- Schedule Name
+  ,                                       !- Multiplier
+  General;                                !- End-Use Subcategory
+
+OS:ElectricEquipment:Definition,
+  {86031c8b-935f-458a-b4c5-9ad9917f9ad3}, !- Handle
+  189.1-2009 - Office - Restroom - CZ4-8 Electric Equipment Definition, !- Name
+  Watts/Area,                             !- Design Level Calculation Method
+  ,                                       !- Design Level {W}
+  0.753473729169681,                      !- Watts per Space Floor Area {W/m2}
+  ;                                       !- Watts per Person {W/person}
+
+OS:ElectricEquipment,
+  {6b374ed4-740e-48b9-ba86-c20f04b9eca9}, !- Handle
+  Electric Equipment 4,                   !- Name
+  {86031c8b-935f-458a-b4c5-9ad9917f9ad3}, !- Electric Equipment Definition Name
+  {111a6928-40ec-475b-89cf-debbdb1a14dd}, !- Space or SpaceType Name
+  ,                                       !- Schedule Name
+  ,                                       !- Multiplier
+  General;                                !- End-Use Subcategory
+
+OS:ElectricEquipment,
+  {0cc4755c-b14b-46a4-b89e-66dfc9ff4fb3}, !- Handle
+  Electric Equipment 5,                   !- Name
+  {1998f6ca-0672-4fd0-a913-9a25970260e6}, !- Electric Equipment Definition Name
+  {dc144420-9a0e-46e3-84c9-0217457923cb}, !- Space or SpaceType Name
+  ,                                       !- Schedule Name
+  ,                                       !- Multiplier
+  General;                                !- End-Use Subcategory
+
+OS:ElectricEquipment,
+  {46e0a4f5-aeb4-4f27-8f1a-18a26efee838}, !- Handle
+  Electric Equipment 6,                   !- Name
+  {1998f6ca-0672-4fd0-a913-9a25970260e6}, !- Electric Equipment Definition Name
+  {994e2c83-196f-4c71-98e1-2190f9d01258}, !- Space or SpaceType Name
+  ,                                       !- Schedule Name
+  ,                                       !- Multiplier
+  General;                                !- End-Use Subcategory
+
+OS:ElectricEquipment,
+  {07dc91b8-6160-4aba-8e4f-b33294521d58}, !- Handle
+  Electric Equipment 7,                   !- Name
+  {1998f6ca-0672-4fd0-a913-9a25970260e6}, !- Electric Equipment Definition Name
+  {e02d53db-6a4e-4927-a536-67802d13d6b3}, !- Space or SpaceType Name
+  ,                                       !- Schedule Name
+  ,                                       !- Multiplier
+  General;                                !- End-Use Subcategory
+
+OS:ElectricEquipment,
+  {1bac7882-c6df-4312-aa41-43255765ded1}, !- Handle
+  Electric Equipment 8,                   !- Name
+  {825752c3-2bfc-490b-b8e7-4b0d8c71723d}, !- Electric Equipment Definition Name
+  {617ad9ac-a772-4823-9c7e-087b05d61c5e}, !- Space or SpaceType Name
+  ,                                       !- Schedule Name
+  ,                                       !- Multiplier
+  General;                                !- End-Use Subcategory
+
+OS:People,
+  {024c098c-f7c7-46c2-9855-0e127accc24a}, !- Handle
+  People 7,                               !- Name
+  {34c1d8d2-024a-4058-ac8a-28a9c05998c3}, !- People Definition Name
+  {afe26a02-00e4-479f-8e9c-1b2b05b47a0d}, !- Space or SpaceType Name
+  ,                                       !- Number of People Schedule Name
+  ,                                       !- Activity Level Schedule Name
+  ,                                       !- Surface Name/Angle Factor List Name
+  ,                                       !- Work Efficiency Schedule Name
+  ,                                       !- Clothing Insulation Schedule Name
+  ,                                       !- Air Velocity Schedule Name
+  1;                                      !- Multiplier
+
+OS:People,
+  {ed1f8f58-09c5-43f6-aa35-519a265a0947}, !- Handle
+  People 8,                               !- Name
+  {34c1d8d2-024a-4058-ac8a-28a9c05998c3}, !- People Definition Name
+  {aef3a4b3-b1d8-4e75-80c2-46d5165e7fdb}, !- Space or SpaceType Name
+  ,                                       !- Number of People Schedule Name
+  ,                                       !- Activity Level Schedule Name
+  ,                                       !- Surface Name/Angle Factor List Name
+  ,                                       !- Work Efficiency Schedule Name
+  ,                                       !- Clothing Insulation Schedule Name
+  ,                                       !- Air Velocity Schedule Name
+  1;                                      !- Multiplier
 
