@@ -6499,7 +6499,7 @@ OS:Schedule:Day,
 
 OS:DefaultScheduleSet,
   {375eb117-a19a-4a1d-a8f7-d933b39b8dbc}, !- Handle
-  Schedule Set - Bahtroom,                !- Name
+  Schedule Set - Bathroom,                !- Name
   ,                                       !- Hours of Operation Schedule Name
   {d906bc23-1c75-4202-9c42-866d3ff8cf65}, !- Number of People Schedule Name
   {d4f212a7-21c0-447d-95fb-619ee978a3cc}, !- People Activity Level Schedule Name
@@ -7879,7 +7879,7 @@ OS:DesignSpecification:OutdoorAir,
   ASHRAE 62.2 2-Bedroom,                  !- Name
   Sum,                                    !- Outdoor Air Method
   0,                                      !- Outdoor Air Flow per Person {m3/s-person}
-  0.0015,                                 !- Outdoor Air Flow per Floor Area {m3/s-m2}
+  0.00015,                                !- Outdoor Air Flow per Floor Area {m3/s-m2}
   0.0105,                                 !- Outdoor Air Flow Rate {m3/s}
   ,                                       !- Outdoor Air Flow Air Changes per Hour {1/hr}
   {f3214ef2-f285-4b46-9108-354e475a81ed}; !- Outdoor Air Flow Rate Fraction Schedule Name
